@@ -1,0 +1,13 @@
+<!--#include file="shared\startup.asp"-->
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+		'Application("Connection1_ConnectionString") = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ssc;Data Source=mcewen2\VSDotNet;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=MCEWEN;Use Encryption for Data=False;Tag with column collation when possible=False;"
+		Application("Connection1_ConnectionString") =  "server=N01DSW067,1435;database=SSC;Trusted_Connection=Yes;"
+		Application("Connection1_ConnectionTimeout") = 15
+		Application("Connection1_CommandTimeout") = 30
+		Application("Connection1_CursorLocation") = 3
+		Application("Connection1_RuntimeUserName") = "webops"
+		Application("Connection1_RuntimePassword") = "webops"
+	createStartup()
+End Sub
+</SCRIPT>

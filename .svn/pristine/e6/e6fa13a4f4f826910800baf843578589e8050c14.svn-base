@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://www.aaancnuit.com.AAANCNU_WSDL_RecordApplicationEventAsync_version1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RecordApplicationEventAsyncService" targetNamespace="http://www.aaancnuit.com.AAANCNU_WSDL_RecordApplicationEventAsync_version1" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema1.xsd" namespace="http://www.aaancnuit.com.AAANCNU_WSDL_RecordApplicationEventAsync_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema2.xsd" namespace="http://www.aaancnuit.com.AAANCNU_RecordApplicationEventAsync_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema3.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Party_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema4.xsd" namespace="http://www.aaancnuit.com.AAANCNU_FinancialTransaction_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema5.xsd" namespace="http://www.aaancnuit.com.AAANCNU_FinancialServicesAgreement_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema6.xsd" namespace="http://www.aaancnuit.com.AAANCNU_ContractAndSpecification_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema8.xsd" namespace="http://www.aaancnuit.com.AAANCNU_ApplicationEvent_version1" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="RecordApplicationEventAsyncService_schema9.xsd" namespace="http://www.aaancnuit.com.AAANCNU_ActivityConditionPlace_version1" />
+    </xsd:schema>
+  </types>
+  <message name="RecordApplicationEventAsync">
+    <part name="recordApplicationEventAsync" element="tns:recordApplicationEventAsyncRequest" />
+  </message>
+  <portType name="RecordApplicationEventAsync">
+    <operation name="RecordApplicationEventAsync">
+      <input message="tns:RecordApplicationEventAsync" />
+    </operation>
+  </portType>
+  <binding name="RecordApplicationEventAsyncSOAPPortBinding" type="tns:RecordApplicationEventAsync">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="RecordApplicationEventAsync">
+      <soap:operation soapAction="http://www.aaancnuit.com.recordApplicationEventAsync" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+  </binding>
+  <service name="RecordApplicationEventAsyncService">
+    <port name="RecordApplicationEventAsyncSOAPPort" binding="tns:RecordApplicationEventAsyncSOAPPortBinding">
+      <soap:address location="http://192.168.49.31:80/enterpriselog/RecordApplicationEventAsyncService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,154 @@
+3:00:08 AM: Source:Forms.login.Page_Load, Message:Session Expired/Redirecting to logout Page 
+3:00:10 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+3:00:11 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+3:00:11 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IlRVRlUtWTU2bkFkRHBYOFZIMmVLVU56ald2aiIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTI4VDEwOjAwOjExLjE2N1oiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJaWFdtcDhoMW1nV3hCWUNYeUVJYk9vcm05NmgiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yOFQxMDowMDoxMS4xNjdaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI1pYV21wOGgxbWdXeEJZQ1h5RUliT29ybTk2aCI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPlEzSlYvSVJOOWZHZEdHTU16Ui9Eb1NVN0QraVBRb0VjY2llYlFQa1VlMVE9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpLRDNwODBGWXZUenorRlBCblJVVlJyMzVuejJFODkrNVV0WkxJSlBXdm5OaHRYNkIwbGxzRzVEbnk3WUVuRzM2NHBMTFhpSmpaS0QvClp3eDJ2TC9TWmUxbjQ2YlZXcUJpRVdod0JCRWJQeWQwMGpCd29KdG1WK2swejVBVDd1dWRkTFE5ODVHUGJMa21oZUdSRmlyenhxWEQKZ0JYM25uVUZyYlR0dUpNZkcveVVLVUpnTW9iOVlENG80NkRGTW9hYWlBcTZja2tMbm8xaHZ0VFZxcnJPbWhicUc5TkZGaElQeWk4WQpNVkNqcjIxU3FhRjI0VHd0ZnJKYnBtR3dGNlZDYmpISDZOdlYvb1d4WDNSNXBmNTFvVFRveW0ycDRYMnFENXZDN3o0S1p3YzRUampECmZ3ZTZubDR1VFdTS0t5RXNKa2MwRTRnUlBzS01WMXRPZDhsK053PT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTI4VDEwOjA1OjExLjE2N1oiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yOFQwOTo1NToxMS4xNjdaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjhUMTA6MDU6MTEuMTY3WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9IlpYV21wOGgxbWdXeEJZQ1h5RUliT29ybTk2aCIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTI4VDEwOjAwOjExLjE2N1oiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+3:00:11 AM: Source:Forms.login.Page_Load, Message:Replay attack check
+3:00:11 AM: Source:Forms.login.Page_Load, Message:NotBefore6/28/2017 2:55:11 AM
+3:00:11 AM: Source:Forms.login.Page_Load, Message:NotOnOrAfter6/28/2017 3:05:11 AM
+3:00:11 AM: Source:Forms.login.Page_Load, Message:CurrentDate6/28/2017 3:00:11 AM
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgs35gur
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+3:00:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:00:11 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+3:00:11 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+3:55:20 AM: Source:__ASP, FastObjectFactory_app_web_j42k40jq.Create_ASP_forms_login_aspx
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_j42k40jq.Create_ASP_forms_login_aspx()
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:55:20 AM: Source:MSCR, Global.Application_Error
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_j42k40jq.Create_ASP_forms_login_aspx()
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:55:20 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/Forms/login.aspx,Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)), User:
+3:55:20 AM: Source:ASP, controls_pagevalidator_ascx..ctor <-- forms_login_aspx.__BuildControlPageValidator1 <-- forms_login_aspx.__BuildControlfrmLogin <-- forms_login_aspx.__BuildControlTree <-- forms_login_aspx.FrameworkInitialize <-- forms_login_aspx.ProcessRequest
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at ASP.controls_pagevalidator_ascx..ctor()
+   at ASP.forms_login_aspx.__BuildControlPageValidator1()
+   at ASP.forms_login_aspx.__BuildControlfrmLogin()
+   at ASP.forms_login_aspx.__BuildControlTree(forms_login_aspx __ctrl)
+   at ASP.forms_login_aspx.FrameworkInitialize()
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.forms_login_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:55:20 AM: Source:MSCR, Global.Application_Error
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at ASP.controls_pagevalidator_ascx..ctor()
+   at ASP.forms_login_aspx.__BuildControlPageValidator1()
+   at ASP.forms_login_aspx.__BuildControlfrmLogin()
+   at ASP.forms_login_aspx.__BuildControlTree(forms_login_aspx __ctrl)
+   at ASP.forms_login_aspx.FrameworkInitialize()
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.forms_login_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:55:20 AM: Source:Global.Application_Error, Message:/PaymentToolMSCR/Forms/Login.aspx,Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)), User:
+3:55:28 AM: Source:forms_login_aspx.ProcessRequest, Message:Request sent to SSO 
+3:58:11 AM: Source:forms_login_aspx.ProcessRequest, Message:The User is not Authenticated, So Session is Abandoned 
+3:58:11 AM: Source:forms_login_aspx.ProcessRequest, Message:Response received from SSO. 
+3:58:11 AM: Source:forms_login_aspx.ProcessRequest, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IlpySTJRQWtOdGJDeVJBaVdrdkg5RDYwUmpsYyIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTI4VDEwOjU4OjEwLjk4NloiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJRYUJFdmNMUWxRZXZMdVhLZXBNR1BvemhPUGkiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yOFQxMDo1ODoxMS4wMDJaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI1FhQkV2Y0xRbFFldkx1WEtlcE1HUG96aE9QaSI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPlNTNTFUYnFxWGZhckZyZzlkVmhZNkg3TW8yMUplbVQrMVdvRW5CRzlXS2s9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpkWVVVdjBoWi9lUzZqM24zUmZxSXcyTTk5UnVWa0crejI4V1N0Vk8rQU4zU0w2cGE5VEZCcDFSSXBwTG45OHlSaVlWMUlDRkFiS0tlCnM3dGx4UmN5Qll5U25CSDcyKys4LzVoMG9SZEhGUitkZWZwa1pOUEJma1l4azdvcW5NdW83d0FUMnpmQSs1RFluTlVGK2NjbHl5cTQKdlIxKzJQZGhjd1VvOElvcmR2dVFWMC92WnY3VUJKVkFORGxiL0s1SkEvMWRyWmJsTjZoTEtucW1NS2Nxb0g1citLWENEcXNXVE9wNApkRXFFZExxbTNGU1ZHSnF2ZlVtblMvYzNkVDZZOWtSRmFwZzVINVkzWXZHSU11NlV5Wmw5elRLbTJWVXNKSlJRTVBPbzZKeXZSaGVWCnoxV2hZQnZWM201M2dBUjROWlpyTG9GcExRdnhhTnFZLzhlMjVnPT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTI4VDExOjAzOjExLjAwMloiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yOFQxMDo1MzoxMS4wMDJaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjhUMTE6MDM6MTEuMDAyWiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9IlFhQkV2Y0xRbFFldkx1WEtlcE1HUG96aE9QaSIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTI4VDEwOjU4OjEwLjk4NloiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+3:58:11 AM: Source:MSCR.Forms.login.Page_Load, Message:Replay attack check
+3:58:11 AM: Source:MSCR.Forms.login.Page_Load, Message:NotBefore6/28/2017 3:53:11 AM
+3:58:11 AM: Source:MSCR.Forms.login.Page_Load, Message:NotOnOrAfter6/28/2017 4:03:11 AM
+3:58:11 AM: Source:MSCR.Forms.login.Page_Load, Message:CurrentDate6/28/2017 3:58:11 AM
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgs35gur
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+3:58:11 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:58:11 AM: Source:forms_login_aspx.ProcessRequest, Message:SSO UserID: xgs35gur
+3:58:12 AM: Source:forms_login_aspx.ProcessRequest, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+3:58:12 AM: Source:__ASP, FastObjectFactory_app_web_udq4r3oj.Create_ASP_default_aspx
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_udq4r3oj.Create_ASP_default_aspx()
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:58:12 AM: Source:MSCR, Global.Application_Error
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_udq4r3oj.Create_ASP_default_aspx()
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:58:12 AM: Source:Global.Application_Error, Message:/PaymentToolMSCR/default.aspx,Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)), User:xgs35gur
+3:58:22 AM: Source:CSAAWeb, __ASP.FastObjectFactory_app_web_b2en3dvk.Create_ASP_shared_head_ascx <-- Filter.FilterTag.Init <-- Filter.FilterTags.Init <-- Filter.FilterTags.Clone <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_b2en3dvk.Create_ASP_shared_head_ascx()
+   at System.Web.UI.TemplateControl.LoadControl(IWebObjectFactory objectFactory, VirtualPath virtualPath, Type t, Object[] parameters)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at CSAAWeb.Filter.FilterTag.Init(TemplateControl Control)
+   at CSAAWeb.Filter.FilterTags.Init(TemplateControl _Control)
+   at CSAAWeb.Filter.FilterTags.Clone(TemplateControl _Control)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter)
+   at CSAAWeb.Filter.TagFilter.CreateChildControls()
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e)
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+3:58:22 AM: Source:CSAAWeb, __ASP.FastObjectFactory_app_web_b2en3dvk.Create_ASP_shared_head_ascx <-- Filter.FilterTag.Init <-- Filter.FilterTags.Init <-- Filter.FilterTags.Clone <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
+   at __ASP.FastObjectFactory_app_web_b2en3dvk.Create_ASP_shared_head_ascx()
+   at System.Web.UI.TemplateControl.LoadControl(IWebObjectFactory objectFactory, VirtualPath virtualPath, Type t, Object[] parameters)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at CSAAWeb.Filter.FilterTag.Init(TemplateControl Control)
+   at CSAAWeb.Filter.FilterTags.Init(TemplateControl _Control)
+   at CSAAWeb.Filter.FilterTags.Clone(TemplateControl _Control)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter)
+   at CSAAWeb.Filter.TagFilter.CreateChildControls()
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e)
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+3:58:22 AM: Source:MSCR, Global.Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.forms_general_error_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+3:58:22 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+3:59:08 AM: Source:forms_login_aspx.ProcessRequest, Message:Session Expired/Redirecting to logout Page 
+3:59:10 AM: Source:forms_login_aspx.ProcessRequest, Message:Request sent to SSO 
+3:59:25 AM: Source:Forms.login.Page_Load, Message:The User is not Authenticated, So Session is Abandoned 
+3:59:25 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+3:59:25 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9InM5UFB2MkgyMVN3UVZRUFZWSlZzTUJiazRzUiIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTI4VDEwOjU5OjI1LjMzMFoiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJqenJicG5aZGxLMjlxYkhPa1kwb2VlaldLdlgiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yOFQxMDo1OToyNS4zMzBaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI2p6cmJwblpkbEsyOXFiSE9rWTBvZWVqV0t2WCI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPlNYQUhNb0UxdStudmptMXM5SFRSUTZkcWtjMHdVVHo5WGkzOCtZWVVMblk9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpSVXZTRDl4VXVKZ2tHR1lTUko0b24rcUxaK1dzb3BORDhHbVVKZHB2TzVZYm1mekx4dzdIOFlTS21KZmp5U2IwbnRrdDgzK1FCbkR1CktRQTNQWHY3eVdYN3ozMkp0elNwQzVub0UxcnFnMHFseU1IZGNFMDZkZS83cHpON1dIZUpaN1U3QWVRZEtvenpWZkE3ZmRQM1hzRmgKRWdiRVJ3dUZnSHd4dkZpL0ZyL0g5RXBtRS9ycjNjQ0EwTlY4SUE0QUZ1VUowaHZXQ0k4K3lnRjZFUW9YMlZlRWx2S1pyNElpdTA5VApoMzJYbHBZcWRlUnU2Q1k4QnYvMjIwSTgySEFxbXRXYjFHV3MzWFZ3S1lTZnJoWW1hMjBqTHh1RjVrYUhhNjg5M2pSbzdzcGZ2ZFMwCmQ3c01sUWZNT0gyR1FGRlVXTUVacHF4bkUxUVliOG1hVVFtNDZRPT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTI4VDExOjA0OjI1LjMzMFoiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yOFQxMDo1NDoyNS4zMzBaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjhUMTE6MDQ6MjUuMzMwWiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9Imp6cmJwblpkbEsyOXFiSE9rWTBvZWVqV0t2WCIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTI4VDEwOjU5OjI1LjMzMFoiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+3:59:25 AM: Source:Forms.login.Page_Load, Message:Replay attack check
+3:59:25 AM: Source:Forms.login.Page_Load, Message:NotBefore6/28/2017 3:54:25 AM
+3:59:25 AM: Source:Forms.login.Page_Load, Message:NotOnOrAfter6/28/2017 4:04:25 AM
+3:59:25 AM: Source:Forms.login.Page_Load, Message:CurrentDate6/28/2017 3:59:25 AM
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgs35gur
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+3:59:25 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+3:59:25 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+3:59:25 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+3:59:26 AM: Source:CSAAWeb.WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]

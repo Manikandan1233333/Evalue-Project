@@ -1,0 +1,226 @@
+2:25:13 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+3:23:57 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+3:24:09 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:24:09 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:24:13 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:24:13 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:16 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+3:25:24 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:24 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:28 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:28 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:41 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:41 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+3:25:41 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+3:25:41 AM: PaymentService.Service GetPaymentType(ColumnFlag=RP,CurrentUser=xgs35gur) OK
+3:25:54 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:26:10 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:26:10 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:26:10 AM: OrderClasses.WebService.Order GetReference(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:26:30 AM: OrderClasses.WebService.Order ProcessOrder(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #326105 " ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="RONALD" LastName="HASKAMP" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="55232" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2020" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202095" PolicyState="OH" PolicyPrefix="HO6">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #326105" Price="1" ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" SubProduct="-1MWIC-SIS" LineItemNo="1" ProductName="Insurance" Amount="1" Quantity="1" RevenueType="1291" Policy="326105" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+3:26:41 AM: OrderClasses.WebService.Order ProcessOrder(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #326105 " ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="RONALD" LastName="HASKAMP" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="55232" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2020" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202095" PolicyState="OH" PolicyPrefix="HO6">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #326105" Price="1" ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" SubProduct="-1MWIC-SIS" LineItemNo="1" ProductName="Insurance" Amount="1" Quantity="1" RevenueType="1291" Policy="326105" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+3:26:42 AM: OrderClasses.WebService.Order ProcessOrder(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #326105 " ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="RONALD" LastName="HASKAMP" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="55232" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2020" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202095" PolicyState="OH" PolicyPrefix="HO6">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #326105" Price="1" ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" SubProduct="-1MWIC-SIS" LineItemNo="1" ProductName="Insurance" Amount="1" Quantity="1" RevenueType="1291" Policy="326105" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+3:28:39 AM: OrderClasses.WebService.Order ProcessOrder(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #326105 " ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="RONALD" LastName="HASKAMP" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="55232" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2020" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202095" PolicyState="OH" PolicyPrefix="HO6">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #326105" Price="1" ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" SubProduct="-1MWIC-SIS" LineItemNo="1" ProductName="Insurance" Amount="1" Quantity="1" RevenueType="1291" Policy="326105" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+3:28:40 AM: OrderClasses.WebService.Order ProcessOrder(Token=3E666FBD-30DB-47AE-9AA7-094C09DA8D28,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #326105 " ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="RONALD" LastName="HASKAMP" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="55232" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2020" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202095" PolicyState="OH" PolicyPrefix="HO6">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #326105" Price="1" ProductCode="INS" FirstName="RONALD" LastName="HASKAMP" AccountNumber="326105" SubProduct="-1MWIC-SIS" LineItemNo="1" ProductName="Insurance" Amount="1" Quantity="1" RevenueType="1291" Policy="326105" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+6:04:06 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+6:11:07 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+6:12:40 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+6:37:21 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+6:42:48 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+6:55:36 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+11:58:23 PM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK

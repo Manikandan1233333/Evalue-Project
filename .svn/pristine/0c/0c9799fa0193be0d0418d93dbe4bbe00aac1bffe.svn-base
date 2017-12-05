@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReasonCodes>
+  <Codes>
+    <Code>
+      <Operation>ENROLL</Operation>
+      <Value>NOT_ELIG_INV_SRC</Value>
+      <Message>We are unable to proceed with recurring enrollment for this policy.</Message>
+      <Action>N</Action>
+    </Code>
+    <Code>
+      <Operation>ENROLL</Operation>
+      <Value>NOT_ELIG_INV_SRC_HUON</Value>
+      <Message>We are unable to proceed with recurring enrollment for this policy. Please use the MemberPoint UI to complete the recurring enrollment.</Message>
+      <Action>N</Action>
+    </Code>
+    <Code>
+      <Operation>ENROLL</Operation>
+      <Value>NOT_ELIG_INV_SRC_HLSYS</Value>
+      <Message>This policy is not eligible for recurring Enrollment.</Message>
+      <Action>N</Action>
+    </Code>
+  </Codes>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIG_INV_POL_STATUS</Value>
+    <Message>Policy is lapsed and cannot be enrolled for recurring payment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIGIBLE</Value>
+    <Message>Policy is already enrolled in Recurring payments.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIG_INV_BILL_PLAN</Value>
+    <Message>This policy is not eligible for recurring enrollment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIG_UNPAID_DUE</Value>
+    <Message>There is an outstanding amount due on the policy. The current minimum must be paid before enrolling policy in recurring payment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_IMM</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT</Value>
+    <Message>Enrollment in Recurring payment will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT_MIN_DUE</Value>
+    <Message>Enrollment in Recurring payment will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_IMM_REST</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT_REST</Value>
+    <Message>Enrollment in Recurring payment will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT_REST_MIN_DUE</Value>
+    <Message>Enrollment in Recurring payment will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT_REST_RENW</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>ELIG_EFF_FUT_RENW</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>NOT_ELIG_INV_SRC</Value>
+    <Message>We are unable to proceed with recurring enrollment for this policy.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>NOT_ELIG_INV_SRC_HUON</Value>
+    <Message>We are unable to proceed with recurring enrollment for this policy. Please use the MemberPoint UI to complete the recurring enrollment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>NOT_ELIG_INV_SRC_HLSYS</Value>
+    <Message>This policy is not eligible for recurring payment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ELIG_EFF_FUT</Value>
+    <Message>The payment account change will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ELIG_EFF_FUT_REST</Value>
+    <Message>The payment account change will be effective with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ELIG_EFF_IMM_FUT</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ELIG_EFF_IMM</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>ELIG_EFF_IMM</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>NOT_ELIG_INV_SRC</Value>
+    <Message>We are unable to proceed with recurring enrollment for this policy.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>NOT_ELIG_INV_SRC_HUON</Value>
+    <Message>Enrollment information is not available for this policy. Please use the MemberPoint UI to complete the transaction.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>NOT_ELIG_INV_SRC_HLSYS</Value>
+    <Message>Enrollment information is not available for this policy. Please verify information entered.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>ELIG_EFF_FUT</Value>
+    <Message>Payment processing has already begun for current installment. Policy will be unenrolled from Recurring payment only with the next installment.</Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>ENR_DATA_NOT_AVAILABLE</Value>
+    <Message>Enrollment information is not available for this policy. Please verify information entered.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ENR_DATA_NOT_AVAILABLE</Value>
+    <Message>Enrollment information is not available for this policy. Please verify information entered.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value>ELIG_EFF_IMM_REST</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>ELIG_EFF_IMM_REST</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>ELIG_EFF_FUT_RENW</Value>
+    <Message></Message>
+    <Action>Y</Action>
+  </Code>
+  <Code>
+      <Operation>ENROLL</Operation>
+      <Value>INVALID_POLICY_IN_CONVERSION</Value>
+      <Message>Policy cannot be enrolled for recurring payment. Policy has been converted to new Policy.</Message>
+      <Action>N</Action>
+  </Code>
+  <Code>
+      <Operation>MODIFY</Operation>
+      <Value>MODIFIED_PMT_ACC_POLICY_IN_CONV</Value>
+      <Message>Enrollment details for Policy are successfully updated. Please note policy has been converted to new Policy. Your changes will not be carried over to the new policy.</Message>
+      <Action>Y</Action>
+  </Code>
+  <Code>
+      <Operation>UNENROLL</Operation>
+      <Value>UN-ENROLLED_POLICY_IN_CONVERSION</Value>
+      <Message>Enrollment details for Policy are successfully updated. Please note policy has been converted to new Policy. Your changes will not be carried over to the new policy.</Message>
+      <Action>Y</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIG_INV_SRC_KIC</Value>
+    <Message>This policy is not eligible for recurring Enrollment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>MODIFY</Operation>
+    <Value> NOT_ELIG_INV_SRC_KIC</Value>
+    <Message>This policy is not eligible for recurring payment.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>UNENROLL</Operation>
+    <Value>NOT_ELIG_INV_SRC_KIC</Value>
+    <Message>Enrollment information is not available for this policy. Please verify information entered.</Message>
+    <Action>N</Action>
+  </Code>
+  <Code>
+    <Operation>ENROLL</Operation>
+    <Value>NOT_ELIG_INV_BILL_TO</Value>
+    <Message>We are unable to proceed with recurring enrollment for this policy. The policy is paid by the mortgage company.</Message>
+    <Action>N</Action>
+  </Code>
+</ReasonCodes>

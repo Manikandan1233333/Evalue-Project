@@ -1,0 +1,2387 @@
+2:21:13 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+2:21:14 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-8.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-04T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T09:21:13.185Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+2:21:44 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:21:44 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-05-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>45698</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+2:21:45 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-05-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>45698</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+2:21:45 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+2:23:03 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:23:03 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:23:03 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:23:03 AM: Source:OrderClasses.OrderInfo.Process, Message:Object reference not set to an instance of an object.
+2:23:04 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters)
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order)
+   at OrderClasses.Service.Order.Process(OrderInfo Order)
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+2:23:07 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:23:07 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:23:07 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:23:07 AM: Source:OrderClasses.OrderInfo.Process, Message:Object reference not set to an instance of an object.
+2:23:07 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters)
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order)
+   at OrderClasses.Service.Order.Process(OrderInfo Order)
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+2:33:31 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+2:33:32 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-8.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-04T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T09:33:30.538Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+2:57:22 AM: Source:header_aspx.ProcessRequest, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+2:58:10 AM: Source:MSC.SiteTemplate.OnLoad, Message:Machine IP:172.24.24.59
+2:58:27 AM: Source:MSC.Forms.ManageEnrollment.btnSearch_Click, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+2:58:28 AM: Source:MSC.Forms.ManageEnrollment.btnSearch_Click, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-8.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-04T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T09:58:27.057Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+2:58:44 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+2:58:45 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-8.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-04T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T09:58:43.443Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+2:59:18 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:59:18 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2022-07-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+2:59:19 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2022-07-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+2:59:19 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+2:59:25 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:59:25 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:59:25 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+2:59:25 AM: Source:OrderClasses.OrderInfo.Process, Message:Object reference not set to an instance of an object.
+3:01:02 AM: Source:ASP, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- MSC.Controls.Buttons.ContinueButton_Click <-- forms_paymentconfirmation_aspx.ProcessRequest
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters)
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order)
+   at OrderClasses.Service.Order.Process(OrderInfo Order)
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+4:59:48 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+4:59:48 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-11.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T11:59:48.386Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:04:33 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:04:47 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2024-07-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+5:04:54 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2024-07-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+5:07:01 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+5:15:43 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:19:26 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+5:19:27 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+5:19:27 AM: Source:OrderClasses.OrderInfo.Process, Message:Object reference not set to an instance of an object.
+5:19:29 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters)
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order)
+   at OrderClasses.Service.Order.Process(OrderInfo Order)
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+5:21:09 AM: Source:header_aspx.ProcessRequest, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+5:21:31 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:21:32 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-11.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T12:21:32.168Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:23:15 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:23:56 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-05-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+5:23:59 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-05-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+5:26:40 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+5:38:29 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:38:30 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-11.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T12:38:30.4Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:38:59 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:38:59 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-03-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>23424</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+5:39:00 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-03-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>23424</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+5:39:00 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+5:42:11 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+5:42:11 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+5:43:22 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+5:43:22 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+5:45:31 AM: Source:header_aspx.ProcessRequest, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+5:45:38 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:45:39 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-11.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T12:45:39.736Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:51:17 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:52:36 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-03-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>23423</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+5:52:40 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-03-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>23423</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+5:52:43 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+5:53:55 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+5:53:55 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+5:53:56 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+5:53:56 AM: Source:OrderClasses.OrderInfo.Process, Message:Object reference not set to an instance of an object.
+5:53:56 AM: Source:ASP, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- MSC.Controls.Buttons.ContinueButton_Click <-- forms_paymentconfirmation_aspx.ProcessRequest
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters)
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order)
+   at OrderClasses.Service.Order.Process(OrderInfo Order)
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+6:01:08 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+6:01:09 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-11.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T13:01:08.942Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+6:01:28 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:01:28 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2019-04-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>12341</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+6:01:28 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2019-04-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>12341</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+6:01:28 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:03:39 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:04:00 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202219</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>2</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>2</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>CAH3900032332</policyNumber>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>2</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2019-04-01</expirationDate>
+          <zipCode>12341</zipCode>
+          <isCardPresent>true</isCardPresent>
+        </card>
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+6:04:17 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentResponse>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <correlationId xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">69D61D1B-A542-21A6-B706-D955F88B675A</correlationId>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202219</externalReferenceNumber>
+    <receiptNumber>1078478</receiptNumber>
+    <statusDescription>SUCC</statusDescription>
+    <paymentDateTime>2017-06-28T13:04:02.834Z</paymentDateTime>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>2</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2019-04-01</expirationDate>
+          <zipCode>12341</zipCode>
+          <isCardPresent>true</isCardPresent>
+          <paymentAuthorization>
+            <returnCode>tst268</returnCode>
+            <authorizationCode>A</authorizationCode>
+            <actualMessage>100-APPROVED    </actualMessage>
+          </paymentAuthorization>
+        </card>
+      </paymentItem>
+    </paymentItems>
+  </issueDirectPaymentResponse>
+</IssueDirectPaymentResponse1>
+6:04:26 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:13:53 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:13:53 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-04-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+6:13:54 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-04-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+6:13:54 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:13:57 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:13:57 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202221</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>2</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>2</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>CAH3900032332</policyNumber>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>2</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2021-04-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+        </card>
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+6:13:58 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentResponse>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <correlationId xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2D0FC682-C935-E294-916E-5786CE43912C</correlationId>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202221</externalReferenceNumber>
+    <receiptNumber>1078479</receiptNumber>
+    <statusDescription>SUCC</statusDescription>
+    <paymentDateTime>2017-06-28T13:13:57.575Z</paymentDateTime>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>2</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2021-04-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+          <paymentAuthorization>
+            <returnCode>tst332</returnCode>
+            <authorizationCode>A</authorizationCode>
+            <actualMessage>100-APPROVED    </actualMessage>
+          </paymentAuthorization>
+        </card>
+      </paymentItem>
+    </paymentItems>
+  </issueDirectPaymentResponse>
+</IssueDirectPaymentResponse1>
+6:13:58 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:14:23 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+6:14:23 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-15.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>2.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T13:14:23.449Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+6:14:50 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:14:50 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-04-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+6:14:50 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-04-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+6:14:50 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:15:07 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in SubProduct50012
+6:15:07 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+6:15:07 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+6:15:11 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:15:11 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202224</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>1</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>1</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>CAH3900032332</policyNumber>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2022-09-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+        </card>
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+6:15:11 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentResponse>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <correlationId xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">4AD63956-8977-F710-7F8A-6636A5B9BCED</correlationId>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202224</externalReferenceNumber>
+    <receiptNumber>1078480</receiptNumber>
+    <statusDescription>SUCC</statusDescription>
+    <paymentDateTime>2017-06-28T13:15:11.135Z</paymentDateTime>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2022-09-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+          <paymentAuthorization>
+            <returnCode>tst951</returnCode>
+            <authorizationCode>A</authorizationCode>
+            <actualMessage>100-APPROVED    </actualMessage>
+          </paymentAuthorization>
+        </card>
+      </paymentItem>
+    </paymentItems>
+  </issueDirectPaymentResponse>
+</IssueDirectPaymentResponse1>
+6:15:11 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:20:02 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+6:20:02 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-16.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-28T13:20:02.935Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+6:21:39 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+6:21:52 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2019-05-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+6:21:55 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2019-05-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>21819 N 31st Dr</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+6:22:25 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+6:23:43 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in SubProduct50012
+6:23:43 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+6:23:43 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+6:25:48 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in SubProduct50012
+6:25:48 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+6:25:48 AM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+9:25:40 PM: Source:SiteTemplate.OnLoad, Message:Machine IP:172.24.24.59
+9:26:00 PM: Source:Forms.ManageEnrollment.btnSearch_Click, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+9:26:01 PM: Source:Forms.ManageEnrollment.btnSearch_Click, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <currentBalance>853.15</currentBalance>
+        <payOffAmount>853.15</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2017-04-03</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.00</installmentAmount>
+          <totalBillAmountDue>853.15</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>A</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T04:25:59.893Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+9:26:28 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>test  </paymentCardHolderName>
+    <paymentCardExpirationDate>2020-04-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState> </paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>true</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+9:26:28 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>test</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-04-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>8230 POST RD</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState> </paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+9:26:28 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Request sent to enroll/modify for policy number CAH3900032332
+9:26:28 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment Enrollment request to Payment Central - Record Payment Enrollment Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<RecordPaymentEnrollmentStatusRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <recordPaymentEnrollmentStatusRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+    </applicationContext>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency />
+    <userId>xgs35gur</userId>
+    <authenticationChannel>F2F</authenticationChannel>
+    <enrollmentEffectiveDate>2017-06-29</enrollmentEffectiveDate>
+    <enrollmentReasonCode>ELIG_EFF_IMM</enrollmentReasonCode>
+    <policyInfo>
+      <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">CAH3900032332</policyNumber>
+      <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">PAS</dataSource>
+      <type xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">HO</type>
+    </policyInfo>
+    <paymentItem>
+      <paymentMethod xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">CRDC</paymentMethod>
+      <paymentAccountToken xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+      <card xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">
+        <number>5454</number>
+        <type>MASTR</type>
+        <printedName>test</printedName>
+        <expirationDate>2020-04-01</expirationDate>
+        <isCardPresent>true</isCardPresent>
+      </card>
+    </paymentItem>
+  </recordPaymentEnrollmentStatusRequest>
+</RecordPaymentEnrollmentStatusRequest1>
+9:26:29 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Enrollment Response from Payment Central - Record Enrollment Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<recordPaymentEnrollmentStatusResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+9:26:29 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:SOAB301  The service has returned  the following error message: SOAB301-Real time POST failed:Error sending to http://pasqa203.tent.trt.csaa.pri/aaa-admin/services/aaaBilling.
+9:26:29 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Failure response received to enroll/modify for policy number CAH3900032332
+9:27:08 PM: Source:SiteTemplate.OnLoad, Message:Machine IP:172.24.24.59
+9:27:15 PM: Source:Forms.ManageEnrollment.btnSearch_Click, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+9:27:16 PM: Source:Forms.ManageEnrollment.btnSearch_Click, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <currentBalance>853.15</currentBalance>
+        <payOffAmount>853.15</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2017-04-03</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.00</installmentAmount>
+          <totalBillAmountDue>853.15</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>A</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T04:27:15.829Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>test  </paymentCardHolderName>
+    <paymentCardExpirationDate>2019-05-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState> </paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>true</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>test</paymentCardHolderName>
+    <paymentCardExpirationDate>2019-05-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>8230 POST RD</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState> </paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Request sent to enroll/modify for policy number CAH3900032332
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Payment Enrollment request to Payment Central - Record Payment Enrollment Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<RecordPaymentEnrollmentStatusRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <recordPaymentEnrollmentStatusRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+    </applicationContext>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency />
+    <userId>xgs35gur</userId>
+    <authenticationChannel>F2F</authenticationChannel>
+    <enrollmentEffectiveDate>2017-06-29</enrollmentEffectiveDate>
+    <enrollmentReasonCode>ELIG_EFF_IMM</enrollmentReasonCode>
+    <policyInfo>
+      <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">CAH3900032332</policyNumber>
+      <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">PAS</dataSource>
+      <type xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">HO</type>
+    </policyInfo>
+    <paymentItem>
+      <paymentMethod xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">CRDC</paymentMethod>
+      <paymentAccountToken xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+      <card xmlns="http://www.aaancnuit.com.AAANCNU_RecordPaymentEnrollmentStatus_version2">
+        <number>5454</number>
+        <type>MASTR</type>
+        <printedName>test</printedName>
+        <expirationDate>2019-05-01</expirationDate>
+        <isCardPresent>true</isCardPresent>
+      </card>
+    </paymentItem>
+  </recordPaymentEnrollmentStatusRequest>
+</RecordPaymentEnrollmentStatusRequest1>
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Enrollment Response from Payment Central - Record Enrollment Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<recordPaymentEnrollmentStatusResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:SOAB301  The service has returned  the following error message: SOAB301-Real time POST failed:Error sending to http://pasqa203.tent.trt.csaa.pri/aaa-admin/services/aaaBilling.
+9:27:40 PM: Source:Controls.CreditCardEnrollment.ImgBtnCCEnrollment_Click, Message:Failure response received to enroll/modify for policy number CAH3900032332
+9:28:04 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+9:28:05 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <currentBalance>853.15</currentBalance>
+        <payOffAmount>853.15</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2017-04-03</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.00</installmentAmount>
+          <totalBillAmountDue>853.15</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>A</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T04:28:04.254Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+9:28:32 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+9:28:32 PM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-06-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+9:28:32 PM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-06-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>8230 POST RD</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+9:28:32 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+9:28:35 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+9:28:35 PM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202229</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>1</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>1</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>CAH3900032332</policyNumber>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2020-06-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+        </card>
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+9:28:36 PM: Source:OrderClasses.OrderInfo.Process, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentResponse>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+      <correlationId xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">28D87C1A-91F8-78A5-F2E6-2993E7447482</correlationId>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202229</externalReferenceNumber>
+    <receiptNumber>1078499</receiptNumber>
+    <statusDescription>SUCC</statusDescription>
+    <paymentDateTime>2017-06-29T04:28:35.01Z</paymentDateTime>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>CRDC</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+        <card>
+          <expirationDate>2020-06-01</expirationDate>
+          <zipCode>78965</zipCode>
+          <isCardPresent>true</isCardPresent>
+          <paymentAuthorization>
+            <returnCode>tst655</returnCode>
+            <authorizationCode>A</authorizationCode>
+            <actualMessage>100-APPROVED    </actualMessage>
+          </paymentAuthorization>
+        </card>
+      </paymentItem>
+    </paymentItems>
+  </issueDirectPaymentResponse>
+</IssueDirectPaymentResponse1>
+9:28:36 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+11:19:08 PM: Source:WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+11:19:40 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+11:19:41 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <currentBalance>853.15</currentBalance>
+        <payOffAmount>853.15</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2017-04-03</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.00</installmentAmount>
+          <totalBillAmountDue>853.15</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>A</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T06:19:41.009Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+11:22:49 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+11:23:02 PM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-06-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+11:23:08 PM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>MARK AAPPLELEAF</paymentCardHolderName>
+    <paymentCardExpirationDate>2021-06-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>8230 POST RD</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+11:23:41 PM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+11:26:59 PM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in SubProduct50012
+11:26:59 PM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in FirstName50008
+11:26:59 PM: Source:CSAAWeb.Serializers.ValidatorAttribute.OnValidate, Message:Validation failed in Zip50029
+11:36:10 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">326105</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+11:36:10 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-29T06:35:52Z</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INVALID POLICY NUMBER</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.Policy Details are : 326105-SIS-HO</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV2SISMM</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">BillingSummarySISService</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>326105</policyNumber>
+        <type>HO</type>
+        <dataSource>SIS</dataSource>
+      </policy>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+11:36:10 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:ErrorCode: SOAB301 Error Message: There is no matching policy found for the given search criteria. Please verify and enter valid policy details. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details.Policy Details are : 326105-SIS-HO PolicyNumber: 326105 UserID:xgs35gur
+11:37:17 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+11:37:18 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <currentBalance>853.15</currentBalance>
+        <payOffAmount>853.15</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2017-04-03</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.00</installmentAmount>
+          <totalBillAmountDue>853.15</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>A</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T06:37:18.282Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:---------------------CheckEligiblity---------------
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.PolicyState CA
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.SourceSystem.ToUpper() PAS
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.ProductType.ToUpper() HO
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.SourceSystem.ToUpper() PAS
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.PaymentMethod.ToUpper() CREDIT CARD
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.PaymentRestriction.ToUpper() FALSE
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.PaymentRestriction False
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.EnrollmentType 
+11:47:50 PM: Source:Forms.ACHEnrollmentPilot.btnSearch_Click, Message:achIn.bZipCodeExists False
+11:48:13 PM: Source:header_aspx.ProcessRequest, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+11:48:32 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAH3900032332</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+11:48:36 PM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>CAH3900032332</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2017-04-04</termEffectiveDate>
+        <termExpirationDate>2018-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>MARK</firstName>
+              <lastName>AAPPLELEAF</lastName>
+              <fullName>MARK AAPPLELEAF</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>HUNTINGTON PARK</cityName>
+              <zipCode>90255</zipCode>
+              <streetAddressLine>6586 PORCUPINE WAY</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>0.00</currentBalance>
+        <payOffAmount>-16.00</payOffAmount>
+        <bill>
+          <installmentNumber>0</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2017-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>853.15</installmentAmount>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-05-12T07:00:00Z</paymentDateTime>
+          <amount>1.00</amount>
+          <status>active</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>ELIG_EFF_IMM</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-29T06:48:35.926Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>

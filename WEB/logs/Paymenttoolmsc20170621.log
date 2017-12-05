@@ -1,0 +1,281 @@
+3:24:13 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">GL60041</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+3:24:13 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-21T03:24:13-07:00</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Policy Not Found.</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV4</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">GetPolicyBillingSummaryServicePC</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>GL60041</policyNumber>
+        <type>HO</type>
+        <dataSource>HDES</dataSource>
+      </policy>
+      <billingSummary>
+        <setupAutoPayReasonCode>ELIG_NEED_VRFY</setupAutoPayReasonCode>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+3:24:13 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is no matching policy found for the given search criteria. Please verify and enter valid policy details. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details. PolicyNumber: GL60041 UserID:xgs35gur
+3:25:17 AM: Source:WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+3:25:28 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">GL60041</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+3:25:28 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-21T03:25:29-07:00</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Policy Not Found.</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV4</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">GetPolicyBillingSummaryServicePC</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>GL60041</policyNumber>
+        <type>HO</type>
+        <dataSource>HDES</dataSource>
+      </policy>
+      <billingSummary>
+        <setupAutoPayReasonCode>ELIG_NEED_VRFY</setupAutoPayReasonCode>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+3:25:28 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is no matching policy found for the given search criteria. Please verify and enter valid policy details. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details. PolicyNumber: GL60041 UserID:xgs35gur
+3:25:40 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">326105</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+3:25:41 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyPrefix>HO6</policyPrefix>
+        <policyNumber>326105</policyNumber>
+        <riskState>OH</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2016-10-11</termEffectiveDate>
+        <termExpirationDate>2017-10-11</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>1MWIC</writingCompany>
+        <dataSource>SIS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>RONALD</firstName>
+              <lastName>HASKAMP</lastName>
+              <fullName>RONALD HASKAMP</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>MAINEVILLE</cityName>
+              <zipCode>45039</zipCode>
+              <streetAddressLine>3324 RAVINE PL</streetAddressLine>
+              <isoRegionCode>OH</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>2</remainingInstallments>
+        <currentBalance>-362.80</currentBalance>
+        <payOffAmount>-155.80</payOffAmount>
+        <priorTermBalance>0.00</priorTermBalance>
+        <termAmount>414.00</termAmount>
+        <totalPaid>-610.00</totalPaid>
+        <autoPay>true</autoPay>
+        <paymentRestriction>true</paymentRestriction>
+        <nextInstallmentAmount>105.50</nextInstallmentAmount>
+        <nextDueDate>2017-04-11</nextDueDate>
+        <nextStatementDate>2017-04-09</nextStatementDate>
+        <bill>
+          <installmentNumber>2</installmentNumber>
+          <statementDate>2016-10-11</statementDate>
+          <dueDate>2016-10-13</dueDate>
+          <feeAmount>0.00</feeAmount>
+          <installmentAmount>-362.80</installmentAmount>
+          <totalBillAmountDue>103.50</totalBillAmountDue>
+          <paymentPlan>AUTO</paymentPlan>
+          <billingPlan>QTR</billingPlan>
+          <subType>D</subType>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2017-06-19T07:00:00Z</paymentDateTime>
+          <paymentMethod>CRDC</paymentMethod>
+          <amount>5.00</amount>
+          <postmarkDate>2017-06-19</postmarkDate>
+          <status>ACTIVE</status>
+          <referenceNumber>10897565</referenceNumber>
+        </lastPayment>
+        <setupAutoPayReasonCode>NOT_ELIGIBLE</setupAutoPayReasonCode>
+        <setupAutoPayEffectiveDate>2017-06-21T10:25:41.624Z</setupAutoPayEffectiveDate>
+        <updateAutoPayReasonCode>ENR_DATA_NOT_AVAILABLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>ENR_DATA_NOT_AVAILABLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+3:26:30 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:26:30 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:30 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:30 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:30 AM: Source:OrderClasses.OrderInfo.Process, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:30 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 236
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 204
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 192
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 174
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 327
+   at OrderClasses.Service.Order.Process(OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 100
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+3:26:41 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:26:41 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:41 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:41 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:41 AM: Source:OrderClasses.OrderInfo.Process, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:41 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 236
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 204
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 192
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 174
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 327
+   at OrderClasses.Service.Order.Process(OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 100
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+3:26:42 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:26:42 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:42 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:42 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:26:42 AM: Source:OrderClasses.OrderInfo.Process, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:26:42 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 236
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 204
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 192
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 174
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 327
+   at OrderClasses.Service.Order.Process(OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 100
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+3:28:39 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:28:39 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:28:39 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:28:39 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:28:39 AM: Source:OrderClasses.OrderInfo.Process, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:28:39 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 236
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 204
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 192
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 174
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 327
+   at OrderClasses.Service.Order.Process(OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 100
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259
+3:28:40 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:28:40 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:28:40 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:28:40 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:28:40 AM: Source:OrderClasses.OrderInfo.Process, Message:The provided URI scheme 'http' is invalid; expected 'https'.
+Parameter name: via
+3:28:40 AM: Source:MSC, CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- CSAAWeb.Web.SoapHttpClientProtocol.Invoke <-- OrderClasses.InternalService.Order.ProcessOrder <-- OrderClasses.Service.Order.Process <-- OrderControl.Process <-- Forms.PaymentConfirmation.ProcessPage <-- Controls.Buttons.ContinueButton_Click
+   Exception=Object reference not set to an instance of an object.
+   at CSAAWeb.Web.SoapHttpClientProtocol.InternalInvoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 236
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 204
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 192
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 174
+   at OrderClasses.InternalService.Order.ProcessOrder(String Token, String UserId, String AppId, OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 327
+   at OrderClasses.Service.Order.Process(OrderInfo Order) in d:\PaymentTool_Emember_Changes\CODE\OrderClassesII\OrderReference.cs:line 100
+   at MSC.OrderControl.Process() in d:\PaymentTool_Emember_Changes\WEB\MSC\Core\Order.cs:line 198
+   at MSC.Forms.PaymentConfirmation.ProcessPage() in d:\PaymentTool_Emember_Changes\WEB\MSC\Forms\PaymentConfirmation.aspx.cs:line 259

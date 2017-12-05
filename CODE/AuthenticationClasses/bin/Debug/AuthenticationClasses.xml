@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthenticationClasses</name>
+    </assembly>
+    <members>
+        <member name="T:AuthenticationClasses.Service.Authentication">
+            <summary>Authentication web service connection.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.#cctor">
+            <summary/>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.#ctor">
+            <summary/>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.#ctor(System.String)">
+            <summary>Constructor with current user name</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.#ctor(AuthenticationClasses.SessionInfo)">
+            <summary>Constructor with current user name and application name</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.Close">
+            <summary>
+            Closes any open references.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.Authenticate(System.String,System.String)">
+            <summary>Authenticates the user and returns user information</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.SSOAuthenticate(System.String,System.String,System.Boolean)">
+            <summary>Authenticates the user and returns user information</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetContactInfo(System.String)">
+            <summary>Returns contact information for UserId</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetContactInfo(System.Int32)">
+            <summary>Returns contact information for UserId</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetUsersByStatus(System.Boolean,System.String,System.String,System.Int32)">
+             <summary>Returns all the users.</summary>
+            STAR Retrofit II.Ch9 - START Added a new reference which retrieve user details.
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetUsers(System.Boolean,System.String)">
+            <summary>Returns all the users.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetRoles(System.String)">
+            <summary>Returns a dataset of all the possible roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetListofDOs(System.String)">
+            <summary>Returns a dataset of all the user information.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetDOdetails(System.String)">
+            <summary>Returns a dataset of district office details</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetAllUserDetails">
+            <summary>Returns a dataset of all users details.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetAppRoles(System.Int32)">
+            <summary>Returns a dataset of all the possible report roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetApplications">
+            <summary>Returns a dataset of applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetApps">
+            <summary>Gets a list of the applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.DeleteUser(System.Int32)">
+            <summary>Deletes user UserRid.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ResetPassword(System.String)">
+            <summary>Resets UserRid's password.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.UpdateUser(AuthenticationClasses.UserInfo)">
+            <summary>Adds or updates user's profile.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.UpdateDO(System.Int32,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>Adds or updates DO's profile.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.SetAccountLockout(System.String,System.Boolean,AuthenticationClasses.SessionInfo)">
+            <summary>Sets the accounts lockout status.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetDOs">
+            <summary>Gets a list of the district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetAllDOs">
+            <summary>Gets a list of the district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ListUsersByRoles(System.String,System.Int32,System.String)">
+            <summary>Lists users by role</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ListAppUsersByRoles(System.String,System.Int32,System.String,System.Int32)">
+            <summary>Lists application users by role</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.UpdatePassword(System.String,System.String,CSAAWeb.Serializers.ArrayOfErrorInfo@)">
+            <summary>
+            Sets new password for UserId
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ValidateSession(System.String)">
+            <summary>
+            Confirms that the session is valid and that it is allowed to call method.
+            </summary>
+            <returns>Errors in session or null if none.</returns>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ValidateSession">
+            <summary>
+            Confirms that the session is valid.
+            </summary>
+            <returns>Errors in session or null if none.</returns>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetRepIDDO(System.String)">
+            Changed by Cognizant on 05/18/04 
+             <summary>
+             Gets Rep ID and DO for the current user
+             </summary>
+             <param name="CurrentUser">Currently logged in User</param>
+             <returns>Dataset of RepID and DO for the current user</returns>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.GetDOsByApp">
+            <summary>
+            To Get District office(New)
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ListUsersByRolesByApp(System.String,System.Int32)">
+            <summary>Lists users by role By Application</summary>
+        </member>
+        <member name="M:AuthenticationClasses.Service.Authentication.ListApprovers(System.String)">
+            <summary>Lists all Approvers by RepDo</summary>
+        </member>
+        <member name="T:AuthenticationClasses.InternalService.Authentication">
+            <summary>Authentication web service connection.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.Authenticate(System.String,AuthenticationClasses.SessionInfo)">
+            <summary>Authenticates the user and returns user information</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.SSOAuthenticate(System.String,AuthenticationClasses.SessionInfo,System.Boolean)">
+            <summary>Authenticates the user and returns user information</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetContactInfo(System.String,System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Returns contact information for UserId</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetUsersByStatus(AuthenticationClasses.SessionInfo,System.Boolean,System.String,System.String,System.Int32)">
+             <summary>Returns all the users.</summary>
+            STAR Retrofit II.Ch10 - START Added a new Soap reference to retrieve user details.
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetUsers(AuthenticationClasses.SessionInfo,System.Boolean,System.String)">
+            <summary>Returns all the users.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetRoles(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>Returns a dataset of all the possible roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetListofDOs(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>Returns a dataset of the districe office information.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetDOdetails(System.String)">
+            <summary>Returns a dataset of district office details</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetAllUserDetails">
+            <summary>Returns a dataset of all users details.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetAppRoles(AuthenticationClasses.SessionInfo,System.Int32)">
+            <summary>Returns a dataset of all the possible report roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetApplications(AuthenticationClasses.SessionInfo)">
+            <summary>Returns a dataset of applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetAllDOs">
+            <summary>Returns a dataset of district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetApps(AuthenticationClasses.SessionInfo)">
+            <summary>Gets a list of the applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.DeleteUser(System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Deletes user UserRid.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ResetPassword(System.String,AuthenticationClasses.SessionInfo)">
+            <summary>Resets UserRid's password.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.UpdateUser(AuthenticationClasses.UserInfo,AuthenticationClasses.SessionInfo)">
+            <summary>Adds or updates user's profile.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.SetAccountLockout(System.String,System.Boolean,AuthenticationClasses.SessionInfo)">
+            <summary>Sets the accounts lockout status.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetDOs(AuthenticationClasses.SessionInfo)">
+            <summary>Gets a list of the district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ListUsersByRoles(System.String,System.Int32,System.String,AuthenticationClasses.SessionInfo)">
+            <summary>Lists users by role</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ListAppUsersByRoles(System.String,System.Int32,System.String,System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Lists application users by role.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.UpdatePassword(System.String,System.String,AuthenticationClasses.SessionInfo,CSAAWeb.Serializers.ArrayOfErrorInfo@)">
+            <summary>
+            Sets new password for UserId
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ValidateSession(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>
+            Confirms that the token is valid and that the user/app has permission on the method.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetRepIDDO(System.String)">
+            Changed by Cognizant on 05/18/04 
+             <summary>
+             Gets Rep ID and DO for the current user
+             </summary>
+             <param name="CurrentUser">Currently logged in User</param>
+             <returns>Dataset of RepID and DO for the current user</returns>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.GetDOsByApp">
+            <summary>Gets a list of the district offices by (Application Not Now)</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ListUsersByRolesByApp(System.String,System.Int32)">
+            <summary>Lists users by role(Created for Later Purpose)</summary>
+        </member>
+        <member name="M:AuthenticationClasses.InternalService.Authentication.ListApprovers(System.String)">
+            <summary>Lists all Approvers by RepDo</summary>
+        </member>
+        <member name="T:AuthenticationClasses.SessionInfo">
+            <summary>
+            Class for holding a user's authentication session data.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.SessionInfo.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.SessionInfo.#ctor(System.Object)">
+            <summary>Constructor from another object</summary>
+        </member>
+        <member name="M:AuthenticationClasses.SessionInfo.#ctor(System.String)">
+            <summary>Xml constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.SessionInfo.#ctor(System.String,System.String)">
+            <summary>Constructor with User and App</summary>
+            <param name="User">(string) UserId for this session.</param>
+            <param name="App">(string) Application name (code) for this session.</param>
+        </member>
+        <member name="M:AuthenticationClasses.SessionInfo.#ctor(System.String,System.String,System.String)">
+            <summary>Constructor with User, App and Token</summary>
+            <param name="User">(string) UserId for this session.</param>
+            <param name="App">(string) Application name (code) for this session.</param>
+            <param name="T">(string) Authentication provider generated session token.</param>
+        </member>
+        <member name="F:AuthenticationClasses.SessionInfo.CurrentUser">
+            <summary>(string) UserId for this session.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.SessionInfo.AppName">
+            <summary>(string) Application name (code) for this session.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.SessionInfo.Token">
+            <summary>(string) Authentication provider generated session token.</summary>
+        </member>
+        <member name="T:AuthenticationClasses.UserInfo">
+            <summary>
+            Encapsulates site user information.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.#ctor(System.Object)">
+            <summary>Constructor from another object</summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.#ctor(System.String)">
+            <summary>Xml constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.#ctor(System.Web.UI.Page)">
+            <summary>Constructor for userinfo from the web page, using the page's IPrinciple.</summary>
+            <param name="Page">The Web Page</param>
+            <remarks>
+            Note that this constructor replaces an older one passing the page's user object.  This allows
+            for further access to the page's other properties, since the principle may not contain all the
+            required data.  
+            </remarks>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.UserRid">
+            <summary>(int) Record Id for this user.  This attribute is deprecated, and its use should
+            be avoided, because not all providers support it.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.UserId">
+            <summary>(string) Unique alphanumeric id for the user.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.FirstName">
+            <summary>(string) Given name of user.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.LastName">
+            <summary>(string) Surname of user.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Email">
+            <summary>(string) Email address of user.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Phone">
+            <summary>(string) Phone number of user.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Token">
+            <summary>(string) Session token for user from authentication provider.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Active">
+            <summary>(boolean) Indicator of whether record is active (enabled).</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.DO">
+            <summary>(string) The district office number.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.FinancialLocation">
+            <summary>(string) The financial office location.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.RepId">
+            <summary>(int) The sales rep number.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.EmployeeId">
+            <summary>(int) The employee Id.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Roles">
+            <summary>(string) User's role ids, comma separated.  Use is deprecated because not all providers support this.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.RoleNames">
+            <summary>(string) User's role names, comma separated.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.IsPasswordExpired">
+            <summary>(boolean) True following authentication attempt if password is expired.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.IsLockedOut">
+            <summary>(boolean) True following authentication attempt if account is locked-out.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.Authenticated">
+            <summary>(boolean) True following authentication attempt if authentication was successful.</summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.AgencyID">
+            <summary>
+            (Long) Agency ID detail will be stored for the User 
+            </summary>
+        </member>
+        <member name="F:AuthenticationClasses.UserInfo.AgencyName">
+            <summary>
+            (string) Agency Name detail will be stored for the User
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.ValidateUserId(CSAAWeb.Serializers.ValidatorAttribute,CSAAWeb.Serializers.ValidatingSerializerEventArgs)">
+            <summary>Validator delegate to validate userid</summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.SetAuthentication(System.Web.UI.Page)">
+            <summary>
+            Sets the forms authentication cookie to this user.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserInfo.ProcessSSOResponse(System.String)">
+            <summary>
+            Function that that will return the SSO Request Status to login page
+            </summary>
+            <param name="samlResponse"></param>
+            <returns>samlStatusCode and UserName</returns>
+        </member>
+        <member name="P:AuthenticationClasses.UserInfo.PhysicalLocation">
+            <summary>(string) The physical office location, corresponds to DO.</summary>
+        </member>
+        <member name="T:AuthenticationClasses.UserIdentityManager">
+            <summary>
+            This class contains static methods for converting between UserInfo object and Identity objects.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.UserIdentityManager.FromPage(AuthenticationClasses.UserInfo,System.Web.UI.Page)">
+            <summary>Gets data from the page.</summary>
+            <param name="User">UserInfo object to fill with data.</param>
+            <param name="Page">The web page object.</param>
+        </member>
+        <member name="M:AuthenticationClasses.UserIdentityManager.FromFormsIdentity(AuthenticationClasses.UserInfo,System.Web.Security.FormsIdentity)">
+            <summary>Gets data from formsidentity</summary>
+            <param name="U">UserInfo object to fill with data.</param>
+            <param name="Identity">The identity object</param>
+        </member>
+        <member name="M:AuthenticationClasses.UserIdentityManager.SetAuthentication(AuthenticationClasses.UserInfo,System.Web.UI.Page)">
+            <summary>
+            Sets the forms authentication cookie to this user.  Packs the needed data into the
+            UserData property of the ticket.
+            </summary>
+            <param name="U">The userinfo object to get the data from.</param>
+            <param name="Page">The page object to insert the cookie.</param>
+        </member>
+        <member name="T:AuthenticationClasses.APDSUserInfo">
+            <summary>
+            A UserInfo type that contains methods for getting data from the native APDS authentication
+            Database..
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.#ctor(System.Object)">
+            <summary>Constructor from another object</summary>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.#ctor(System.String)">
+            <summary>Xml constructor</summary>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.CopyFrom(System.Data.SqlClient.SqlDataReader)">
+            <summary>Copies data from a DataReader</summary>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.CopyFrom(System.Data.SqlClient.SqlDataReader,System.Int32)">
+            <summary>Copies data from a DataReader</summary>
+            <param name="Reader">The open DataReader containing the data</param>
+            <param name="PasswordLife">The number of days for password life.</param>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.CheckExpired(System.String,System.Int32)">
+            <summary>
+            Checks to see if the password has expired.
+            </summary>
+            <param name="dateLastUpdated">String containing the date password last updated.</param>
+            <param name="lifeSpan">Number of days allowed before password must be updated.</param>
+            <returns>True if the password has expired.</returns>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.GetDirectoryObject(System.String,System.String)">
+            <summary>
+            Function that that will attempt a logon based on the users credentials
+            </summary>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.GetUser(System.String,System.String)">
+            <summary>
+            Method which will perfrom query based on combination of username and password
+            This is used with the login process to validate the user credentials and return the response of the LDAP server validation.
+            </summary>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationClasses.APDSUserInfo.AppendData(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Fills properties that must be obtained from recordsets following the original.  Namely,
+            the Role Ids and Role names.
+            </summary>
+            <param name="Reader">The dataReader containing the data, already read for the primary dataset.</param>
+        </member>
+        <member name="T:AuthenticationClasses.WebService.Authentication">
+            <summary>
+            Web service provides authentication services.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.#cctor">
+            <summary/>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetCommand(System.String,AuthenticationClasses.SessionInfo)">
+            <summary>
+            Returns a command object.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.Authenticate(System.String,AuthenticationClasses.SessionInfo)">
+            <summary>
+            Authenticates a user.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.SSOAuthenticate(System.String,AuthenticationClasses.SessionInfo,System.Boolean)">
+            <summary>
+            Authenticates a user.
+            </summary>
+            SSO-Integration.Ch1: Added new method for Authenticate in Internal reference for SSO integration by Cognizant on 09/24/2010
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetContactInfo(System.String,System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Returns contact information for a user.</summary>
+            <param name="UserId">The user for whom to get contact information.</param>
+            <param name="UserRid">Record id of user for whom to get contact information.</param>
+            <param name="S">Session information of calling user.</param>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetUsersByStatus(AuthenticationClasses.SessionInfo,System.Boolean,System.String,System.String,System.Int32)">
+            <summary>Returns a dataset of all the users.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetUsers(AuthenticationClasses.SessionInfo,System.Boolean,System.String)">
+            <summary>Returns a dataset of all the users.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetRoles(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>Returns a dataset of all the possible roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetListofDOs(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>Returns a dataset of all the possible district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetDOdetails(System.String)">
+            <summary>Returns a dataset of district office details.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetAllUserDetails">
+            <summary>Returns a dataset of all users details.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetAppRoles(AuthenticationClasses.SessionInfo,System.Int32)">
+            <summary>Returns a dataset of all the possible report roles.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetApplications(AuthenticationClasses.SessionInfo)">
+            <summary>Returns a dataset of applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetApps(AuthenticationClasses.SessionInfo)">
+            <summary>Gets a list of the applications.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.DeleteUser(System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Deletes user UserRid.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ResetPassword(System.String,AuthenticationClasses.SessionInfo)">
+            <summary>Resets UserRid's password.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.UpdateUser(AuthenticationClasses.UserInfo,AuthenticationClasses.SessionInfo)">
+            <summary>Adds or updates user's profile.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.UpdateDO(System.Int32,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>Adds or updates DO's profile.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.AddPassword(System.Data.SqlClient.SqlCommand,System.Boolean,System.String)">
+            <summary>
+            Adds the new password related parameters to Cmd
+            </summary>
+            <param name="Cmd">The command object to which to add the parameters.</param>
+            <param name="BackDate">true if the update date should be backdated</param>
+            <param name="Password">The password to use.</param>
+            <returns>The unencypted password.</returns>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.SetAccountLockout(System.String,System.Boolean,AuthenticationClasses.SessionInfo)">
+            <summary>
+            Sets the account lockout flag.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetDOs(AuthenticationClasses.SessionInfo)">
+            <summary>Gets a list of the district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetAllDOs">
+            <summary>Gets a list of the all district offices.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ListUsersByRoles(System.String,System.Int32,System.String,AuthenticationClasses.SessionInfo)">
+            <summary>Lists users by role</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ListAppUsersByRoles(System.String,System.Int32,System.String,System.Int32,AuthenticationClasses.SessionInfo)">
+            <summary>Lists application users by role Application.</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.UpdatePassword(System.String,System.String,AuthenticationClasses.SessionInfo,CSAAWeb.Serializers.ArrayOfErrorInfo@)">
+            <summary>
+            Sets new password for UserId
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ValidateSession(AuthenticationClasses.SessionInfo,System.String)">
+            <summary>
+            Confirms that the token is valid and that the user/app has permission on the method.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.CheckLockoutCounterNew(AuthenticationClasses.SessionInfo)">
+            <summary>
+            Determinines if the account has tried to log in more than the allowed number of
+            times, and locks it out if so. Returns true if locked out.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ResetLockoutCounter(System.String)">
+            <summary/>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.MD5Hash(System.String)">
+            <summary>
+            Used to encrypt passwords.
+            </summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetRepIDDO(System.String)">
+            Changed by Cognizant on 05/18/04 
+             <summary>
+             Gets Rep ID and DO for the current user
+             </summary>
+             <param name="CurrentUser">Currently logged in User</param>
+             <returns>Dataset of RepID and DO for the current user</returns>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.GetDOsByApp">
+            <summary>Gets a list of the district offices by (Application Not Now)</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ListUsersByRolesByApp(System.String,System.Int32)">
+            <summary>Lists users by role(Created for Later Purpose)</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.ListApprovers(System.String)">
+            <summary>Lists all Approvers by RepDo</summary>
+        </member>
+        <member name="M:AuthenticationClasses.WebService.Authentication.EnforcePwdRules(System.String,System.String)">
+            <summary>
+            Used to enforce password rules.
+            </summary>
+        </member>
+    </members>
+</doc>

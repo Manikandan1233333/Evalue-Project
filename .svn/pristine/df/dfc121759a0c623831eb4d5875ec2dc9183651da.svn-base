@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_ContractAndSpecification_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:complexType name="ProductSearchCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:SearchCriteria">
+        <xs:sequence>
+          <xs:element name="usState" type="ns1:USStates" />
+          <xs:element name="clubCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="productSearchCriteriaExtension" nillable="true" type="ns1:ExtensionArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--PCI Arcsight Holding the Server ip configuration-->
+  <!--Config entry to control the web service reference for Arcsight logging-->
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="CSAAWeb.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+      <section name="OrderClassesII.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="IssueDirectPaymentSOAPBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="VaultAjaxEndPointImplPortBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <!-- If https mode should be Transport, else None-->
+          <security mode="Transport">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="IssueDirectPaymentReversalSOAPBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <!--CHG0112662 - START - Record Payment Enrollment SOA Service changes-->
+        <binding name="RecordPaymentEnrollmentStatusSOAPBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="RetrievePaymentEnrollmentDetailSOAPBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <!--CHG0112662 - END - Record Payment Enrollment SOA Service changes-->
+        <binding name="RetrieveFinancialInstitutionDetailSOAPBinding" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+
+      </basicHttpBinding>
+    </bindings>
+    <client>
+
+      <!--  IDP Service URL  -->
+      <endpoint address="https://sit-soaservices.tent.trt.csaa.pri:444/IssueDirectPaymentV2" binding="basicHttpBinding" bindingConfiguration="IssueDirectPaymentSOAPBinding" contract="IssueDirectPayment" name="IssueDirectPaymentSOAPPort" />
+      <!--  Payment token Service URL -->
+      <endpoint address="http://pc-sit.tent.trt.csaa.pri/pmtctrl/RecordFinancialAccount" binding="basicHttpBinding" bindingConfiguration="VaultAjaxEndPointImplPortBinding" contract="RecordFinancialAccount" name="VaultAjaxEndPointImplPort" />
+      <endpoint address="https://sit-soaservices.tent.trt.csaa.pri:444/IssueDirectPaymentReversalV2" binding="basicHttpBinding" bindingConfiguration="IssueDirectPaymentReversalSOAPBinding" contract="IssueDirectPaymentReversal" name="IssueDirectPaymentReversalSOAPPort" />
+      <!--CHG0112662 - START  Record Payment Enrollment SOA Service changes-->
+      <endpoint address="http://sit-soaservices.tent.trt.csaa.pri:444/RecordPaymentEnrollmentStatusV2" binding="basicHttpBinding" bindingConfiguration="RecordPaymentEnrollmentStatusSOAPBinding" contract="RecordPaymentEnrollmentStatus" name="RecordPaymentEnrollmentStatusSOAPPort" />
+      <!--CHG0112662 - END - Record Payment Enrollment SOA Service changes-->
+      <endpoint address="http://sit-soaservices.tent.trt.csaa.pri:444/RetrievePaymentEnrollmentDetailV2" binding="basicHttpBinding" bindingConfiguration="RetrievePaymentEnrollmentDetailSOAPBinding" contract="RetrievePaymentEnrollmentDetail" name="RetrievePaymentEnrollmentDetailSOAPPort" />
+      <endpoint address="http://sit-soaservices.tent.trt.csaa.pri:444/RetrieveFinancialInstitutionDetailV2" binding="basicHttpBinding" bindingConfiguration="RetrieveFinancialInstitutionDetailSOAPBinding" contract="RetrieveFinancialInstitutionDetail" name="RetrieveFinancialInstitutionDetailSOAPPort" />
+      
+    </client>
+  </system.serviceModel>
+  <applicationSettings>
+    <CSAAWeb.Properties.Settings>
+      <setting name="CSAAWeb_WebReference_RecordApplicationEventAsyncService" serializeAs="String">
+        <value>
+          http://soau-sit/enterpriselog/RecordApplicationEventAsyncService
+        </value>
+      </setting>
+
+    </CSAAWeb.Properties.Settings>
+    <OrderClassesII.Properties.Settings>
+      <!--AZ PAS Conversion and PC integration - START - Added the below entry for Payment central billing lookup-->
+      <setting name="OrderClassesII_BillingSummaryLookup_RetrievePolicyBillingSummariesService" serializeAs="String">
+        <value>
+          https://sit-soaservices.tent.trt.csaa.pri:444/4.0/RetrievePolicyBillingSummaries
+        </value>
+      </setting>
+      <!-- MAIG Phase 3 Changes Starts-->
+      <setting name="OrderClassesII_ReportExecution2005_ReportExecutionService" serializeAs="String">
+        <value>https://ssrs-dev.tent.trt.csaa.pri/ReportServer/ReportExecution2005.asmx</value>
+      </setting>
+      <setting name="OrderClassesII_ReportService2010_ReportingService2010" serializeAs="String">
+        <value>https://ssrs-dev.tent.trt.csaa.pri/ReportServer/ReportService2010.asmx</value>
+      </setting>
+      <!-- MAIG Phase 3 Changes Ends-->
+      <!--AZ PAS Conversion and PC integration - END - Added the below entry for Payment central billing lookup-->
+    </OrderClassesII.Properties.Settings>
+  </applicationSettings>
+  <appSettings>
+    <add key="SalesXType" value="WUA,10" />
+    <add key="AppTimeoutMinutes" value="1" />
+    <add key="AppWarnMinutes" value="1" />
+    <add key="AppLogoutURL" value="Forms/Login.aspx" />
+    <!-- MAIGEnhancement CHG0107527 - BEGIN - CH1 - Added the below key to allow Payments even if it is restricted to pay -->
+    <add key="SkipPaymentRestriction" value="true" />
+    <!-- MAIGEnhancement CHG0107527 - END - CH1 - Added the below key to allow Payments even if it is restricted to pay -->
+    <!--Config entry to control the web service reference for Arcsight logging-->
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH :Arcsight enabling and disabling can be controlled using the web config entry by cognizant on 12/15/2011-->
+    <add key="ArcsightReference.Enabled" value="true" />
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH :Arcsight enabling and disabling can be controlled using the web config entry by cognizant on 12/15/2011-->
+
+    <!-- RFC 185138 - AD Integration- Added the below to control the server name and Inhous application authentication-->
+    <add key="ADServer" value="LDAP://tent.trt.csaa.pri" />
+    <!--SSO CHNAGES-->
+    <add key="SSORESPONSE_STATUS" value="ssoResponse" />
+    <add key="Services.ActiveDirectory" value="HIUM" />
+
+    <!-- RFC 185138 - AD Integration- Added the below to control the server name and specific salesx user ID and Inhous application authentication-->
+
+    <!-- Prevent soap errors from propagating -->
+    <!--START Modified by Cognizant on 11/04/2005 - Q4 CSR contact number changes-->
+    <!--<add key="Service_SoapErrorMessage" value="A system error occurred. Please use offline process and contact the website 
+					support team at (415) 934-3189. Be prepared to give the error message and member's first and last name. "/>-->
+    <add key="Service_SoapErrorMessage" value="A system error occurred. Please use offline process and contact the IT Service Desk       at 1-877-554-2911. Be prepared to give the error message and member's first and last name. " />
+    <!--End-->
+    <!--Start:Added by Cognizant as a part of the Billing and Payments Quick Hits Project- RFC 48347 for displaying the Product Type Override confirmation message on 11-26-2009. -->
+    <add key="ProductType.OverrideMessage" value="Please confirm whether you would like to override the Product Type?" />
+    <!--End:Added by Cognizant as a part of the Billing and Payments Quick Hits Project- RFC 48347 for displaying the Product override confirmation message on 11-26-2009. -->
+
+    <!-- Authentication Service values -->
+    <add key="AuthenticationRetryMax" value="5" />
+    <add key="AuthenticationRetryTime" value="2" />
+    <add key="AuthenticationSessionTimeout" value="480" />
+    <!-- length in days that password is good for until it expires -->
+    <add key="PasswordLifeSpan" value="60" />
+    <!-- default password (encrypted) and pwd expiry settings -->
+    <add key="UserDefaultPwd" value="temporary" />
+    <add key="NewUserPasswordExpired" value="true" />
+    <add key="ResetPasswordExpired" value="true" />
+    <!--CHGXXXXXXX - START - Security Incident Fix for Replay Attack-->
+    <add key="ReplyAttackCheck" value="true" />
+    <!--CHGXXXXXXX - END - Security Incident Fix for Replay Attack-->
+
+    <!--MAIG - CH69 - BEGIN - For Dwon payment if the below key decides to hit the RPBS Service -->
+    <add key="SISpolicyPrefix" value="AR,DC,DR,LR,PC,RC" />
+    <add key="jsonURL" value="https://sit-soaservices.tent.trt.csaa.pri:8469/WebEnterpriseSearchRel3/csaigsearch/customerSearch.action" />
+    <!--<add key="ScheduleAuthjsonURL" value="https://perf-sso.tent.trt.csaa.pri/as/token.oauth2" />-->
+    <add key="ScheduleAuthjsonURL" value="https://qa-sso.tent.trt.csaa.pri/as/token.oauth2" />
+    <!--SIT-->
+    <add key="SchedulePaymentIdjsonURL" value="https://sit-soaservices.tent.trt.csaa.pri:2073/ent/sit/csaa/v1/payments/schedule/retrieveByPaymentId" />
+    <add key="SchedulePolicyNojsonURL" value="https://sit-soaservices.tent.trt.csaa.pri:2073/ent/sit/csaa/v1/payments/schedule/retrieveByPolicyInfo" />
+    <!--UAT-->
+    <!--<add key="SchedulePaymentIdjsonURL" value="https://soapcqa1.tent.trt.csaa.pri:2073/ent/soapcqa1/csaa/v1/payments/schedule/retrieveByPaymentId" />
+    <add key="SchedulePolicyNojsonURL" value="https://soapcqa1.tent.trt.csaa.pri:2073/ent/soapcqa1/csaa/v1/payments/schedule/retrieveByPolicyInfo" />-->
+    <!--PIT-->
+    <!--<add key="SchedulePaymentIdjsonURL" value="https://pit-soaservices.tent.trt.csaa.pri:2073/ent/dev/csaa/v1/payments/schedule/retrieveByPaymentId" />
+    <add key="SchedulePolicyNojsonURL" value="https://pit-soaservices.tent.trt.csaa.pri:2073/ent/dev/csaa/v1/payments/schedule/retrieveByPolicyInfo" />-->
+    <!--PERF-->
+    <!--<add key="SchedulePaymentIdjsonURL" value="https://perf-soaservices.tent.trt.csaa.pri:2073/ent/dev/csaa/v1/payments/schedule/retrieveByPaymentId" />
+    <add key="SchedulePolicyNojsonURL" value="https://perf-soaservices.tent.trt.csaa.pri:2073/ent/dev/csaa/v1/payments/schedule/retrieveByPolicyInfo" />-->
+    <!--QA-->
+    <!--<add key="Base64Key" value="Basic Y2NfbXJtOkNkYlpYcWFuS3UweDdxREdET0JXV1l1QThFMXFPMmRmd0lCVnBlRGg4N2R6bXZOckNlc01mMWI0WVk5cm95SHg="/>-->
+    <add key="Base64Key" value="Basic Y2NfcGF5bWVudHRvb2w6QTFPd05lOFB2SEF2YWxRaFQ5Y0hPOHJCWDRrcVJWR3Y3SVR2YmI5OTBLWjIwYjRFOGMzMXlOT05oNUhlbTM1Rg=="/>
+    <add key="ReportServiceTimeOut" value="5000" />
+    <add key="ReportPath" value="/PaymentCentralReporting/MAIG/SIT/" />
+    <add key="Logging.SSRSReport" value="1" />
+    <add key="GrantType" value="client_credentials" />
+    <add key="ClientId" value="cc_paymenttool" />
+    <!--<add key="ClientSecret" value="eX6l3UNK6a6a6LMN5VIodq9Bd62tae5ulI4nYKamFjZa7gI9c6zqJcB62DDQ4xnY" />-->
+    <add key="ClientSecret" value="A1OwNe8PvHAvalQhT9cHO8rBX4kqRVGv7ITvbb990KZ20b4E8c31yNONh5Hem35F" />
+    <add key="ConvertDate" value="MM/dd/yyyy"/>
+    <add key="ScheduleStatus" value="PEND,CANCEL,COMPLETED"/>
+    <add key="Logging.SchedulePaymentService" value="1" />
+    <add key="TransactionType" value="real" />
+    <add key="Subsystem" value="PC" />
+
+    <!--Added key for IP address fix-->
+    <add key="CryptorKey" value="a*bd1%3#t78*0erf"/>
+    <add key="GetIP" value="1"/>
+    <add key="GetServerIP" value="REMOTE_ADDR"/>
+    <!--Added key for IP address fix-->
+    <!-- Report By Agency Name-->
+    <add key="ReportDetailIdentifier_AgencyName_ALL" value="PaymentDetail_User_Agency" />
+    <add key="ReportDetailIdentifier_AgencyName_Multiple" value="PaymentDetail_Agency" />
+
+    <add key="ReportSummaryIdentifier_AgencyName_ALL" value="PaymentSummary_User_Agency" />
+    <add key="ReportSummarydentifier_AgencyName_Multiple" value="PaymentSummary_Agency" />
+
+    <!-- Report By Agency Location-->
+    <add key="ReportDetailIdentifier_AgencyLocation_ALL" value="PaymentDetail_Location_Agency" />
+    <add key="ReportDetailIdentifier_AgencyLocation_Multiple" value="PaymentDetail_Location" />
+
+    <add key="ReportSummaryIdentifier_AgencyLocation_ALL" value="PaymentSummary_Location_Agency" />
+    <add key="ReportSummaryIdentifier_AgencyLocation_Multiple" value="PaymentSummary_Location" />
+
+    <!-- Report By User-->
+    <add key="ReportDetailIdentifier_User_ALL" value="PaymentDetail_User_Agency" />
+    <add key="ReportDetailIdentifier_User_Multiple" value="PaymentDetail_User" />
+
+    <add key="ReportSummaryIdentifier_User_ALL" value="PaymentSummary_User_Agency" />
+    <add key="ReportSummaryIdentifier_User_Multiple" value="PaymentSummary_User" />
+
+    <!-- Report By Settlement report-->
+    <add key="ReportDetailIdentifier" value="" />
+
+    <add key="CreditCardTypesDisabled" value="" />
+    <add key="Invalid_KIC_Auto_Allowed" value="0" />
+    <add key="Invalid_KIC_Home_Allowed" value="0" />
+    <add key="Invalid_HDES_Home_Allowed" value="1" />
+    <add key="Invalid_PUP_Allowed" value="1" />
+    <add key="SSRSTripleDESKey" value="sdhfjkh564" />
+    <!-- MAIG - CH3 - BEGIN - Added The below Keys for enhancing the Logging-->
+    <add key="Logging.SSO" value="1" />
+    <add key="Logging.ElasticSearch" value="1" />
+    <add key="Logging.PaymentRedirection" value="1" />
+    <add key="Logging.Menu" value="1" />
+    <!-- MAIG - CH3 - END - Added The below Keys for enhancing the Logging-->
+    <add key="AllowRPBS" value="1" />
+    <add key="Fullname.SourceSystem2" value="HUON,PAS,SIS,KIC" />
+    <add key="ProductCode.PUP" value="PU" />
+    <!--MAIG - CH69 - END - For Dwon payment if the below key decides to hit the RPBS Service -->
+
+    <!-- must match key used for member ops applications -->
+    <add key="CSAA_ORDERS_KEY" value="CSAACRYPTO" />
+
+    <!--Payment service configuration-->
+    <add key="PAYMENT_DEFAULT_COUNTRY" value="US" />
+    <add key="PAYMENT_DEFAULT_CURRENCY" value="USD" />
+    <add key="PAYMENT_CARDS_REVERSABLE" value="0" />
+    <!-- Cybersource requires an email field, but for apps that do not require it, use this -->
+    <add key="PAYMENT_DEFAULT_EMAIL" value="default_email@default_email.org" />
+    <add key="PAYMENT_REAUTH_LINE_ITEM" value="&lt;LineItem ProductName='Reauthorize item' Amount='1.00' Quantity='1'/>" />
+
+
+    <!-- START: ADDED BY COGNIZANT on 5/23/2008 - Config entries to log the input timestamp for Credit Card payments -->
+    <add key="LogInputTimeStamp" value="true" />
+    <!-- Boolean value which determines if the input time stamps must be logged. -->
+    <add key="LogInputforApps" value="WBI,IVR" />
+    <!-- Denotes the applications for which the input time stamps must be logged -->
+    <add key="LogTimeVerboseLevel" value="1" />
+    <!-- Defines the versbose level. 1 denotes only input & output. 2 denotes much more detail. 3 denotes exhaustive logging -->
+    <!-- END: ADDED BY COGNIZANT on 5/23/2008 - Config entries to log the input timestamp for Credit Card payments -->
+
+    <!--START - HO6.Ch1 - 4/5/2010 - Added by Cognizant for HO6 project -->
+    <!-- START - MP2.Ch4 - Modified by COGNIZANT for MP2 EBP project -->
+    <!-- MP2.Ch4 - Added EXG - app id for Exigen to the list of apps that will use CPM for eChecks -->
+    <!-- RFC 130547 - Added SalesX,APDS - app id for SalesX  and APDS to the list of apps that will use CPM for eChecks -->
+    <!-- 67811A0  - PCI Remediation for Payment systems-CH6- Included AI in the value field for cpm.eCheckApplications on 08/23/2011 -->
+    <add key="cpm.eCheckApplications" value="NetPos,EXG,AI,SalesX,APDS,WEB,SIS" />
+    <!-- This will contain App Ids of apps that will have eCheck payment -->
+    <add key="eCheck.ProductApplication" value="SalesX" />
+    <!--Config value to store the salesX  application where e-check payment type to be restriced based on product application -->
+
+
+    <!-- MP2.Ch4 - Added EXG - app id for Exigen to the list of apps that will use ACH Verify for eChecks -->
+    <!-- 67811A0  - PCI Remediation for Payment systems-CH5- Included AI in the value field for Applications.EnableACHVerify on 08/23/2011 -->
+    <add key="Applications.EnableACHVerify" value="AI,EXG,NetPos,SalesX,APDS" />
+    <!-- This will contain App Ids of apps that will have ACHVerify enabled -->
+    <!-- END - MP2.Ch4 -->
+    <add key="AppName.NetPos" value="NetPos" />
+    <!-- This will contain the App Id of netPOSitive application -->
+    <add key="NetPos.GenericUserId" value="netpositive" />
+    <!-- This will contain the generic user Id that will be used by netPOSitive application for authentication -->
+    <!--END - HO6.Ch1 -->
+
+    <!--START - MP2.Ch1 - Added by COGNIZANT - 6/11/2010 as part of MP2 EBP Integration -->
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH4-START- Added config key to Indicate the Application to call Auth and Bill request in teh same request Modified by Cognizant on 09/06/2011  -->
+    <add key="Application.AuthCaptureCall" value="EXG,SIS,WBI" />
+    <!--67811A0 - PCI Remediation for Payment systems-CH4-END-->
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH5-START- Added config key to Indicate the Application to call Auth and Capture in the Process request Modified by Cognizant on 12/21/2011  -->
+    <add key="Application.AuthBillCall" value="" />
+    <add key="Application.OrderServiceAuthCapture" value="IVR,SalesX,APDS,WEB,NetPos,AI" />
+    <!--<add key="Application.OrderServiceAuthCapture" value="IVR,SalesX,APDS,WEB,NetPos,AI"/>-->
+    <add key="Application.MembershipAuthCall" value="APDS" />
+
+    <!--67811A0 - PCI Remediation for Payment systems-CH5-END-->
+
+    <!-- Config value to store the App Id of Exigen application -->
+    <add key="AllowedExigenPolicies" value="CAAS,AZSS,AZSI,VASS" />
+    <!-- Config value to store the Allowed Exigen Policies for Payment Tool -->
+    <add key="RestrictedExigenPolicies" value="" />
+    <!--AZ PAS Product Configuration: Start Added the below config to hold the CA and AZ policy prefix for PAS polices-->
+    <add key="AllowedCAExigenPolicies" value="CAAS" />
+
+    <add key="AllowedAZExigenPolicies" value="AZSS,AZSI,VASS" />
+    <!--AZ PAS Product Configuration:End Added the below config to hold the CA and AZ policy prefix for PAS polices-->
+    <!-- Config value to store the Restricted Exigen Policies for Payment Tool -->
+    <!--END - MP2.Ch1  -->
+    <!--AZ PAS Product Configuration: Start Added the below config to hold the CA and AZ policy prefix for PAS polices-->
+    <add key="AllowedCAExigenPolicies" value="CAAS" />
+
+    <add key="AllowedAZExigenPolicies" value="AZSS,AZSI" />
+    <!--AZ PAS Product Configuration:End Added the below config to hold the CA and AZ policy prefix for PAS polices-->
+    <!--RFC 130547  Config value to store the salesX product type for processing e-check payment type -->
+    <add key="SalesX.eCheckProductType" value="00,10" />
+
+
+    <!--added as a part of HO6 on 04-05-2010-->
+    <add key="AppName.NetPos" value="NetPos" />
+    <add key="NetPos.GenericUserId" value="netpositive" />
+
+    <!-- Added by COGNIZANT 08/10/2011 CSAA.COM CH1: START This will contain the App Id  which bypass token validations in order web service -->
+    <add key="ByPassTokenVldn.OrderService.AppName" value="WEB" />
+
+
+    <!--Added as part of Exigen EBP Integration -->
+    <!--<add key="AppName.Exigen" value="EXG"/>-->
+
+    <add key="Application-Merchant-Id-Product" value="WBI,SalesX,NetPos" />
+    <!--RFC 130547 Contains the membership code which needs to be identified for merchant id configuration.-->
+    <!--START - MP2.Ch2 - 6/11/2010 - Added by Cognizant for MP2 - EBP project  -->
+
+    <!-- END - Added by Cognizant on 02/03/2006 - CSR 4593 related changes -->
+    <!--Payment service error messages translations-->
+    <!--Security Defects - Added the below key value pair to define error code for the fields-->
+    <add key="ERRCDE_APPID" value="50002" />
+    <add key="ERRCDE_USERID" value="50003" />
+    <add key="ERRCDE_TOKEN" value="50001" />
+    <add key="ERRCDE_DESCRIPTION" value="50004" />
+    <add key="ERRCDE_PRICE" value="50016" />
+    <add key="ERRCDE_TAX_AMOUNT" value="50016" />
+    <add key="ERRCDE_PRODUCTCODE" value="50007" />
+    <add key="ERRCDE_FIRSTNAME" value="50008" />
+    <add key="ERRCDE_LASTNAME" value="50009" />
+    <add key="ERRCDE_ACCOUNTNUMBER" value="50052" />
+    <add key="ERRCDE_REVENUECODE" value="50011" />
+    <add key="ERRCDE_SUBPRODUCT" value="50012" />
+    <add key="ERRCDE_CLUBCODE" value="50013" />
+    <add key="ERRCDE_LINEIEMNO" value="50014" />
+    <add key="ERRCDE_PRODUCTNAME" value="50015" />
+    <add key="ERRCDE_AMOUNT" value="50016" />
+    <add key="ERRCDE_QUANTITY" value="50017" />
+    <add key="ERRCDE_REVENUETYPE" value="50018" />
+    <add key="ERRCDE_MIDDLENAME" value="50020" />
+    <add key="ERRCDE_ADDRESS1" value="50022" />
+    <add key="ERRCDE_ADDRESS2" value="50023" />
+    <add key="ERRCDE_CITY" value="50024" />
+    <add key="ERRCDE_STATE" value="50025" />
+    <add key="ERRCDE_EMAIL" value="50026" />
+    <add key="ERRCDE_DAYPHONE" value="50027" />
+    <add key="ERRCDE_EVENINGPHONE" value="50027" />
+    <add key="ERRCDE_ZIP" value="50029" />
+    <add key="ERRCDE_ADDRESSTYPE" value="50030" />
+    <add key="ERRCDE_CCNUMBER" value="50032" />
+    <add key="ERRCDE_CCVNUMBER" value="50033" />
+    <add key="ERRCDE_CCEXPMONTH" value="50034" />
+    <add key="ERRCDE_CCEXPYEAR" value="50035" />
+    <add key="ERRCDE_CCTYPE" value="50036" />
+    <add key="ERRCDE_BANKACNTNO" value="50038" />
+    <add key="ERRCDE_BANKID" value="50039" />
+    <add key="ERRCDE_BANKACNTYPE" value="50040" />
+    <add key="ERRCDE_CUSTOMERNAME" value="50041" />
+    <add key="ERRCDE_MERCHANTREFNUM" value="50043" />
+    <add key="ERRCDE_REQUESTID" value="50044" />
+    <add key="ERRCDE_AUTHCODE" value="50045" />
+
+    <add key="ERRCDE_PAYMENTTYPE" value="50047" />
+    <add key="ERRCDE_CROSSREFERNCENUMBER" value="50049" />
+    <add key="ERRCDE_POLICYPREFIX" value="50050" />
+    <add key="ERRCDE_POLICYSTATE" value="50051" />
+    <add key="ERRCDE_PRICE" value="50016" />
+    <add key="ERRCDE_DESCRIPTION" value="50004" />
+    <add key="ERRCDE_PRODUCTYPE" value="50067" />
+    <add key="ERRCDE_RATETYPE" value="50068" />
+    <add key="ERRCDE_ACTION" value="50069" />
+    <add key="ERRCDE_PLUS" value="50070" />
+    <add key="ERRCDE_PRODUCT" value="50071" />
+    <add key="ERRCDE_ACTIONNAME" value="50072" />
+
+    <add key="ERRCDE_FULLNAME" value="50078" />
+    <add key="ERRCDE_GENDER" value="50079" />
+    <add key="ERRCDE_DOB" value="50080" />
+    <add key="ERRCDE_DO" value="50125" />
+    <add key="ERRCDE_RELATIONSHIP" value="50081" />
+    <add key="ERRCDE_ACTIONS" value="50082" />
+    <add key="ERRCDE_PLUS" value="50083" />
+    <add key="ERRCDE_MEMBERID" value="50084" />
+    <add key="ERRCDE_CANCELREASON" value="50085" />
+    <add key="ERRCDE_STATUS" value="50086" />
+    <add key="ERRCDE_EXPIRATIONDATE" value="50087" />
+    <add key="ERRCDE_BASEYEAR" value="50088" />
+    <add key="ERRCDE_AMOUNT" value="50046" />
+    <add key="ERRCDE_EFFECTIVEDATE" value="50089" />
+    <add key="ERRCDE_PLUSELIGIBLE" value="50090" />
+    <add key="ERRCDE_BILLINGACCOUNTID" value="50091" />
+    <add key="ERRCDE_SERVICERESTRICTION" value="50092" />
+    <add key="ERRCDE_PRODUCTUSUAGE" value="50093" />
+    <add key="ERRCDE_CLUBCODE" value="50094" />
+    <add key="ERRCDE_ASSOCIATEID" value="50095" />
+    <add key="ERRCDE_AMOUNT" value="50016" />
+    <add key="ERRCDE_STAGE" value="50098" />
+    <add key="ERRCDE_ZIP" value="50029" />
+    <add key="ERRCDE_POLICY" value="50052" />
+    <add key="ERRCDE_PRODUCTTYPE" value="50053" />
+    <add key="ERRCDE_PRODUCTNAME" value="50015" />
+    <add key="ERRCDE_FIRSTNAME" value="50008" />
+    <add key="ERRCDE_MIDDLENAME" value="50020" />
+    <add key="ERRCDE_LASTNAME" value="50009" />
+    <add key="ERRCDE_DESCRIPTION" value="50004" />
+    <add key="ERRCDE_PRICE" value="50016" />
+    <add key="ERRCDE_TAX_AMOUNT" value="50016" />
+    <add key="ERRCDE_QUANTITY" value="50017" />
+    <add key="ERRCDE_PRODUCTCODE" value="50007" />
+    <add key="ERRCDE_AMOUNT" value="50016" />
+    <add key="ERRCDE_REVENUETYPE" value="50018" />
+    <add key="ERRCDE_FIRSTNAME" value="50008" />
+    <add key="ERRCDE_MIDDLENAME" value="50020" />
+    <add key="ERRCDE_APPLICATION" value="50126" />
+    <add key="ERRCDE_PROMOTION" value="50100" />
+    <add key="ERRCDE_ISMEMBER" value="50111" />
+    <add key="ERRCDE_ISGIFT" value="50112" />
+    <add key="ERRCDE_APPNAME" value="50113" />
+    <add key="ERRCDE_SENDTO" value="50114" />
+    <add key="ERRCDE_ENROLLMENTFEE" value="50115" />
+    <add key="ERRCDE_ADDTOMAILLIST" value="50116" />
+    <add key="ERRCDE_BILLINGACCOUNTID" value="50117" />
+    <add key="ERRCDE_ID" value="50118" />
+    <add key="ERRCDE_NAME" value="50119" />
+    <add key="ERRCDE_DESCRIPTION" value="50004" />
+    <add key="ERRCDE_CONFIRMATION" value="50121" />
+    <add key="ERRCDE_CODE" value="50122" />
+    <add key="ERRCDE_NONDOLLAR" value="50123" />
+    <add key="ERRCDE_CCNUMBER" value="50032" />
+    <add key="ERRCDE_CCTYPE" value="50036" />
+    <add key="ERRCDE_CCVNUMBER" value="50033" />
+    <add key="ERRCDE_CCEXPMONTH" value="50034" />
+    <add key="ERRCDE_CCEXPYEAR" value="50035" />
+    <add key="ERRCDE_APPLICATION" value="50128" />
+    <add key="ERRCDE_ADDRESS1" value="50022" />
+    <add key="ERRCDE_ADDRESS2" value="50023" />
+    <add key="ERRCDE_CITY" value="50024" />
+    <add key="ERRCDE_FIRSTNAME" value="50008" />
+    <add key="ERRCDE_LASTNAME" value="50009" />
+    <add key="ERRCDE_ZIP" value="50029" />
+    <add key="ERRCDE_STATE" value="50025" />
+    <add key="ERRCDE_COUNTRY" value="50132" />
+
+
+    <add key="ERRCDE_AUTHENTICATED" value="50124" />
+    <add key="ERRCDE_DO" value="50125" />
+    <add key="ERRCDE_EMAIL" value="50026" />
+    <add key="ERRCDE_EMPLOYEEID" value="50042" />
+    <add key="ERRCDE_FINANCIALLOCATION" value="50048" />
+    <add key="ERRCDE_ISACCOUNTLOCKED" value="50021" />
+    <add key="ERRCDE_ISPASSWORDEXPIRED" value="50028" />
+    <add key="ERRCDE_REPID" value="50126" />
+    <add key="ERRCDE_ROLENAMES" value="50127" />
+    <add key="ERRCDE_ROLES" value="50129" />
+    <add key="ERRCDE_PHONENUMBER" value="" />
+    <add key="ERRCDE_USERID" value="50003" />
+    <add key="ERRCDE_USERRID" value="50017" />
+    <add key="ERRCDE_QUANTITY" value="50017" />
+    <add key="ERRCDE_LINEITEMNO" value="50014" />
+    <add key="ERRCDE_TAX_AMOUNT" value="50016" />
+    <add key="ERRCDE_PAYMENTTYPE" value="50047" />
+    <add key="ERRCDE_AMOUNT" value="50016" />
+    <add key="ERRCDE_REVENUETYPE" value="50018" />
+    <add key="ERRCDE_REVENUECODE" value="50011" />
+    <add key="ERRCDE_SKU" value="50131" />
+    <add key="ERRCDE_ACCOUNTNUMBER" value="50052" />
+    <add key="ERRCDE_SUBPRODUCT" value="50012" />
+    <add key="ERRCDE_CLUBCODE" value="50013" />
+    <add key="ERRCDE_PRODUCTNAME" value="50013" />
+    <add key="ERRCDE_PRODUCTCODE" value="50015" />
+    <add key="ERRCDE_PRODUCTTYPE" value="50053" />
+    <add key="ERRCDE_BANKID" value="50038" />
+    <add key="ERRCDE_BANKACNTNO" value="50039" />
+    <add key="ERRCDE_BANKACNTTYPE" value="50040" />
+    <add key="ERRCDE_CUSTOMERNAME" value="50041" />
+    <add key="EM_DAVSNO" value="The billing address entered does not match the address on file with the credit card. Please verify billing address.  If billing address is correct then request another credit card." />
+    <add key="EM_DCALL" value="Credit Card is declined. Please obtain another form of payment." />
+    <add key="EM_DCARDEXPIRED" value="The credit card entered has expired. Please request another credit card." />
+    <add key="EM_DCARDREFUSED" value="The credit card has been declined by the issuing bank due to insufficient funds or another problem with the account.  Please request another credit card." />
+    <add key="EM_DCHECKREFUSED" value="The credit card has been declined due to some problem with the account. Please request another credit card." />
+    <add key="EM_DINVALIDADDRESS" value="An invalid city, state, or zip code was entered. Please verify this information.  If the information is correct, then please request another credit card." />
+
+
+    <add key="RedirectLogoutToSSO" value="true" />
+    <add key="SSO_LOGOUTURL" value="https://e1.pncie.com/authen/AuthenticationService/?resume=/idp/startSLO.ping%3FPartnerSpId=PaymentTool:SP" />
+    <!--CHG0121437 - Start-Added for ACH Enrollment Incentive-->
+    <add key="Eligility_States" value="NJ,PA,DE,MD,VA,DC" />
+    <!--CHG0121437 - End - Added for ACH Enrollment Incentive-->
+    <!--CHGXXXXXXX- SSL\TLS -Added the below code for setting the security protocol type - Start-->
+    <add key="ProtocolType" value="TLS12" />
+    <!--CHGXXXXXXX- SSL\TLS -Added the below code for setting the security protocol type - End-->
+    <!--24/9/2012-SSO Integration  - Added the below code to give request to SSO Server-->
+    <!--<add key="SSO_URL" value="https://qa-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=2"/>-->
+    <!--<add key="SSO_URL" value="https://dev-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=DEV:PaymentTool:SP&amp;ACSIdx=2"/>-->
+    <!--<add key="SSO_URL" value="https://e1.pncie.com/sso/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=5"/>-->
+    <!--<add key="SSO_URL" value="https://qa-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=5" />-->
+    <!--QA SSO:
+    <add key="SSO_URL" value="https://qa-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=2" />-->
+    <add key="SSO_URL" value="https://dev-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=2" />
+    <!--<add key="SSO_URL" value="https://dev-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=DEV:PaymentTool:SP&amp;ACSIdx=2"/>-->
+    <!--<add key="SSO_URL" value="https://qa-sso.tent.trt.csaa.pri/idp/startSSO.ping?PartnerSpId=PaymentTool:SP&amp;ACSIdx=1"/>-->
+    <!-- 24/9/2012-SSO Integration  - Added the below key which holds the SSO status response -->
+    <add key="SSO_STATUS" value="urn:oasis:names:tc:SAML:2.0:status:Success" />
+
+    <!-- 24/9/2012-SSO Integration  - Added the below key which holds the SSO protocol response -->
+    <add key="SSO_PROTOCOL" value="urn:oasis:names:tc:SAML:2.0:protocol" />
+
+    <!-- 24/9/2012-SSO Integration  - Added the below key which holds the SSO assertion  response -->
+    <add key="SSO_ASSERTION" value="urn:oasis:names:tc:SAML:2.0:assertion" />
+
+    <!-- 24/9/2012-SSO Integration  - Added the below key which holds the status node value from SSO response -->
+    <add key="SSO_STATUS_NODE_RESPONSE" value="ssoProtocolResponse:Response/ssoProtocolResponse:Status/ssoProtocolResponse:StatusCode/@Value" />
+
+    <!-- 24/9/2012-SSO Integration  - Added the below key which holds the username value from SSO response -->
+    <add key="SSO_USERNAME_NODE_RESPONSE" value="ssoProtocolResponse:Response/ssoAssertionResponse:Assertion/ssoAssertionResponse:Subject" />
+
+    <!--End-->
+    <!-- START Modified by Cognizant on 09/21/2010 - Payment Tool SSO Integration-->
+    <!--SSOIntegratedApplications is used to set the values of SSO integrated application names -->
+    <add key="SSOIntegratedApplications" value="SalesX" />
+    <!-- This key is used to set the Path of the AgentConfig.txt file-->
+    <add key="SSO.AgentConfigPath" value="D:\PaymentTool\agent-config.txt" />
+    <!-- END -->
+
+
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH1-START- Added config key to Indicate the Application ID for Agent Intranet application.Modified by Cognizant on 08/23/2011  -->
+    <add key="AppName.AI" value="AI" />
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH1-END-->
+
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH2-START- Added config key to Indicate the generic user id for Agent Intranet application.Modified by Cognizant on 08/23/2011  -->
+    <add key="AI.GenericUserId" value="AgentWebPay" />
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH2-END-->
+
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH3-START- Added config key to Indicate the PCP products.Modified by Cognizant on 08/23/2011  -->
+
+    <add key="PCP.Products" value="WUA,WUH,WUW,WUM,CEA,DF" />
+    <add key="PCP.ProductTypeCEA" value="CEA" />
+    <add key="PCP.StatePrefixCEA" value="HO6" />
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH3-END-->
+
+    <!--67811A0 - PCI Remediation for Payment systems-CH4-START - Added  config key to Indicate the Application ID for Payments made from UI-->
+    <add key="AppName.APDS" value="APDS" />
+    <!-- 67811A0 - PCI Remediation for Payment systems-CH4-END-->
+    <!-- Company code Fix START- Added the below keys to use the merchant Id value for a transaction as expected in UI PCP transactions-->
+    <add key="AppName.CompanyID" value="APDS" />
+    <!-- Company code Fix END- Added the below keys to use the merchant Id value for a transaction as expected in UI PCP transactions-->
+
+    <!--67811A0  - PCI Remediation for Payment systems :Having teh web config value of applications processing memberhsip transactions using Order service without rate calculations-->
+    <add key="Application.MemTransactions" value="SalesX,NetPos" />
+    <add key="Application.PaymentGateway" value="EXG,SIS,WBI" />
+    <!--Reund in UI - START - Added the below keys to use in the conditions of the payment mode verification-->
+    <add key="PayType.Echeck" value="5" />
+    <add key="PayType.CCard" value="1" />
+    <add key="PayMode.CCard" value="credit card" />
+    <add key="PayMode.Echeck" value="e-check" />
+    <add key="PayMode.Cash" value="cash" />
+    <add key="PayMode.Check" value="check" />
+    <!--Reund in UI - END - Added the below keys to use in the conditions of the payment mode verification-->
+    <!--Added the below keys for highlimit product code and company id values of payment central-->
+    <add key="ProductCode.HighLimit" value="HL" />
+    <add key="CompanyID.Company1" value="4WUIC" />
+    <add key="CompanyID.Company2" value="1MWIC" />
+    <add key="Fullname.SourceSystem1" value="ADES,HDES,PUPSYS,HLSYS" />
+    <add key="Logging.BillSummary" value="1" />
+    <!-- Added the below source systems-->
+    <add key="DataSource.POESAuto" value="ADES" />
+    <add key="DataSource.POESHome" value="HDES" />
+    <add key="DataSource.SIS" value="SIS" />
+    <add key="DataSource.Exigen" value="PAS" />
+    <add key="DataSource.HL" value="HLSYS" />
+    <add key="DataSource.PUP" value="PUPSYS" />
+    <add key="DataSource.HUON" value="HUON" />
+    <add key="SAMLValidation.Enable" value="1" />
+    <!--<add key="SSOCertificate.Subject" value="qa-sso.tent.trt.csaa.pri" />-->
+    <add key="SSOCertificate.Subject" value="dev-sso.tent.trt.csaa.pri" />
+    <add key="Certificate.Logging" value="1" />
+    <!-- Payment Central-Insurance Applications -->
+    <add key="AppName.PCInsuranceApplications" value="APDS, SALESX, WEB" />
+    <!-- Payment central-PaymentMethod code -->
+    <add key="CreditCard_Code" value="CRDC" />
+    <add key="ElectronicFund_Code" value="EFT" />
+    <add key="CASH_Code" value="CASH" />
+    <add key="CHECK_Code" value="CHCK" />
+    <!-- Payment Central-E-Check Account Type-->
+    <add key="EFT_SAVING" value="SAVG" />
+    <add key="EFT_CHECKING" value="CHKG" />
+    <!-- Payment central-Application Context -->
+    <add key="ApplicationContext_Payment_Tool" value="PMTTOOL" />
+    <add key="ApplicationContext_SalesX" value="SALESX" />
+    <add key="ApplicationContext_PaymentX" value="PMTXSYS" />
+    <add key="ProductType.Auto" value="00,AUT" />
+    <!-- Payment central-Service Logging -->
+    <add key="Logging.IssueDirectPayment" value="1" />
+    <add key="Logging.MaintainPaymentAccount" value="1" />
+    <add key="Logging.IssueDirectPaymentReversal" value="1" />
+    <add key="Logging.RetrieveEnrollment" value="1" />
+    <add key="Logging.RecordEnrollment" value="1" />
+    <add key="Logging.ValidateEnrollment" value="1" />
+    <add key="PC_DO.CC" value="92,94,97,91,95,922,925,928,500005088,500005159,500005269,500005227,500016414,500016416,500016415" />
+    <add key="PC_DO.BO" value="88,79" />
+    <add key="ProdutDescription.PUP" value="AAA NCNU Personal Umbrella Policy" />
+    <add key="HUONStartDigit" value="05" />
+    <add key="ValidateXml" value="D:\PaymentTool_OTSP\WEB\MSC\Xml\ValidateResponseMapping.xml" />
+  </appSettings>
+
+  <system.web>
+    <!--Added by cognizant as a part of .NetMig 3.5 for displaying the general_error page when un handle exception occurs on 09-17-2010. -->
+    <!-- External URL Implementation-Modified the below  code in order to make the site work from both Internal and External URL as a part of 'Virtual Directory renaming' Approach  -->
+    <!--Added HttpOnly attribute to set the Cookie to httpOnly - Fix for VA Defect 210-->
+    <httpCookies requireSSL="true" />
+    <!--Added HttpOnly attribute to set the Cookie to httpOnly - Fix for VA Defect 210-->
+    <customErrors mode="On" defaultRedirect="/PaymentToolmscr/forms/general_error.aspx" >
+    </customErrors>
+    <!--Security Testing - START - Added to diasble debugging,header information and trace-->
+    <compilation debug="true"></compilation>
+    <!--CHGXXXXXXX- Server migration - Added the below entry for fixing the Runtime error - Start-->
+    <trust level="Full" originUrl="" />
+    <!--CHGXXXXXXX- Server migration - Added the below entry for fixing the Runtime error - End-->
+    <httpRuntime enableVersionHeader="false" />
+    <trace enabled="false" />
+    <!--Security Testing - END - Added to diasble debugging-->
+    <httpModules>
+      <add name="LogModule" type="CSAAWeb.Web.LogModule, CSAAWeb" />
+      <add name="HttpsModule" type="CSAAWeb.Web.HttpsModule, CSAAWeb" />
+      <add name="ClosableModule" type="CSAAWeb.Web.ClosableModule, CSAAWeb" />
+      <add name="Session" type="System.Web.SessionState.SessionStateModule"/>
+    </httpModules>
+    <!-- START Added by Cognizant As a part of DotNet Migration 3.5-->
+    <!-- Below line is added by COGNIZANT on 2/11/2010 to set the encryption & decryption keys explicitly in order to configure this using load balancer -->
+
+    <!-- <machineKey validationKey="AutoGenerate" decryptionKey="AutoGenerate" validation="SHA1" decryption="Auto"/>-->
+    <machineKey validationKey="EF2E74808CE348777A34240B31C9B64FAC633CB3F493FE6370AF83CD789C9253C2CF8B88908A14C28AF5D9D09EB51BFD7F85C5F72F11A7A71D0D91377F34B709" decryptionKey="9D1CCF73B5DC24A2E042E99F4A11D83CD132CBBB7DC4A962" validation="SHA1" decryption="AES" />
+    <authentication mode="Forms">
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" cookieless="UseCookies" requireSSL="true" slidingExpiration="true" />
+    </authentication>
+
+    <!--67811A0 - PCI Remediation for Payment systems-START Added the below code as a part of security defect fix to disable the WSDL and DISCO file for web services as a part of VA sacn defect by cognizant on 04/01/2011-->
+    <webServices>
+      <protocols>
+        <remove name="Documentation" />
+      </protocols>
+    </webServices>
+    <!--67811A0 - PCI Remediation for Payment systems-END Added the below code as a part of security defect fix to disable the WSDL and DISCO file for web services as a part of VA sacn defect by cognizant on 04/01/2011-->
+  </system.web>
+  <!-- START Added by Cognizant As a part of DotNet Migration 3.5-->
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules>
+      <add name="LogModule" type="CSAAWeb.Web.LogModule, CSAAWeb" />
+      <add name="HttpsModule" type="CSAAWeb.Web.HttpsModule, CSAAWeb" />
+      <add name="ClosableModule" type="CSAAWeb.Web.ClosableModule, CSAAWeb" />
+    </modules>
+    <defaultDocument>
+      <files>
+        <clear />
+        <add value="Default.htm" />
+        <add value="default.aspx" />
+        <add value="Default.asp" />
+        <add value="index.htm" />
+        <add value="index.html" />
+        <add value="iisstart.htm" />
+      </files>
+    </defaultDocument>
+    <httpErrors>
+      <remove statusCode="502" subStatusCode="-1" />
+      <remove statusCode="501" subStatusCode="-1" />
+      <remove statusCode="500" subStatusCode="-1" />
+      <remove statusCode="412" subStatusCode="-1" />
+      <remove statusCode="406" subStatusCode="-1" />
+      <remove statusCode="405" subStatusCode="-1" />
+      <remove statusCode="404" subStatusCode="-1" />
+      <remove statusCode="403" subStatusCode="-1" />
+      <remove statusCode="401" subStatusCode="-1" />
+      <!-- External URL Implementation-START-Modified the below  code in order to make the site work from both Internal and External URL as a part of 'Virtual Directory renaming' Approach  -->
+      <error statusCode="401" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="403" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="404" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="405" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="406" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="412" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="500" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="501" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <error statusCode="502" prefixLanguageFilePath="" path="/PaymentToolmsc/forms/general_error.aspx" responseMode="ExecuteURL" />
+      <!-- External URL Implementation-END-Modified the ABOVE  code in order to make the site work from both Internal and External URL as a part of 'Virtual Directory renaming' Approach  -->
+
+    </httpErrors>
+    <staticContent>
+      <remove fileExtension=".disco" />
+    </staticContent>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="X-Frame-Options" value="deny" />
+        <add name="X-XSS-Protection" value="1" />
+        <!--CHGXXXXXXX - Upgrade 4.6.1 - Security Defect - Added the code to set the cache control value - VA DefectID - 213 - Start-->
+        <add name="Cache-Control" value="no-cache, no-store" />
+        <add name="Pragma" value="no-cache" />
+        <add name="Expires" value="-1" />
+        <!--CHGXXXXXXX - Upgrade 4.6.1 - Security Defect - Added the code to set the cache control value - VA DefectID - 213 - End-->
+      </customHeaders>
+    </httpProtocol>
+    <security>
+      <requestFiltering allowHighBitCharacters="true">
+        <fileExtensions allowUnlisted="true" />
+        <verbs>
+          <add verb="OPTIONS" allowed="false" />
+        </verbs>
+      </requestFiltering>
+    </security>
+    <!--<rewrite>
+      <outboundRules rewriteBeforeCache="true">
+      </outboundRules>
+    </rewrite>-->
+  </system.webServer>
+
+  <!-- End: Added by Cognizant As a part of DotNet Migration 3.5-->
+  <runtime>
+    <gcConcurrent enabled="false" />
+  </runtime>
+
+</configuration>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" xmlns:AAANCNU_RetrievePolicyBillingSummaries_version2="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:AAANCNU_Common_version2="http://www.aaancnuit.com.AAANCNU_Common_version2" targetNamespace="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="RetrievePolicyBillingSummariesV2.xsd2.xsd" namespace="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+  <xsd:import schemaLocation="RetrievePolicyBillingSummariesV2.xsd3.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version2" />
+  <xsd:complexType name="retrievePolicyBillingSummariesRequest">
+    <xsd:sequence minOccurs="1" maxOccurs="1">
+      <xsd:element minOccurs="0" maxOccurs="1" name="applicationContext" type="AAANCNU_Common_version2:ApplicationContext" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policies" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyProductSource" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="messageExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="retrievePolicyBillingSummariesRequest" type="AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2:retrievePolicyBillingSummariesRequest" />
+  <xsd:complexType name="retrievePolicyBillingSummariesResponse">
+    <xsd:sequence minOccurs="1" maxOccurs="1">
+      <xsd:element minOccurs="0" maxOccurs="1" name="applicationContext" type="AAANCNU_Common_version2:ApplicationContext" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="responseCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="responseDescription" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="billingSummaries" type="AAANCNU_RetrievePolicyBillingSummaries_version2:BillingSummaries" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="messageExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="retrievePolicyBillingSummariesResponse" type="AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2:retrievePolicyBillingSummariesResponse" />
+</xsd:schema>

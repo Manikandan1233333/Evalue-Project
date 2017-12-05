@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" targetNamespace="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:schema>
+      <xsd:import schemaLocation="RetrievePolicyBillingSummariesV2.xsd3.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version2" />
+      <xsd:import schemaLocation="RetrievePolicyBillingSummariesV2.xsd1.xsd" namespace="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ErrorInfo">
+    <wsdl:part xmlns:xsns="http://www.aaancnuit.com.AAANCNU_Common_version2" name="errorInfo" element="xsns:ErrorInfo" />
+  </wsdl:message>
+  <wsdl:message name="retrievePolicyBillingSummariesRequest">
+    <wsdl:part xmlns:xsns="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" name="retrievePolicyBillingSummaries" element="xsns:retrievePolicyBillingSummariesRequest" />
+  </wsdl:message>
+  <wsdl:message name="retrievePolicyBillingSummariesResponse">
+    <wsdl:part xmlns:xsns="http://www.aaancnuit.com.AAANCNU_WSDL_RetrievePolicyBillingSummaries_version2" name="retrievePolicyBillingSummaries" element="xsns:retrievePolicyBillingSummariesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RetrievePolicyBillingSummaries">
+    <wsdl:operation name="RetrievePolicyBillingSummaries">
+      <wsdl:input name="RetrievePolicyBillingSummariesRequest" message="ns0:retrievePolicyBillingSummariesRequest" />
+      <wsdl:output name="RetrievePolicyBillingSummariesResponse" message="ns0:retrievePolicyBillingSummariesResponse" />
+      <wsdl:fault name="ErrorResponseType" message="ns0:ErrorInfo" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RetrievePolicyBillingSummariesSOAPBinding" type="ns0:RetrievePolicyBillingSummaries">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrievePolicyBillingSummaries">
+      <soap11:operation soapAction="http://www.aaancnuit.com.retrievePolicyBillingSummaries" style="document" />
+      <wsdl:input name="RetrievePolicyBillingSummariesRequest">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RetrievePolicyBillingSummariesResponse">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorResponseType">
+        <soap11:fault use="literal" name="ErrorResponseType" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RetrievePolicyBillingSummariesService">
+    <wsdl:port name="RetrievePolicyBillingSummariesSOAPPort" binding="ns0:RetrievePolicyBillingSummariesSOAPBinding">
+      <soap11:address location="http://192.168.49.53:41000/RetrievePolicyBillingSummariesV2" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

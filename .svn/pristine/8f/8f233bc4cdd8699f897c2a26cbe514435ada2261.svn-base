@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema2.xsd" filename="RecordApplicationEventAsyncService_schema2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema8.xsd" filename="RecordApplicationEventAsyncService_schema8.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema9.xsd" filename="RecordApplicationEventAsyncService_schema9.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema1.xsd" filename="RecordApplicationEventAsyncService_schema1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService.wsdl" filename="RecordApplicationEventAsyncService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema3.xsd" filename="RecordApplicationEventAsyncService_schema3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema7.xsd" filename="RecordApplicationEventAsyncService_schema7.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema5.xsd" filename="RecordApplicationEventAsyncService_schema5.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema6.xsd" filename="RecordApplicationEventAsyncService_schema6.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.49.31/enterpriselog/RecordApplicationEventAsyncService/RecordApplicationEventAsyncService_schema4.xsd" filename="RecordApplicationEventAsyncService_schema4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

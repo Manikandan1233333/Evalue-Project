@@ -1,0 +1,520 @@
+1:25:58 AM: Token: Session has timed out. <SessionInfo CurrentUser="xgs35gur" AppName="APDS" Token="34CD3B15-E1F8-4EBE-B4A7-6A34F8164638" />
+1:25:58 AM: OrderClasses.WebService.Order ProcessOrder(Token=34CD3B15-E1F8-4EBE-B4A7-6A34F8164638,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+1:26:50 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+1:29:02 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:29:02 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:29:42 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:29:43 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+1:29:43 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+1:29:43 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:29:53 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:30:20 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:30:23 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+1:30:23 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+1:43:15 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+1:43:52 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+1:44:46 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:44:46 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:44:53 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+1:44:53 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+1:44:53 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+1:44:53 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:45:07 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:45:24 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+1:45:27 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+1:45:27 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+2:24:14 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+2:24:24 AM: OrderClasses.WebService.Order Authenticate(UserId=xgs35gur,Password=****,AppId=APDS) OK
+2:42:37 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:42:37 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:43:09 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:43:10 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+2:43:10 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+2:43:10 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:46:09 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:46:09 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:46:33 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:46:34 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+2:46:34 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+2:46:34 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:46:38 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:47:01 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:47:04 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+2:47:04 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+2:50:32 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+2:50:42 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:50:58 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:51:03 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+2:51:03 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+2:51:51 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+2:52:14 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+2:53:53 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:53:53 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:54:00 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+2:54:01 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+2:54:01 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+2:54:01 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:54:09 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:54:30 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+2:54:32 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+2:54:32 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:00:29 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:01:56 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:25:33 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:33 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:35 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:35 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:38 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:25:38 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:25:44 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:25:46 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:26:14 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:26:39 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:26:39 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:53:43 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:54:35 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:54:35 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:54:37 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:54:37 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+3:54:37 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+3:54:37 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:54:44 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:54:57 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:54:57 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:54:57 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:54:58 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:55:02 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:56:09 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:56:11 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:56:11 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:56:18 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:56:24 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:56:31 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:56:42 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:56:43 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:56:43 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:57:07 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:59:49 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:02:36 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:03:52 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:05:42 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:05:52 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:05:56 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:05:56 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:08:08 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:11:35 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+4:11:35 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+4:11:35 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:12:24 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:12:35 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:17:07 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="43514" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="2" CCExpYear="2019" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202173" Amount="2" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+4:17:21 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:17:49 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:17:51 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:17:51 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:18:08 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:18:49 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="43514" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="5" CCExpYear="2019" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202174" Amount="2" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+4:18:53 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:19:03 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:19:03 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:19:03 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:19:03 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:20:03 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="43514" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="12" CCExpYear="2024" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202175" Amount="2" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+4:20:07 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:20:28 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:20:30 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:20:30 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:20:39 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:21:05 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:21:07 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:21:07 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:21:07 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:21:17 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:21:17 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:21:20 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:21:20 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:21:26 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:21:28 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:21:57 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:22:00 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+4:22:00 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+4:22:00 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:22:00 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:22:00 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:22:00 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020 " ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" LineItemNo="1" ProductName="Insurance" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="23141" AddressType="BillTo" />
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="5" CCExpYear="2022" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202178" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household" />
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+4:22:20 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:22:20 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:22:20 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:22:20 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:22:53 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:22:53 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:22:55 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:22:55 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:23:02 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:23:22 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:23:24 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:23:24 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:24:43 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+4:26:16 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="43523" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="6" CCExpYear="2021" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202180" Amount="2" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+4:27:46 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:27:53 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:27:55 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:27:55 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:28:13 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:28:13 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:28:15 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:28:15 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:28:18 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+4:28:18 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:28:26 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:28:59 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+4:28:59 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+4:28:59 AM: OrderClasses.WebService.Order GetReference(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,out Errors) OK
+4:28:59 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+5:36:44 AM: OrderClasses.WebService.Order ProcessOrder(Token=C179E86C-B3D3-4FE7-84BB-78B62A8701DC,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="SHARON N" LastName="ORDONIA" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="14341" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="2" CCExpYear="2019" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202181" Amount="2" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #HD46020" Price="2" ProductCode="INS" FirstName="SHARON N" LastName="ORDONIA" AccountNumber="HD46020" SubProduct="-CSIIB-HDES" LineItemNo="1" ProductName="Insurance" Amount="2" Quantity="1" RevenueType="1291" Policy="HD46020" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+10:48:12 PM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+11:26:12 PM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+11:32:42 PM: OrderClasses.WebService.Order CalculateOrderLines(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+11:32:42 PM: OrderClasses.WebService.Order CalculateOrderLines(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+11:32:45 PM: OrderClasses.WebService.Order CalculateOrderLines(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+11:32:45 PM: OrderClasses.WebService.Order CalculateOrderLines(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+11:33:01 PM: OrderClasses.WebService.Order CalculateOrderLines(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+11:33:01 PM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+11:33:01 PM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+11:33:01 PM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+11:33:09 PM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+11:33:26 PM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+11:33:26 PM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+11:33:26 PM: OrderClasses.WebService.Order GetReference(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,out Errors) OK
+11:33:27 PM: OrderClasses.WebService.Order ProcessOrder(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+11:33:31 PM: OrderClasses.WebService.Order ProcessOrder(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #CAH3900032332" Price="3" ProductCode="INS" FirstName="MARK" LastName="AAPPLELEAF" AccountNumber="CAH3900032332" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="3" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="MARK" LastName="AAPPLELEAF" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="45698" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2021" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202182" Amount="3" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #CAH3900032332" Price="3" ProductCode="INS" FirstName="MARK" LastName="AAPPLELEAF" AccountNumber="CAH3900032332" SubProduct="-CSIIB-PAS" LineItemNo="1" ProductName="Insurance" Amount="3" Quantity="1" RevenueType="1291" Policy="CAH3900032332" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed
+11:33:36 PM: OrderClasses.WebService.Order ProcessOrder(Token=942C861E-44F8-4460-8295-86F1DB40B024,UserId=xgs35gur,AppId=APDS,Order=<OrderInfo>
+  <Lines>
+    <LineItem Description="Home Installment Payment Policy #CAH3900032332" Price="3" ProductCode="INS" FirstName="MARK" LastName="AAPPLELEAF" AccountNumber="CAH3900032332" SubProduct="7A8A6BDD-2AC0-1DB4-A491-ED744A42A653" LineItemNo="1" ProductName="Insurance" Amount="3" Quantity="1" RevenueType="1291">
+      <Errors />
+      <ProductTypeNew>HO</ProductTypeNew>
+    </LineItem>
+  </Lines>
+  <Addresses>
+    <AddressInfo FirstName="MARK" LastName="AAPPLELEAF" State="CA" DayPhone="0000000000" EveningPhone="0000000000" Zip="45698" AddressType="BillTo">
+      <Errors />
+    </AddressInfo>
+    <AddressInfo AddressType="Household">
+      <Errors />
+    </AddressInfo>
+  </Addresses>
+  <Card CCNumber="****" CCExpMonth="3" CCExpYear="2021" CCType="1">
+    <Errors />
+  </Card>
+  <echeck>
+    <Errors />
+  </echeck>
+  <Detail MerchantRefNum="APDS8202182" Amount="3" PolicyState="CA">
+    <Errors />
+  </Detail>
+  <Products>
+    <InsuranceInfo>
+      <Errors />
+      <Addresses>
+        <AddressInfo SkipValidation="true" AddressType="Household">
+          <Errors />
+        </AddressInfo>
+      </Addresses>
+      <Lines>
+        <InsuranceLineItem Description="Home Installment Payment Policy #CAH3900032332" Price="3" ProductCode="INS" FirstName="MARK" LastName="AAPPLELEAF" AccountNumber="CAH3900032332" SubProduct="-CSIIB-PAS" LineItemNo="1" ProductName="Insurance" Amount="3" Quantity="1" RevenueType="1291" Policy="CAH3900032332" ProductType="HO">
+          <Errors />
+          <ProductTypeNew>HO</ProductTypeNew>
+          <PolicyValidate>true</PolicyValidate>
+          <IsHUONAuto>false</IsHUONAuto>
+        </InsuranceLineItem>
+      </Lines>
+    </InsuranceInfo>
+  </Products>
+</OrderInfo>) Failed

@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MSC</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSC</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccAuxPath>
+    </SccAuxPath>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>MSC.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.ATLPAYMENTLib">
+      <Name>Interop.ATLPAYMENTLib</Name>
+      <HintPath>C:\Users\ef7chin\Desktop\msc\bin\Interop.ATLPAYMENTLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSXML2, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ef7chin\Desktop\msc\bin\Interop.MSXML2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\CODE\AuthenticationClasses\AuthenticationClasses.csproj">
+      <Name>AuthenticationClasses</Name>
+      <Project>{AAFA3961-F5A4-4A6F-AD7E-17365037373E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CODE\Actors\CSAAActors.csproj">
+      <Name>CSAAActors</Name>
+      <Project>{1F1B8C9B-E177-4CE6-877E-762893CF125B}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CODE\CSAAWeb\CSAAWeb.csproj">
+      <Project>{7B04FDB9-6D6C-4E77-834F-ACF329747458}</Project>
+      <Name>CSAAWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CODE\OrderClassesII\OrderClassesII.csproj">
+      <Project>{04D7A002-8C64-422D-BCD9-B6FB80A7A908}</Project>
+      <Name>OrderClassesII</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CODE\PaymentClasses\PaymentClasses.csproj">
+      <Name>PaymentClasses</Name>
+      <Project>{5CD8A6D1-19AF-4E63-A9D9-04A43BD44796}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CODE\PaymentService\PaymentService.csproj">
+      <Name>PaymentService</Name>
+      <Project>{2CD04B62-4649-47AF-A008-131230177D57}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PC_PaymentService\PC_PaymentService.csproj">
+      <Project>{16FF8C1A-B695-4EA1-ABF9-70F02D530BE2}</Project>
+      <Name>PC_PaymentService</Name>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\DO.aspx.cs">
+      <DependentUpon>DO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DO.aspx.designer.cs">
+      <DependentUpon>DO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DOs.aspx.cs">
+      <DependentUpon>DOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DOs.aspx.designer.cs">
+      <DependentUpon>DOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users_PrintXls.aspx.cs">
+      <DependentUpon>Users_PrintXls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users_PrintXls.aspx.designer.cs">
+      <DependentUpon>Users_PrintXls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.designer.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Buttons.ascx.cs">
+      <DependentUpon>Buttons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons.ascx.designer.cs">
+      <DependentUpon>Buttons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Check.ascx.cs">
+      <DependentUpon>Check.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Check.ascx.designer.cs">
+      <DependentUpon>Check.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConfirmingEmail.ascx.cs">
+      <DependentUpon>ConfirmingEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ConfirmingEmail.ascx.designer.cs">
+      <DependentUpon>ConfirmingEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreditCardEnrollment.ascx.cs">
+      <DependentUpon>CreditCardEnrollment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreditCardEnrollment.ascx.designer.cs">
+      <DependentUpon>CreditCardEnrollment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\echeck.ascx.cs">
+      <DependentUpon>echeck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\echeck.ascx.designer.cs">
+      <DependentUpon>echeck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\eCheckEnrollment.ascx.cs">
+      <DependentUpon>eCheckEnrollment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\eCheckEnrollment.ascx.designer.cs">
+      <DependentUpon>eCheckEnrollment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditCardDetails.ascx.cs">
+      <DependentUpon>EditCardDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditCardDetails.ascx.designer.cs">
+      <DependentUpon>EditCardDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EMailAlertPopup.ascx.cs">
+      <DependentUpon>EMailAlertPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EMailAlertPopup.ascx.designer.cs">
+      <DependentUpon>EMailAlertPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Gender.ascx.cs">
+      <DependentUpon>Gender.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Gender.ascx.designer.cs">
+      <DependentUpon>Gender.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InsPayment.ascx.cs">
+      <DependentUpon>InsPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InsPayment.ascx.designer.cs">
+      <DependentUpon>InsPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Name.ascx.cs">
+      <DependentUpon>Name.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Name.ascx.designer.cs">
+      <DependentUpon>Name.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NameSearch.ascx.cs">
+      <DependentUpon>NameSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NameSearch.ascx.designer.cs">
+      <DependentUpon>NameSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSummary.ascx.cs">
+      <DependentUpon>OrderSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSummary.ascx.designer.cs">
+      <DependentUpon>OrderSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSummary_New.ascx.cs">
+      <DependentUpon>OrderSummary_New.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSummary_New.ascx.designer.cs">
+      <DependentUpon>OrderSummary_New.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageValidator.ascx.cs">
+      <DependentUpon>PageValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PageValidator.ascx.designer.cs">
+      <DependentUpon>PageValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PaymentAccount.ascx.cs">
+      <DependentUpon>PaymentAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PaymentAccount.ascx.designer.cs">
+      <DependentUpon>PaymentAccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PaymentMethod.ascx.cs">
+      <DependentUpon>PaymentMethod.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PaymentMethod.ascx.designer.cs">
+      <DependentUpon>PaymentMethod.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PaymentTypeControl.ascx.cs">
+      <DependentUpon>PaymentTypeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PaymentTypeControl.ascx.designer.cs">
+      <DependentUpon>PaymentTypeControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Phone.ascx.cs">
+      <DependentUpon>Phone.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Phone.ascx.designer.cs">
+      <DependentUpon>Phone.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PolicyAmount.ascx.cs">
+      <DependentUpon>PolicyAmount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PolicyAmount.ascx.designer.cs">
+      <DependentUpon>PolicyAmount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PolicyLastName.ascx.cs">
+      <DependentUpon>PolicyLastName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PolicyLastName.ascx.designer.cs">
+      <DependentUpon>PolicyLastName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PolicyNumber.ascx.cs">
+      <DependentUpon>PolicyNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PolicyNumber.ascx.designer.cs">
+      <DependentUpon>PolicyNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\State.ascx.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\State.ascx.designer.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Three_Box_Date.ascx.cs">
+      <DependentUpon>Three_Box_Date.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Three_Box_Date.ascx.designer.cs">
+      <DependentUpon>Three_Box_Date.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UnEnrollRecurringCC.ascx.cs">
+      <DependentUpon>UnEnrollRecurringCC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UnEnrollRecurringCC.ascx.designer.cs">
+      <DependentUpon>UnEnrollRecurringCC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UnEnrollRecurringECheck.ascx.cs">
+      <DependentUpon>UnEnrollRecurringECheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UnEnrollRecurringECheck.ascx.designer.cs">
+      <DependentUpon>UnEnrollRecurringECheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Year.ascx.cs">
+      <DependentUpon>Year.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Year.ascx.designer.cs">
+      <DependentUpon>Year.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ZipCode.ascx.cs">
+      <DependentUpon>ZipCode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ZipCode.ascx.designer.cs">
+      <DependentUpon>ZipCode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ItemsControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Template.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption\EncryptQueryString.cs" />
+    <Compile Include="Forms\ACHEnrollmentPilot.aspx.cs">
+      <DependentUpon>ACHEnrollmentPilot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ACHEnrollmentPilot.aspx.designer.cs">
+      <DependentUpon>ACHEnrollmentPilot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\general_error.aspx.cs">
+      <DependentUpon>general_error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\general_error.aspx.designer.cs">
+      <DependentUpon>general_error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageEnrollment.aspx.cs">
+      <DependentUpon>ManageEnrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageEnrollment.aspx.designer.cs">
+      <DependentUpon>ManageEnrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewInsurance.aspx.cs">
+      <DependentUpon>NewInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NewInsurance.aspx.designer.cs">
+      <DependentUpon>NewInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentConfirmation.aspx.cs">
+      <DependentUpon>PaymentConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentConfirmation.aspx.designer.cs">
+      <DependentUpon>PaymentConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintEnrollmentConfirmationEC.aspx.cs">
+      <DependentUpon>PrintEnrollmentConfirmationEC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintEnrollmentConfirmationEC.aspx.designer.cs">
+      <DependentUpon>PrintEnrollmentConfirmationEC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RecurringConfirmation.aspx.cs">
+      <DependentUpon>RecurringConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\RecurringConfirmation.aspx.designer.cs">
+      <DependentUpon>RecurringConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnEnrollmentConfirm.aspx.cs">
+      <DependentUpon>UnEnrollmentConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UnEnrollmentConfirm.aspx.designer.cs">
+      <DependentUpon>UnEnrollmentConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shared\CommonMenu.ascx.cs">
+      <DependentUpon>CommonMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\CommonMenu.ascx.designer.cs">
+      <DependentUpon>CommonMenu.ascx</DependentUpon>
+    </Compile>
+    <Content Include="Admin\DO.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Admin\DOs.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Admin\User.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\Users_PrintXls.aspx" />
+    <Content Include="Controls\Address.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\Buttons.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\Check.ascx" />
+    <Content Include="Controls\ConfirmingEmail.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\CreditCardEnrollment.ascx" />
+    <Content Include="Controls\echeck.ascx" />
+    <Content Include="Controls\eCheckEnrollment.ascx" />
+    <Content Include="Controls\EditCardDetails.ascx" />
+    <Content Include="Controls\EMailAlertPopup.ascx" />
+    <Content Include="Controls\Gender.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\InsPayment.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\Name.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\NameSearch.ascx" />
+    <Content Include="Controls\OrderSummary.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\OrderSummary_New.ascx" />
+    <Content Include="Controls\PageValidator.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\PaymentAccount.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\PaymentMethod.ascx" />
+    <Content Include="Controls\PaymentTypeControl.ascx" />
+    <Content Include="Controls\Phone.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\PolicyAmount.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\PolicyLastName.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\PolicyNumber.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\State.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\TermsAndConditions.aspx" />
+    <Content Include="Controls\terms_and_conditions.htm" />
+    <Content Include="Controls\Three_Box_Date.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\UnEnrollRecurringCC.ascx" />
+    <Content Include="Controls\UnEnrollRecurringECheck.ascx" />
+    <Content Include="Controls\Year.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Controls\ZipCode.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Default.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\ACHEnrollmentPilot.aspx" />
+    <Content Include="Forms\Billing.aspx" />
+    <Content Include="Forms\Confirm.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\Default.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\email_info_popup.htm" />
+    <Content Include="Forms\general_error.aspx" />
+    <Content Include="Forms\Insurance.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\ManageEnrollment.aspx" />
+    <Content Include="Forms\New.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\NewInsurance.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Forms\PaymentConfirmation.aspx" />
+    <Content Include="Forms\PrintEnrollmentConfirmationEC.aspx" />
+    <Content Include="Forms\Receipt.aspx" />
+    <Content Include="Forms\RecurringConfirmation.aspx" />
+    <Content Include="Forms\UnEnrollmentConfirm.aspx" />
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Images\aaa_logo.gif" />
+    <Content Include="Images\AAA_Logo_backside.gif" />
+    <Content Include="Images\add_associate_btn.gif" />
+    <Content Include="Images\btn_AddAnother.gif" />
+    <Content Include="Images\btn_addbranchoffice.GIF" />
+    <Content Include="Images\btn_addproduct.gif" />
+    <Content Include="Images\btn_adduser.gif" />
+    <Content Include="Images\btn_back.gif" />
+    <Content Include="Images\btn_cancel.gif" />
+    <Content Include="Images\btn_clear.gif" />
+    <Content Include="Images\btn_closewindow.gif" />
+    <Content Include="Images\btn_continue.gif" />
+    <Content Include="Images\btn_convert.gif" />
+    <Content Include="Images\btn_deleteproduct.gif" />
+    <Content Include="Images\btn_deleteuser.gif" />
+    <Content Include="Images\btn_doanother.gif" />
+    <Content Include="Images\btn_doanothertrans.gif" />
+    <Content Include="Images\btn_logout.gif" />
+    <Content Include="Images\btn_mbrsearch.gif" />
+    <Content Include="Images\btn_newadmin.gif" />
+    <Content Include="Images\btn_newcsr.gif" />
+    <Content Include="Images\btn_newmembership.gif" />
+    <Content Include="Images\btn_newmgr.gif" />
+    <Content Include="Images\btn_print.gif" />
+    <Content Include="Images\btn_remove.gif" />
+    <Content Include="Images\btn_renew.gif" />
+    <Content Include="Images\btn_reset.gif" />
+    <Content Include="Images\btn_resetpassword.gif" />
+    <Content Include="Images\btn_search.gif" />
+    <Content Include="Images\btn_searchformember.gif" />
+    <Content Include="Images\btn_submit.gif" />
+    <Content Include="Images\btn_unEnrollForRecurring.gif" />
+    <Content Include="Images\btn_updateuser.gif" />
+    <Content Include="Images\bullet.gif" />
+    <Content Include="Images\del_associate_btn.gif" />
+    <Content Include="Images\double_arrow.gif" />
+    <Content Include="Images\eCheck_v1_3.jpg" />
+    <Content Include="Images\grf_cardBottom.gif" />
+    <Content Include="Images\grf_cardBottom_sml.gif" />
+    <Content Include="Images\grf_cardLeft.gif" />
+    <Content Include="Images\grf_cardRight.gif" />
+    <Content Include="Images\grf_cardRight1.GIF" />
+    <Content Include="Images\grf_cardRight_sml.gif" />
+    <Content Include="Images\grf_cardTop.gif" />
+    <Content Include="Images\grf_cardTop_sml.gif" />
+    <Content Include="Images\grf_cardtop_sml2.gif" />
+    <Content Include="Images\grf_cardtop_sml3.gif" />
+    <Content Include="Images\login_collage.jpg" />
+    <Content Include="Images\login_logo.gif" />
+    <Content Include="Images\msc_logo.gif" />
+    <Content Include="Images\pixel.gif" />
+    <Content Include="Images\red_arrow.gif" />
+    <Content Include="Images\ss_logo.gif" />
+    <Content Include="Scripts\ACHMasking.js" />
+    <Content Include="Scripts\CCMasking.js" />
+    <Content Include="Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Shared\ChainEvents.js" />
+    <Content Include="Shared\Common.js" />
+    <Content Include="Shared\CommonMenu.ascx" />
+    <Content Include="Shared\formEvents.js" />
+    <Content Include="style.css" />
+    <Content Include="Template\footer.ascx" />
+    <Content Include="Template\head.ascx" />
+    <Content Include="Template\header.ascx" />
+    <Content Include="terms_and_conditions.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Xml\ValidateResponseMapping.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Admin\DO.aspx.resx">
+      <DependentUpon>DO.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\DOs.aspx.resx">
+      <DependentUpon>DOs.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\User.aspx.resx">
+      <DependentUpon>User.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Users.aspx.resx">
+      <DependentUpon>Users.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Users_PrintXls.aspx.resx">
+      <DependentUpon>Users_PrintXls.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Address.ascx.resx">
+      <DependentUpon>Address.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Buttons.ascx.resx">
+      <DependentUpon>Buttons.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConfirmingEmail.ascx.resx">
+      <DependentUpon>ConfirmingEmail.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Gender.ascx.resx">
+      <DependentUpon>Gender.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InsPayment.ascx.resx">
+      <DependentUpon>InsPayment.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Name.ascx.resx">
+      <DependentUpon>Name.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderSummary.ascx.resx">
+      <DependentUpon>OrderSummary.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderSummary_New.ascx.resx">
+      <DependentUpon>OrderSummary_New.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PageValidator.ascx.resx">
+      <DependentUpon>PageValidator.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PaymentAccount.ascx.resx">
+      <DependentUpon>PaymentAccount.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PaymentTypeControl.ascx.resx">
+      <DependentUpon>PaymentTypeControl.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Phone.ascx.resx">
+      <DependentUpon>Phone.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PolicyAmount.ascx.resx">
+      <DependentUpon>PolicyAmount.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PolicyLastName.ascx.resx">
+      <DependentUpon>PolicyLastName.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PolicyNumber.ascx.resx">
+      <DependentUpon>PolicyNumber.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\State.ascx.resx">
+      <DependentUpon>State.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Year.ascx.resx">
+      <DependentUpon>Year.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ZipCode.ascx.resx">
+      <DependentUpon>ZipCode.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.aspx.resx">
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Billing.aspx.resx">
+      <DependentUpon>Billing.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Confirm.aspx.resx">
+      <DependentUpon>Confirm.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Default.aspx.resx">
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\general_error.aspx.resx">
+      <DependentUpon>general_error.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\New.aspx.resx">
+      <DependentUpon>New.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewInsurance.aspx.resx">
+      <DependentUpon>NewInsurance.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentConfirmation.aspx.resx">
+      <DependentUpon>PaymentConfirmation.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receipt.aspx.resx">
+      <DependentUpon>Receipt.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecurringConfirmation.aspx.resx" />
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3233</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/MSC</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

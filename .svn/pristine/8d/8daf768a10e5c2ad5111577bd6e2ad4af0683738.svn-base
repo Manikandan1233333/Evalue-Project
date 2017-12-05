@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AAA Insurance Exchange - Terms and Conditions</title>
+<!--<link rel="stylesheet" type="text/css" media="screen" href="style.css" />-->
+<style type="text/css">
+h1, h2, h3, h4, h5, h6 { font-family:arial,helvetica,sans-serif;font-weight:normal;text-decoration:none;}
+h1 { font-size: 20pt; }
+h2 { font-size: 18pt; }
+h3 { font-size: 16pt; }
+h4 { font-size: 14pt; }
+h5 { font-size: 12pt; }
+h6 { font-size: 10pt; }
+
+#content{border:3px solid #009;margin:0;padding:0;width:900px;overflow:hidden;}
+#banner{background:#009;height:50px;}
+#logo{}
+#banner-text{color:#FFF;display:inline;left:15px;position:relative;}
+#main{padding-left:6px;padding-right:6px;}
+#print-button{bottom:-15px;float:right;position:relative;}
+#close-button{float:right;}
+#copyright{bottom:-15px;color:#0080ff;position:relative;text-align:center;font-size: xx-small}
+</style>
+</head>
+<body>
+<div id="content">
+<div id="banner"><img id="logo" src="../Images/aaa_logo.gif" alt="AAA Insurance Exchange Logo" /><h1 id="banner-text">Terms and Conditions</h1></div>
+<div id="main">
+<div id="print-button" ><input type="button" value="Print"onclick="window.print();return false;" /></div>
+<h3>Automatic Payment Authorization</h3>
+<h6>By signing below or providing an electronic signature over the Internet or the telephone, you authorize AAA Northern California, Nevada & Utah Insurance Exchange ("we," "us" and "our") to initiate charges to your credit card or debits to your bank account or debit card identified below automatically (an "automatic payment") (1) each month to pay your insurance premium and any service charge and (2) for any returned payment fee imposed as described below.  This authorization also covers any adjustments due to changes in premiums or entries made in error.</h6>
+<h6>Your premiums may vary, including based on changes in coverage, adding or removing vehicles, or adding or removing drivers.  The amount of your insurance premium and any returned payment fee will be included on a billing statement sent to you at least 10 days before the date on which the premium and any returned payment fee will be charged or debited.</h6>
+<h6>Your authorization applies to new and renewal policies.  Your authorization will remain in effect until you revoke it by calling us at (800) 922-8228 and we have a reasonable opportunity to act on your revocation.  We can cancel your authorization or change these terms upon <strong>[30]</strong> days' notice to you.  <strong>[Please print a copy of this authorization for your records.]</strong></h6>
+<h6>You agree to continue to make payments by check or money order until we have notified you that your automatic payment authorization has been activated.  You should ensure that sufficient collected funds are in your account or sufficient credit is available on your credit card to satisfy each payment and that your account or card has not been closed or has expired.  You agree to notify us of any change in your account or card, including a change in account number or expiration date.  If a payment is returned unpaid, we will impose a returned payment fee up to $20.00, and we may resubmit it up to the number of times permitted by applicable law.  Your bank or card issuer may also impose fees for returned payments.  If a payment remains unpaid for any reason, you will be obligated to make the payment by check or money order, and we may cancel your automatic payment authorization immediately upon notice to you.  Failure to pay your premium may also result in our canceling your insurance policy in accordance with applicable law.</h6>
+<h6><strong>[If you are applying for insurance, you acknowledge that acceptance of this automatic payment authorization does not mean that your application for insurance has been approved.  If an automatic payment is made and your application for insurance is declined, your automatic payment will be refunded to you.]</strong></h6>
+<div id="close-button" ><input type="button" value="Close"onclick="window.close();return false;" /></div>
+<h6 id="copyright">Copyright &copy; 2013 AAA Insurance Exchange. All Rights Reserved</h6>
+</div>
+</div>
+</body>
+</html>

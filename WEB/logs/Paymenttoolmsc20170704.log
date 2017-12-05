@@ -1,0 +1,242 @@
+3:49:17 AM: Source:WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+3:49:37 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">AZH4900032384</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+3:49:37 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>AZH4900032384</policyNumber>
+        <riskState>AZ</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2018-04-04</termEffectiveDate>
+        <termExpirationDate>2019-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>1KICO</writingCompany>
+        <renewalFlag>true</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>LEE</firstName>
+              <lastName>CANTON</lastName>
+              <fullName>LEE CANTON</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>MESA</cityName>
+              <zipCode>85213</zipCode>
+              <streetAddressLine>E BROWN RD</streetAddressLine>
+              <isoRegionCode>AZ</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>142.00</currentBalance>
+        <payOffAmount>142.00</payOffAmount>
+        <autoPay>true</autoPay>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2018-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>142.00</installmentAmount>
+          <totalBillAmountDue>142.00</totalBillAmountDue>
+          <paymentPlan>AUTO</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>active</status>
+        </lastPayment>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+3:51:55 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:52:09 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202259</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>1</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>1</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>AZH4900032384</policyNumber>
+          <riskState>AZ</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>1KICO</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>EFT</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken />
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+3:52:15 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.HandleFaultException, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:52:15 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.HandleFaultException, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:52:15 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:User: xgs35gur SOAS301 Remote Endpoint is down or unavailable.
+3:52:21 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+3:53:19 AM: Source:WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+3:53:43 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">AZH4900032384</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+3:53:43 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>AZH4900032384</policyNumber>
+        <riskState>AZ</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2018-04-04</termEffectiveDate>
+        <termExpirationDate>2019-04-04</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>1KICO</writingCompany>
+        <renewalFlag>true</renewalFlag>
+        <dataSource>PAS</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <firstName>LEE</firstName>
+              <lastName>CANTON</lastName>
+              <fullName>LEE CANTON</fullName>
+            </name>
+            <preferredPostalAddress>
+              <cityName>MESA</cityName>
+              <zipCode>85213</zipCode>
+              <streetAddressLine>E BROWN RD</streetAddressLine>
+              <isoRegionCode>AZ</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>0</remainingInstallments>
+        <currentBalance>142.00</currentBalance>
+        <payOffAmount>142.00</payOffAmount>
+        <autoPay>true</autoPay>
+        <bill>
+          <installmentNumber>1</installmentNumber>
+          <statementDate>2018-03-27</statementDate>
+          <dueDate>2018-04-04</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>142.00</installmentAmount>
+          <totalBillAmountDue>142.00</totalBillAmountDue>
+          <paymentPlan>AUTO</paymentPlan>
+          <billingPlan>ANN</billingPlan>
+        </bill>
+        <lastPayment>
+          <status>active</status>
+        </lastPayment>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+3:54:43 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+3:54:43 AM: Source:OrderClasses.OrderInfo.Process, Message:Payment request to Payment Central - IDP Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentRequest1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <issueDirectPaymentRequest>
+    <applicationContext>
+      <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    </applicationContext>
+    <externalReferenceNumber>APDS8202261</externalReferenceNumber>
+    <agentIdentifier>1235689449</agentIdentifier>
+    <agency>0</agency>
+    <userId>xgs35gur</userId>
+    <districtOffice>500</districtOffice>
+    <authenticationChannel>F2F</authenticationChannel>
+    <totalAmount>1</totalAmount>
+    <lineItems>
+      <lineItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <amount>1</amount>
+        <amountFor>INST</amountFor>
+        <policyInfo>
+          <policyNumber>AZH4900032384</policyNumber>
+          <riskState>AZ</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>1KICO</writingCompany>
+          <type>HO</type>
+        </policyInfo>
+      </lineItem>
+    </lineItems>
+    <paymentItems>
+      <paymentItem xmlns="http://www.aaancnuit.com.AAANCNU_IssueDirectPayment_version2">
+        <paymentMethod>EFT</paymentMethod>
+        <amount>1</amount>
+        <paymentAccountToken />
+      </paymentItem>
+    </paymentItems>
+    <emailTo />
+  </issueDirectPaymentRequest>
+</IssueDirectPaymentRequest1>
+3:54:43 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.HandleFaultException, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:54:43 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.HandleFaultException, Message:Payment Response from Payment Central - IDP Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<IssueDirectPaymentResponse1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+3:54:43 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:User: xgs35gur SOAS301 Remote Endpoint is down or unavailable.
+3:54:43 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends

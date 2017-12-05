@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_Common_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ErrorInfo" type="tns:ErrorInfo" />
+  <xs:element name="ExtensionArea" type="tns:ExtensionArea" />
+  <xs:complexType name="ObjectProperty">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="value" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="objectPropertyExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtensionArea">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CurrencyAmount">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element default="USD" name="currencyCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="currencyAmountExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ApplicationContext">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" />
+      <xs:element name="transactionType" type="xs:string" />
+      <xs:element name="application" type="xs:string" />
+      <xs:element name="subSystem" type="xs:string" />
+      <xs:element name="address" type="xs:string" />
+      <xs:element minOccurs="0" name="correlationId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="applicationContextExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObjectReference">
+    <xs:sequence>
+      <xs:element name="componentId" type="xs:string" />
+      <xs:element name="objectId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="objectReferenceExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RuleAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stringRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleAttributeExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceOptions">
+    <xs:sequence>
+      <xs:element default="false" name="echoBackRequest" type="xs:boolean" />
+      <xs:element minOccurs="0" name="startPaginationInstance" type="xs:positiveInteger" />
+      <xs:element minOccurs="0" default="50" name="maximumReturnedInstances" type="xs:positiveInteger" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceResponseSort" nillable="true" type="tns:ResponseSort" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceOptionsExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseSort">
+    <xs:sequence>
+      <xs:element name="sortBy" type="xs:string" />
+      <xs:element default="Ascending" name="sortDirection" type="tns:SortDirection" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="responseSortExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" type="xs:date" />
+      <xs:element minOccurs="0" name="endDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="statusExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StatusWithCommonReason">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Status">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="statusWithCommonReasonExtension" nillable="true" type="tns:ExtensionArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Amount">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:decimal" />
+      <xs:element name="Unit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="amountExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userRID" type="xs:integer" />
+      <xs:element minOccurs="0" name="requestID" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" name="eMailAddress" type="xs:string" />
+      <xs:element minOccurs="0" name="telephoneNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      <xs:element name="districtOfficeNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="financialLocation" type="xs:string" />
+      <xs:element name="repID" type="xs:string" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roleNames" nillable="true" type="xs:string" />
+      <xs:element default="false" name="isPasswordExpired" type="xs:boolean" />
+      <xs:element default="false" name="isLockedOut" type="xs:boolean" />
+      <xs:element default="false" name="authenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userInfoExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ErrorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorTimeStamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+      <xs:element minOccurs="0" name="severity" type="tns:ErrorSeverity" />
+      <xs:element minOccurs="0" name="errorMessageText" type="xs:string" />
+      <xs:element minOccurs="0" name="friendlyErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="vendorMessageText" type="xs:string" />
+      <xs:element minOccurs="0" name="stackTrace" type="xs:string" />
+      <xs:element minOccurs="0" name="sqlState" type="xs:string" />
+      <xs:element name="serviceName" type="xs:string" />
+      <xs:element name="sourceSystem" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuleResponse" type="tns:RuleResponse" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="errorInfoExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RuleResponse">
+    <xs:sequence>
+      <xs:element name="timestamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ruleDecision" type="xs:string" />
+      <xs:element minOccurs="0" name="ruleScore" type="xs:string" />
+      <xs:element name="service" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleScorecard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleResults" nillable="true" type="tns:RuleResult" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleResponseExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RuleResult">
+    <xs:sequence>
+      <xs:element name="ruleId" type="xs:string" />
+      <xs:element name="ruleDescription" type="xs:string" />
+      <xs:element minOccurs="0" name="action" type="xs:string" />
+      <xs:element name="severity" type="tns:RuleSeverity" />
+      <xs:element name="isOverridable" type="xs:boolean" />
+      <xs:element name="overrideAuthorityLevel" type="xs:string" />
+      <xs:element name="instanceId" type="xs:integer" />
+      <xs:element name="sourceSystem" type="xs:string" />
+      <xs:element name="timestamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="category" type="tns:RuleCategory" />
+      <xs:element name="correlationId" type="xs:integer" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleattribute" nillable="true" type="tns:RuleAttribute" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleResultExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="searchCriteriaExtension" nillable="true" type="tns:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SortDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Descending" />
+      <xs:enumeration value="Ascending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MembershipState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="C" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="L" />
+      <xs:enumeration value="F" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorSeverity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Critical" />
+      <xs:enumeration value="Non Critical" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RuleSeverity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Informational" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RuleCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Product Constraint" />
+      <xs:enumeration value="Mandatory Data" />
+      <xs:enumeration value="Eligibility" />
+      <xs:enumeration value="Underwriting" />
+      <xs:enumeration value="Informational" />
+      <xs:enumeration value="Clerical" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="USStates">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AZ" />
+      <xs:enumeration value="AL" />
+      <xs:enumeration value="AK" />
+      <xs:enumeration value="AR" />
+      <xs:enumeration value="CA" />
+      <xs:enumeration value="CO" />
+      <xs:enumeration value="CT" />
+      <xs:enumeration value="DE" />
+      <xs:enumeration value="FL" />
+      <xs:enumeration value="GA" />
+      <xs:enumeration value="HI" />
+      <xs:enumeration value="ID" />
+      <xs:enumeration value="IL" />
+      <xs:enumeration value="IN" />
+      <xs:enumeration value="IA" />
+      <xs:enumeration value="KS" />
+      <xs:enumeration value="KT" />
+      <xs:enumeration value="LA" />
+      <xs:enumeration value="ME" />
+      <xs:enumeration value="MD" />
+      <xs:enumeration value="MA" />
+      <xs:enumeration value="MI" />
+      <xs:enumeration value="MN" />
+      <xs:enumeration value="MS" />
+      <xs:enumeration value="MO" />
+      <xs:enumeration value="MT" />
+      <xs:enumeration value="NE" />
+      <xs:enumeration value="NH" />
+      <xs:enumeration value="NJ" />
+      <xs:enumeration value="NM" />
+      <xs:enumeration value="NC" />
+      <xs:enumeration value="ND" />
+      <xs:enumeration value="OH" />
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="OR" />
+      <xs:enumeration value="PA" />
+      <xs:enumeration value="RI" />
+      <xs:enumeration value="SC" />
+      <xs:enumeration value="SD" />
+      <xs:enumeration value="TN" />
+      <xs:enumeration value="TX" />
+      <xs:enumeration value="UT" />
+      <xs:enumeration value="VT" />
+      <xs:enumeration value="VA" />
+      <xs:enumeration value="WA" />
+      <xs:enumeration value="WV" />
+      <xs:enumeration value="WI" />
+      <xs:enumeration value="WY" />
+      <xs:enumeration value="NY" />
+      <xs:enumeration value="NV" />
+      <xs:enumeration value="AA" />
+      <xs:enumeration value="AE" />
+      <xs:enumeration value="AP" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

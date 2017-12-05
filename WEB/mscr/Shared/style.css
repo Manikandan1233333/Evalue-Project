@@ -1,0 +1,180 @@
+<STYLE type="text/css">
+<!--
+
+A
+{
+	color: #0066ff;
+	text-decoration: none;
+}   
+
+A:visited
+{
+	color: #0066ff;
+	text-decoration: none;
+}
+
+A:active
+{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+A:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+.headerlink
+{
+	color: #000000;
+	text-decoration: none;
+}     /* unvisited link */
+
+.headerlink:visited
+{
+	color: #000000;
+	text-decoration: none;
+}     /* visited link */
+
+.headerlink:active
+{
+	color: #cccccc;
+	text-decoration: none;
+}     /* active link */
+
+.headerlink:hover
+{
+	color: #ffffff;
+	text-decoration: none;
+}     /* hover or mousover link */
+
+
+
+.arial_8_link
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #0066ff;
+	font-size: 8px;
+	text-decoration: none;
+}
+
+.arial_9
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 9px;
+}
+
+.arial_9_link
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #0066ff;
+	font-size: 9px;
+	text-decoration: none;
+}
+
+.arial_10
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 10px;
+}
+
+.arial_11
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 11px;
+}
+
+.arial_11_red
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #ff0000;
+	font-size: 11px;
+}
+
+.arial_12
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+}
+
+.arial_12_blue
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #0066ff;
+	font-size: 12px;
+}
+
+.arial_12_blue_link
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #0066ff;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.arial_12_bold
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.arial_11_bold_white
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.arial_12_bold_red
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #ff0000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.arial_12_bold_white
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.arial_15
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 15px;
+}
+
+.arial_15_bold
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #000000;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.report_total
+{
+	font-family: arial, helvetica, sans-serif;
+	color: #CCCCCC;
+	font-size: 8px;
+	text-decoration: none;
+}
+
+
+-->
+</style>

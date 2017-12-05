@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:AAANCNU_Common_version2="http://www.aaancnuit.com.AAANCNU_Common_version2" xmlns:AAANCNU_RetrievePolicyBillingSummaries_version2="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="RetrievePolicyBillingSummariesV2.xsd3.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version2" />
+  <xsd:complexType name="BillingProfile">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="remainingInstallments" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="currentBalance" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="payOffAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="priorTermBalance" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="termAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="totalPaid" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="billingAccountId" type="xsd:string" />
+      <xsd:element minOccurs="0" default="false" name="autoPay" type="xsd:boolean" />
+      <xsd:element minOccurs="0" default="false" name="paymentRestriction" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="nextInstallmentAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="nextDueDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="nextStatementDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="nextProcessingDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="bill" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PaymentDueProfile" />
+      <xsd:element minOccurs="0" name="lastPayment" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PaymentProfile" />
+      <xsd:element minOccurs="0" default="false" name="isRestrictedToPay" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="setupAutoPayReasonCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="setupAutoPayEffectiveDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="updateAutoPayReasonCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="updateAutoPayEffectiveDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="cancelAutoPayReasonCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="canceAutoPayEffectiveDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="payers" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyPayers" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="billingProfileExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PartyName">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="firstName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="middleName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lastName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="prefix" type="xsd:string" />
+      <xsd:element minOccurs="0" name="suffix" type="xsd:string" />
+      <xsd:element minOccurs="0" name="salutation" type="xsd:string" />
+      <xsd:element minOccurs="0" name="shortFirstName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="maidenName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="personNameIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fullName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="partyType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="partyNameExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TelephoneNumbers">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="telephoneNumber" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceTelephone" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="telephoneNumbersExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmailAddresses">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="emailAddress" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceEmail" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="emailAddressesExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AdditionalInterests">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="additionalInterest" type="AAANCNU_RetrievePolicyBillingSummaries_version2:AdditionalInterestSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="additionalInterestsExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyProductSource">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicySource">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="writingCompany" type="xsd:string" />
+          <xsd:element minOccurs="0" name="lineOfBusiness" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="policyPrefix" type="xsd:string" />
+          <xsd:element minOccurs="0" name="zipCode" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyProductSourceExtension" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="NamedInsuredSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="namedInsuredIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" default="false" name="primary" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lengthOfTimeKnown" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="preferredEmailAddress" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dateOfBirth" type="xsd:date" />
+      <xsd:element minOccurs="0" name="gender" type="xsd:string" />
+      <xsd:element minOccurs="0" name="maritalStatus" type="xsd:string" />
+      <xsd:element minOccurs="0" name="occupation" type="xsd:string" />
+      <xsd:element minOccurs="0" name="knownSinceYear" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="homeTelephoneNumber" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceTelephone" />
+      <xsd:element minOccurs="0" name="businessTelephoneNumber" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceTelephone" />
+      <xsd:element minOccurs="0" name="cellularTelephoneNumber" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceTelephone" />
+      <xsd:element minOccurs="0" name="mailingAddress" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PostalAddressSummary" />
+      <xsd:element minOccurs="0" name="name" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PartyName" />
+      <xsd:element minOccurs="0" name="preferredPostalAddress" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PostalAddressSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="namedInsuredSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AgentWorkArea">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="riskState" type="xsd:string" />
+      <xsd:element minOccurs="0" name="generalNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="legacyId" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dataSource" type="xsd:string" />
+      <xsd:element minOccurs="0" name="gaName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="riskClub" type="AAANCNU_RetrievePolicyBillingSummaries_version2:OrganizationHeader" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="agentWorkAreaExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AdditionalInterestSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="loanNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sequenceNumber" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="interestIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="billTo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="address" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PostalAddressSummary" />
+      <xsd:element minOccurs="0" name="telephontNumbers" type="AAANCNU_RetrievePolicyBillingSummaries_version2:TelephoneNumbers" />
+      <xsd:element minOccurs="0" name="emailAddresses" type="AAANCNU_RetrievePolicyBillingSummaries_version2:EmailAddresses" />
+      <xsd:element minOccurs="0" name="name" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PartyName" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="additionalInterestSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConvertedPolicy">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyProductSource">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="inceptionDate" type="xsd:date" />
+          <xsd:element minOccurs="0" name="billingAccountId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="convertedPolicyExtension" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrganizationHeader">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="identifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fullName" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="organizationHeaderExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BillingPolicyHeader">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyHeader">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="convertedPolicy" type="AAANCNU_RetrievePolicyBillingSummaries_version2:ConvertedPolicy" />
+          <xsd:element minOccurs="0" name="additionalInterests" type="AAANCNU_RetrievePolicyBillingSummaries_version2:AdditionalInterests" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="billingPolicyHeaderExtension" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyBillingSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="errorInfo" type="AAANCNU_Common_version2:ErrorInfo" />
+      <xsd:element minOccurs="0" name="policy" type="AAANCNU_RetrievePolicyBillingSummaries_version2:BillingPolicyHeader" />
+      <xsd:element minOccurs="0" name="billingSummary" type="AAANCNU_RetrievePolicyBillingSummaries_version2:BillingProfile" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyBillingSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicySource">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="policyNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="productCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="riskState" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dataSource" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policySourceExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyInsuredSummaries">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="namedInsuredSummary" type="AAANCNU_RetrievePolicyBillingSummaries_version2:NamedInsuredSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyInsuredSummariesExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AgentSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="agentIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="firstName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lastName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fullName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="emailAddress" type="xsd:string" />
+      <xsd:element minOccurs="0" name="channelType" type="xsd:string" />
+      <xsd:element minOccurs="0" name="agentType" type="xsd:string" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="isSweepEnabled" type="xsd:boolean" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="address" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PostalAddressSummary" />
+      <xsd:element minOccurs="0" name="agency" type="AAANCNU_RetrievePolicyBillingSummaries_version2:OrganizationHeader" />
+      <xsd:element minOccurs="0" name="location" type="AAANCNU_RetrievePolicyBillingSummaries_version2:OrganizationHeader" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="workArea" type="AAANCNU_RetrievePolicyBillingSummaries_version2:AgentWorkArea" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="contactNumber" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceTelephone" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="agentSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PreferenceEmail">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="preferenceEmailIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="emailAddress" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="preferenceEmailExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentProfile">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="paymentDateTime" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="paymentMethod" type="xsd:string" />
+      <xsd:element minOccurs="0" name="amount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="checkNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postmarkDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referenceNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="subType" type="xsd:string" />
+      <xsd:element minOccurs="0" name="remarks" type="xsd:string" />
+      <xsd:element minOccurs="0" name="userID" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="paymentProfileExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyHeader">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="policyIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lineOfBusiness" type="xsd:string" />
+      <xsd:element minOccurs="0" name="productCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="policyPrefix" type="xsd:string" />
+      <xsd:element minOccurs="0" name="policyNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="riskState" type="xsd:string" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="termEffectiveDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="termExpirationDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="termAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusDescription" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusReason" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusReasonDescription" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusReasonDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="writingCompany" type="xsd:string" />
+      <xsd:element minOccurs="0" name="renewalFlag" type="xsd:boolean" />
+      <xsd:element minOccurs="0" default="false" name="convertedRenewalOffer" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="inceptionDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="dataSource" type="xsd:string" />
+      <xsd:element minOccurs="0" name="months" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="quoteId" type="xsd:string" />
+      <xsd:element minOccurs="0" name="customerNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lastUpdated" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="agent" type="AAANCNU_RetrievePolicyBillingSummaries_version2:AgentSummary" />
+      <xsd:element minOccurs="0" name="insureds" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyInsuredSummaries" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyHeaderExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyPayers">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="payer" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PayerSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyPayersExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BillingSummaries">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="policyBillingSummary" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PolicyBillingSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="billingSummariesExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PayerSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="name" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PartyName" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="email" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PreferenceEmail" />
+      <xsd:element minOccurs="0" name="telephoneNumbers" type="AAANCNU_RetrievePolicyBillingSummaries_version2:TelephoneNumbers" />
+      <xsd:element minOccurs="0" name="postalAddress" type="AAANCNU_RetrievePolicyBillingSummaries_version2:PostalAddressSummary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="payerSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentDueProfile">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="installmentNumber" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="statementDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="processingDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="dueDate" type="xsd:date" />
+      <xsd:element minOccurs="0" name="previousBalance" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="feeAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="installmentAmount" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="totalBillAmountDue" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="minimumAmountDue" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="paymentPlan" type="xsd:string" />
+      <xsd:element minOccurs="0" name="billingPlan" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referenceNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="subType" type="xsd:string" />
+      <xsd:element minOccurs="0" name="remarks" type="xsd:string" />
+      <xsd:element minOccurs="0" name="userID" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="paymentDueProfileExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PostalAddressSummary">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="cityStatePostalCodeLine" type="xsd:string" />
+      <xsd:element minOccurs="0" name="extendedStreetAddressLine" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cityName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zipCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="streetAddressLine" type="xsd:string" />
+      <xsd:element minOccurs="0" name="unitNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="isoCountryCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="isoRegionCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="houseNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precedingDirection" type="xsd:string" />
+      <xsd:element minOccurs="0" name="streetName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="floorNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="streetSuffix" type="xsd:string" />
+      <xsd:element minOccurs="0" name="countyName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postDirection" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postalBoxNumber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dpvValue" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="postalAddressSummaryExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PreferenceTelephone">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="preferenceTelephoneIdentifier" type="xsd:string" />
+      <xsd:element minOccurs="0" name="countryCode" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="areaCode" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="extension" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="preferred" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="localNumber" type="xsd:integer" />
+      <xsd:element minOccurs="0" default="false" name="doNotCall" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="prefixCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="displayValue" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="preferenceTelephoneExtension" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

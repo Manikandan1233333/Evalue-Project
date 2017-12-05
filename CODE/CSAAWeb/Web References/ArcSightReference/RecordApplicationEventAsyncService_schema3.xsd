@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_Party_version1" xmlns:ns1="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_Party_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:complexType name="OrganizationStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:Status">
+        <xs:sequence>
+          <xs:element name="state" type="tns:OrganizationState" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="organizationStatusExtension" nillable="true" type="ns1:ExtensionArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PartySearchCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:SearchCriteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="policyNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="membershipNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="firstName" type="xs:string" />
+          <xs:element minOccurs="0" name="lastName" type="xs:string" />
+          <xs:element minOccurs="0" name="birthDate" type="xs:date" />
+          <xs:element minOccurs="0" name="telephoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="drivingLicenseNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="drivingLicenseIssuedState" type="xs:string" />
+          <xs:element minOccurs="0" name="socialSecurityNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="clubCode" type="xs:string" />
+          <xs:element minOccurs="0" name="quoteNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="city" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="ns1:USStates" />
+          <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+          <xs:element minOccurs="0" name="eMailAddress" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="partySearchCriteriaExtension" nillable="true" type="ns1:ExtensionArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="OrganizationState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Compulsory Liquidation" />
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Closed Out" />
+      <xs:enumeration value="Liquidation" />
+      <xs:enumeration value="Not Applicable" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

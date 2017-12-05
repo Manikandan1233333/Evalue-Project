@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="PaymentIDPProxy.asmx.cs" Class="PaymentIDPProxyService.PaymentIDPService" %>

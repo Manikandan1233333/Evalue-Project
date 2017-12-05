@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CyberSource</name>
+    </assembly>
+    <members>
+        <member name="T:CyberSource.ClientInstaller">
+            <summary>
+            Class used internally by the Installer application.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ClientInstaller.Install(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Install() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ClientInstaller.Commit(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Commit() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ClientInstaller.Rollback(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Rollback() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ClientInstaller.Uninstall(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Uninstall() method.
+            </summary>
+        </member>
+        <member name="T:CyberSource.BugExceptionCode">
+            <summary>
+            Defines the exception codes assigned to the ExceptionCode
+            property of BugException.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.INVALID_ARG">
+            <summary>
+            An argument passed to a method is null or invalid.
+            The Message property has the name of the argument.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.INVALID_CONFIG">
+            <summary>
+            A property is null or invalid, preventing ICSClient from
+            working properly.  The Message property has the 
+            description of the problem.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.INVALID_CONFIG_FORMAT">
+            <summary>
+            The file or stream passed to ICSClient's constructor
+            does not contain the correct format.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.INVALID_FIELD">
+            <summary>
+            A field in the request is null or invalid.  The Message
+            property has the field name and, if not null, its
+            invalid value.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.DLL_NOT_FOUND">
+            <summary>
+            CybsSecurity.dll could not be found.  Copy CybsSecurity.dll
+            to the same location where the assembly CyberSource.dll
+            is.  If you have an ASP.NET application, this is usually
+            the bin subdirectory.  Otherwise, if your application is
+            an executable, this is usually the same directory where
+            the executable file is located.
+            </summary>
+        </member>
+        <member name="F:CyberSource.BugExceptionCode.INVALID_DLL">
+            <summary>
+            The copy of CybsSecurity.dll is invalid.  Contact
+            CyberSource Customer Support for a valid copy.
+            </summary>
+        </member>
+        <member name="T:CyberSource.ConfigIOExceptionCode">
+            <summary>
+            Defines the exception codes assigned to the ExceptionCode
+            property of ConfigIOException.
+            </summary>
+        </member>
+        <member name="F:CyberSource.ConfigIOExceptionCode.LOAD">
+            <summary>
+            An error occurred while loading the configuration properties.
+            The InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.ConfigIOExceptionCode.SAVE">
+            <summary>
+            An error occurred while saving the configuration properties.
+            The InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="T:CyberSource.CriticalTransactionExceptionCode">
+            <summary>
+            Defines the exception codes assigned to the ExceptionCode
+            property of CriticalTransactionException.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.HTTP_ERROR">
+            <summary>
+            An HTTP response other than "200" was returned by the server.
+            The InnerException property has the System.Net.WebException
+            object.  Its Response property has the HttpWebResponse object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.INCOMPLETE_REPLY">
+            <summary>
+            The reply received from the server could not be parsed
+            completely.  The Message property has the remaining
+            string in the reply that could not be parsed.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.PARSE_REPLY">
+            <summary>
+            An error occurred while parsing the reply received from
+            the server.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.READ_RESPONSE_STREAM">
+            <summary>
+            An error occurred while reading from the response stream.  The
+            InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.RECEIVE">
+            <summary>
+            An error occurred while receiving the reply from the server.
+            The InnerException property has the actual
+            System.Net.WebException object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.TIMEOUT">
+            <summary>
+            The request timed out.  The InnerException property has
+            the actual System.Net.WebException object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.CriticalTransactionExceptionCode.UNKNOWN_STATUS">
+            <summary>
+            An error occurred while transmitting the request and it 
+            could not be determined whether or not the server had received
+            the request.  The InnerException property has the
+            actual System.Net.WebException object. 
+            </summary>
+        </member>
+        <member name="T:CyberSource.NonCriticalTransactionExceptionCode">
+            <summary>
+            Defines the exception codes assigned to the ExceptionCode
+            property of NonCriticalTransactionException.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.COMPOSE_REQUEST">
+            <summary>
+            An error occurred while composing the request.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.CONNECT">
+            <summary>
+            Could not connect to the server.  The InnerException property
+            has the actual System.Net.WebException object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.GENERATE_REQUEST_ID">
+            <summary>
+            Could not generate a request id.  The Message property has
+            the description of the problem.  If applicable, the
+            InnerException property has a System.Net.Sockets.SocketException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.GET_REQUEST_STREAM">
+            <summary>
+            An error occurred while obtaining the request stream.  The
+            InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.LOAD_KEY">
+            <summary>
+            An error occurred while loading a key.  The Message property
+            has the full path of the key that failed to load.  The
+            InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.PROXY_CONNECT">
+            <summary>
+            An error occurred while connecting to the proxy server.  The 
+            InnerException property has the actual System.Net.WebException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.PROXY_AUTH">
+            <summary>
+            Failed to authenticate against the proxy server.  The
+            InnerException property has the actual System.Net.WebException
+            object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.SEND">
+            <summary>
+            An error occurred while sending the request to the server.
+            The InnerException property has the actual
+            System.Net.WebException object.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NonCriticalTransactionExceptionCode.WRITE_REQUEST_STREAM">
+            <summary>
+            An error occurred while writing to the request stream.  The
+            InnerException property has the actual System.IO.IOException
+            object.
+            </summary>
+        </member>
+        <member name="T:CyberSource.BugException">
+            <summary>
+            The exception that is thrown when a bug in the code or in the
+            configuration is detected.
+            </summary>
+        </member>
+        <member name="M:CyberSource.BugException.#ctor(CyberSource.BugExceptionCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the BugException class with
+            the specified code, message, and innerException.
+            </summary>
+            <param name="code">A BugExceptionCode value.</param>
+            <param name="message">The text of the error message.  May be null.</param>
+            <param name="innerException">A nested exception.  May be null.</param>
+        </member>
+        <member name="M:CyberSource.BugException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="P:CyberSource.BugException.ExceptionCode">
+            <summary>
+            Gets the BugExceptionCode value.
+            </summary>
+        </member>
+        <member name="T:CyberSource.ConfigIOException">
+            <summary>
+            The exception that is thrown when an error occurs while loading
+            or saving the configuration properties.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ConfigIOException.#ctor(CyberSource.ConfigIOExceptionCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ConfigIOException class with
+            the specified code, message, and innerException.
+            </summary>
+            <param name="code">A ConfigIOExceptionCode value.</param>
+            <param name="message">The text of the error message.  May be null.</param>
+            <param name="innerException">A nested exception.  May be null.</param>
+        </member>
+        <member name="M:CyberSource.ConfigIOException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="P:CyberSource.ConfigIOException.ExceptionCode">
+            <summary>
+            Gets the ConfigIOExceptionCode value.
+            </summary>
+        </member>
+        <member name="T:CyberSource.CriticalTransactionException">
+            <summary>
+            The exception that is thrown when an error occurs after the
+            request has been sent to the server or when it is not known whether
+            or not the server received the request.
+            </summary>
+        </member>
+        <member name="M:CyberSource.CriticalTransactionException.#ctor(CyberSource.CriticalTransactionExceptionCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the CriticalTransactionException
+            class with the specified code, message, and innerException.
+            </summary>
+            <param name="code">A CriticalTransactionExceptionCode value.</param>
+            <param name="message">The text of the error message.  May be null.</param>
+            <param name="innerException">A nested exception.  May be null.</param>
+        </member>
+        <member name="M:CyberSource.CriticalTransactionException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="P:CyberSource.CriticalTransactionException.ExceptionCode">
+            <summary>
+            Gets the CriticalTransactionExceptionCode value.
+            </summary>
+        </member>
+        <member name="T:CyberSource.NonCriticalTransactionException">
+            <summary>
+            The exception that is thrown when an error occurs while the 
+            request is being prepared or is being sent to the server.
+            </summary>
+        </member>
+        <member name="M:CyberSource.NonCriticalTransactionException.#ctor(CyberSource.NonCriticalTransactionExceptionCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NonCriticalTransactionException
+            class with the specified code, message, and innerException.
+            </summary>
+            <param name="code">A NonCriticalTransactionExceptionCode value.</param>
+            <param name="message">The text of the error message.  May be null.</param>
+            <param name="innerException">A nested exception.  May be null.</param>
+        </member>
+        <member name="M:CyberSource.NonCriticalTransactionException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="P:CyberSource.NonCriticalTransactionException.ExceptionCode">
+            <summary>
+            Gets the NonCriticalTransactionExceptionCode value.
+            </summary>
+        </member>
+        <member name="T:CyberSource.LogException">
+            <summary>
+            The exception that is thrown when an error occurs while logging.
+            It will be thrown only if the ThrowLogException property in
+            the ICSClient object is set to "yes".
+            </summary>
+        </member>
+        <member name="M:CyberSource.LogException.#ctor(System.ApplicationException,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Exception class with
+            the specified exceptionBeingLogged, message, and innerException.
+            </summary>
+            <param name="exceptionBeingLogged">The exception that was being logged when the logging failed.  May be null.</param>
+            <param name="message">The text of the error message.  May be null.</param>
+            <param name="innerException">A nested exception.  May be null.</param>
+        </member>
+        <member name="M:CyberSource.LogException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="P:CyberSource.LogException.ExceptionBeingLogged">
+            <summary>
+            Gets the ApplicationException object that was being logged
+            when the logging failed.  It will have a value only when
+            the Logger object was logging an exception.  Otherwise,
+            it will be null.
+            </summary>
+        </member>
+        <member name="T:CyberSource.ICSClient">
+            <summary>
+            The class containing the methods that talk to the ICS server.
+            It is also a component and is therefore designable inside
+            Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSClient.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the ICSClient class from the
+            specified IContainer object.  This constructor is used by
+            Visual Studio .NET when dragging the ICSClient component into
+            a container such as a Web Forms page.  All configuration
+            properties are set to their default values.
+            </summary>
+            <param name="container">The container object.</param>
+        </member>
+        <member name="M:CyberSource.ICSClient.#ctor">
+            <summary>
+            Initializes a new instance of the ICSClient class, setting
+            all configuration properties to their default values.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ICSClient class, reading
+            the configuration properties from the specified file.
+            </summary>
+            <param name="configFile">Absolute or relative path to the config file.</param>
+        </member>
+        <member name="M:CyberSource.ICSClient.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the ICSClient class, reading
+            the configuration properties from the specified stream.
+            <param name="stream">An open stream containing the configuration properties.</param>
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSClient.SaveConfig(System.String)">
+            <summary>
+            Saves the configuration properties into the specified file.
+            If the file already exists, it will be overwritten.
+            </summary>
+            <param name="configFile">Absolute or relative path to the config file.</param>
+        </member>
+        <member name="M:CyberSource.ICSClient.SaveConfig(System.IO.Stream)">
+            <summary>
+            Saves the configuration properties into the specified stream.
+            </summary>
+            <param name="stream">The stream to write the properties to.</param>
+        </member>
+        <member name="M:CyberSource.ICSClient.Send(CyberSource.ICSRequest)">
+            <summary>
+            Sends the request to the server and returns the reply.
+            </summary>
+            <param name="request">The ICSRequest object containing the SCMP request fields.</param>
+            <returns>The ICSReply object containing the SCMP reply fields.</returns>
+        </member>
+        <member name="M:CyberSource.ICSClient.Send(CyberSource.ICSRequest,System.IO.Stream)">
+            <summary>
+            Sends the request to the server and returns the reply.
+            If the property LogLevel is not LOG_NONE and the logStream
+            parameter is not null, all logging information will be 
+            written to this Stream object.  If logStream is null,
+            this method behaves exactly the same as the other form
+            of Send().
+            </summary>
+            <param name="request">The ICSRequest object containing the SCMP request fields.</param>
+            <param name="logStream">A Stream object to which logging information will be written.  May be null.</param>
+            <returns>The ICSReply object containing the SCMP reply fields.</returns>
+        </member>
+        <member name="M:CyberSource.ICSClient.ToString">
+            <summary>
+            Creates and returns a string representation of the configuration
+            properties of this ICSClient object.
+            </summary>
+            <returns>A string representation of the configuration properties of this ICSClient object.</returns>
+        </member>
+        <member name="M:CyberSource.ICSClient.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the content of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.MerchantId">
+            <summary>
+            Unique ID assigned to you by CyberSource.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.KeysDir">
+            <summary>
+            Directory containing the private key and certificates.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.ServerHost">
+            <summary>
+            Use ics2test.ic3.com for testing and ics2.ic3.com for production.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.ServerPort">
+            <summary>
+            Unless otherwise instructed by CyberSource, you should leave this at the default value of "80".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.ServerId">
+            <summary>
+            Unless otherwise instructed by CyberSource, you should leave this at the default value of "CyberSource_SJC_US".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.Timeout">
+            <summary>
+            Number of seconds to wait before timing out.  The default value is "110".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.RetryEnabled">
+            <summary>
+            Set this to "yes" if you want to enable the retry feature.  The default value is "no".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.RetryStart">
+            <summary>
+            Number of seconds before retry is started.  Applicable only if retry is enabled.  The default value is "30".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.HTTPProxyURL">
+            <summary>
+            URL of your HTTP proxy server, if any.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.HTTPProxyUsername">
+            <summary>
+            Username used to authenticate against the specified HTTP proxy server.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.HTTPProxyPassword">
+            <summary>
+            Password used to authenticate against the specified HTTP proxy server.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LogLevel">
+            <summary>
+            Dictates the amount of information that will be logged.  You should set it to LOG_NONE in production.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LogFile">
+            <summary>
+            Full path of the log file.  The directory must already exist.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LogMaxSize">
+            <summary>
+            The maximum size of the log file in MB units.  When this size is reached, the file will be archived and a new one will be created.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.ThrowLogException">
+            <summary>
+            Set this to "yes" if you want a LogException thrown when logging fails.  The default value is "no".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.ClientVersion">
+            <summary>
+            Gets the version of this CyberSource .NET client.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.IntegrationVersion">
+            <summary>
+            Gets or sets the integration version.  The default value is "null".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LOG_NONE">
+            <summary>
+            No logging will be done.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LOG_CRITICAL_EXCEPTIONS">
+            <summary>
+            Whenever a CriticalTransactionException is thrown by 
+            ICSClient.Send(), it will be logged together with the
+            configuration properties and, if available, the request and/or
+            reply fields.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LOG_EXCEPTIONS">
+            <summary>
+            Whenever an exception is thrown by ICSClient.Send(), it will be
+            logged together with the configuration properties and if
+            available, the request and/or reply fields.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LOG_TRANSACTIONS">
+            <summary>
+            The request and/or reply fields, together with the configuration
+            properties, will always be logged.  Any exceptions will also be
+            logged.
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClient.LOG_TRACES">
+            <summary>
+            Trace statements will be logged, in addition to the configuration
+            properties and, if available, the request and reply fields and/or
+            any exceptions.
+            </summary>
+        </member>
+        <member name="T:CyberSource.ICSClientConfig">
+            <summary>
+            Configuration class used internally by ICSClient for loading
+            and saving the configuration properties.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSClientConfig.ToString">
+            <summary>
+            Creates and returns a string representation of the properties of this
+            ICSClientConfig object.
+            </summary>
+            <returns>A string representation of the properties of this ICSClientConfig object.</returns>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.MerchantId">
+            <summary>
+            Please see summary for ICSClient.MerchantId
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.KeysDir">
+            <summary>
+            Please see summary for ICSClient.KeysDir
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.ServerHost">
+            <summary>
+            Please see summary for ICSClient.ServerHost
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.ServerPort">
+            <summary>
+            Please see summary for ICSClient.ServerPort
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.ServerId">
+            <summary>
+            Please see summary for ICSClient.ServerId
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.Timeout">
+            <summary>
+            Please see summary for ICSClient.Timeout
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.RetryEnabled">
+            <summary>
+            Please see summary for ICSClient.RetryEnabled
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.RetryStart">
+            <summary>
+            Please see summary for ICSClient.RetryStart
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.HTTPProxyURL">
+            <summary>
+            Please see summary for ICSClient.HTTPProxyURL
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.HTTPProxyUsername">
+            <summary>
+            Please see summary for ICSClient.HTTPProxyUsername
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.HTTPProxyPassword">
+            <summary>
+            Please see summary for ICSClient.HTTPProxyPassword
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.LogLevel">
+            <summary>
+            Please see summary for ICSClient.LogLevel
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.LogFile">
+            <summary>
+            Please see summary for ICSClient.LogFile
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.LogMaxSize">
+            <summary>
+            Please see summary for ICSClient.LogMaxSize
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSClientConfig.ThrowLogException">
+            <summary>
+            Please see summary for ICSClient.ThrowLogException
+            </summary>
+        </member>
+        <member name="T:CyberSource.ICSOffer">
+            <summary>
+            Encapsulates an ICS offer line.  Instead of forming the offer line
+            yourself, you can add the name-value pairs to an ICSOffer instance
+            and then include the offer in the request by calling
+            the SetOffer() method of the ICSRequest object.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSOffer.#ctor">
+            <summary>
+            Initializes a new instance of the ICSOffer class.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSOffer.ToString">
+            <summary>
+            Creates and returns a string representation of the
+            ICSOffer object in the format accepted by the server.
+            </summary>
+            <returns>A string representation of the ICSOffer object in the format accepted by the server.</returns>
+        </member>
+        <member name="M:CyberSource.ICSOffer.Clear">
+            <summary>
+            Erases all name-value pairs previously set.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSOffer.GetEnumerator">
+            <summary>
+            Returns an enumerator for the ICSOffer.
+            </summary>
+            <returns>An enumerator for the ICSOffer.</returns>
+        </member>
+        <member name="P:CyberSource.ICSOffer.Field(System.String)">
+            <summary>
+            Gets or sets the value of the specified field.  In C#, this
+            property is the indexer for the ICSOffer class.
+            <param name="field">The offer-level field whose value you want to get or set.</param>
+            </summary>
+        </member>
+        <member name="T:CyberSource.ICSReply">
+            <summary>
+            Encapsulates a reply from the server.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSReply.Clear">
+            <summary>
+            Erases all name-value pairs previously set.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSReply.GetEnumerator">
+            <summary>
+            Returns an enumerator for the ICSReply.
+            </summary>
+            <returns>An enumerator for the ICSReply.</returns>
+        </member>
+        <member name="M:CyberSource.ICSReply.ToString">
+            <summary>
+            Creates and returns a string representation of the name-value
+            pairs in the ICSReply object.
+            </summary>
+            <returns>A string representation of the name-value pairs in the ICSReply object.</returns>
+        </member>
+        <member name="P:CyberSource.ICSReply.Field(System.String)">
+            <summary>
+            Gets the value of the specified field.  In C#, this property
+            is the indexer for the ICSReply class.
+            <param name="field">The reply field whose value you want to get.</param>
+            </summary>
+        </member>
+        <member name="T:CyberSource.ICSRequest">
+            <summary>
+            Encapsulates a request.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSRequest.#ctor">
+            <summary>
+            Initializes a new instance of the ICSRequest class.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSRequest.SetOffer(System.Int32,CyberSource.ICSOffer)">
+            <summary>
+            Adds or updates an offer line in the request via an ICSOffer
+            object.
+            </summary>
+            <param name="offerNo">A zero-based offer number.</param>
+            <param name="offer">The ICSOffer object to set the offer number to.</param>
+        </member>
+        <member name="M:CyberSource.ICSRequest.Clear">
+            <summary>
+            Erases all name-value pairs previously set.
+            </summary>
+        </member>
+        <member name="M:CyberSource.ICSRequest.GetEnumerator">
+            <summary>
+            Returns an enumerator for the ICSRequest.
+            </summary>
+            <returns>An enumerator for the ICSRequest.</returns>
+        </member>
+        <member name="M:CyberSource.ICSRequest.ToString">
+            <summary>
+            Creates and returns a string representation of the name-value
+            pairs in the ICSRequest object.
+            </summary>
+            <returns>A string representation of the name-value pairs in the ICSRequest object.</returns>
+        </member>
+        <member name="P:CyberSource.ICSRequest.Encoding">
+            <summary>
+            Gets or sets the Encoding object to be used to convert the 
+            request into a stream of bytes.  The default Encoding is "Latin-1
+            (Code page 850)".
+            </summary>
+        </member>
+        <member name="P:CyberSource.ICSRequest.Field(System.String)">
+            <summary>
+            Gets the value of the specified field.  In C#, this property
+            is the indexer for the ICSRequest class.
+            <param name="field">The request field whose value you want to get or set.</param>
+            </summary>
+        </member>
+        <member name="T:CyberSource.KeysDialog">
+            <summary>
+            Summary description for MerchantDialog.
+            </summary>
+        </member>
+        <member name="F:CyberSource.KeysDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CyberSource.KeysDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:CyberSource.KeysDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CyberSource.NameValuePair">
+            <summary>
+            Structure returned by the enumerator for each name-value pair
+            in ICSOffer, ICSRequest, and ICSReply.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NameValuePair.Name">
+            <summary>
+            The field name.
+            </summary>
+        </member>
+        <member name="F:CyberSource.NameValuePair.Value">
+            <summary>
+            The field's value.
+            </summary>
+        </member>
+        <member name="M:CyberSource.NameValuePair.ToString">
+            <summary>
+            Creates and returns the string representation of the name-value pair.
+            </summary>
+            <returns>the string representation of the name-value pair.</returns>
+        </member>
+        <member name="T:CyberSource.StoreInstaller">
+            <summary>
+            Class used internally by the Installer application.
+            </summary>
+        </member>
+        <member name="M:CyberSource.StoreInstaller.Install(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Install() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.StoreInstaller.Commit(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Commit() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.StoreInstaller.Rollback(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Rollback() method.
+            </summary>
+        </member>
+        <member name="M:CyberSource.StoreInstaller.Uninstall(System.Collections.IDictionary)">
+            <summary>
+            Overrides the Installer.Uninstall() method.
+            </summary>
+        </member>
+        <member name="F:CyberSource.WaitDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CyberSource.WaitDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:CyberSource.WaitDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

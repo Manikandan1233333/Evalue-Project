@@ -1,0 +1,24 @@
+3:49:24 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:49:24 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:49:26 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:49:26 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:49:37 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:49:37 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+3:49:37 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+3:49:37 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:49:48 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:50:45 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:50:45 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:50:45 AM: OrderClasses.WebService.Order GetReference(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:52:22 AM: OrderClasses.WebService.Order ProcessOrder(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK
+3:53:25 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:53:25 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:53:43 AM: OrderClasses.WebService.Order CalculateOrderLines(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo,ProductName=Insurance) OK
+3:53:44 AM: PaymentService.Service GetCreditCards(includePrompt=True) OK
+3:53:44 AM: PaymentService.Service GetBankAccount(includePrompt=True) OK
+3:53:44 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:53:53 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:54:38 AM: PaymentService.Service GetPaymentType(ColumnFlag=P,CurrentUser=xgs35gur) OK
+3:54:38 AM: PaymentService.Service GetMerchantReference(AppId=APDS) OK
+3:54:38 AM: OrderClasses.WebService.Order GetReference(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,out Errors) OK
+3:54:43 AM: OrderClasses.WebService.Order ProcessOrder(Token=3BBAD9D0-BED0-49CC-9FF1-C42AD84A6FD0,UserId=xgs35gur,AppId=APDS,Order=OrderInfo) OK

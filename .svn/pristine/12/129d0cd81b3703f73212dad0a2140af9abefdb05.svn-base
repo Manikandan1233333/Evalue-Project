@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaymentClasses</name>
+    </assembly>
+    <members>
+        <member name="T:PaymentClasses.Service.CPM_Payments">
+            <summary>
+            Proxy class for accessing the Insurance Web service.
+            Modified by Cognizant on 06/27/2005 to change all the 
+            references of InternalService.Payments class to 
+            InternalService.CPM_Payments
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.#ctor">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.#ctor(AuthenticationClasses.SessionInfo,AuthenticationClasses.UserInfo)">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Close">
+            <summary>Closes the internal web service.</summary>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Process(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Auth(System.String,System.Object,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Auth(System.String,System.Object,System.Object,System.Collections.IList,System.Boolean,System.Int32,System.Object)">
+            <remarks/>
+            MP2.0.Ch1 - added 2 parameters in signature int PayType, object eCheck - change of code on 26/05/2010 - by Cognizant.
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Bill(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.BillVerbalAuth(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.Credit(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.ACHDeposit(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.ACHVerify(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.RecordPayment(PaymentClasses.PaymentTypes,System.String,System.Collections.IList)">
+            <summary>
+            Record a payment other than on-line credit card.
+            </summary>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.UpdateLines(AuthenticationClasses.UserInfo,PaymentClasses.PaymentTypes,System.String,System.String,System.Collections.IList)">
+            <summary>
+            Update the account number on the lines for the payment.  Only one of receipt #
+            or reference number need be supplied.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+            <param name="Reference">Merchant reference number</param>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.GetReferenceNumber">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType which invokes the Webservice
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R)or Workflow(W))</param>
+            <param name="CurrentUser"> Get Current User to fetch PaymentType based on the roles for the user</param> 
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentClasses.Service.CPM_Payments.GetCreditCards(System.Boolean)">
+            <remarks/>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:PaymentClasses.Service.CPM_Payments.GetBankAccount(System.Boolean)" -->
+        <member name="M:PaymentClasses.Service.CPM_Payments.GetStateCodes">
+            <remarks/>
+        </member>
+        <member name="T:PaymentClasses.CCResponse">
+            <summary>
+            Message class for response from the Payment processor.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CCResponse.#ctor">
+            <summary>Initializes a new instance of CCResponse with default properties.</summary>
+        </member>
+        <member name="M:PaymentClasses.CCResponse.#ctor(System.String)">
+            <summary>Initializes a new instance of CCResponse from the Xml string.</summary>
+        </member>
+        <member name="M:PaymentClasses.CCResponse.#ctor(System.Object)">
+            <summary>Initializes a new instance of CCResponse, copying matching properties and fields from O.</summary>
+        </member>
+        <member name="M:PaymentClasses.CCResponse.#ctor(System.Exception)">
+            <summary>Initializes a new instance of CCResponse with the exception information in e.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.ID">
+            <summary>The id of the item in the data store.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.RequestID">
+            <summary>Unique ID returned by processor.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.ReturnCode">
+            <summary>1 if successful, 0 if not</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.Message">
+            <summary>Error message from web service.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.ActualMessage">
+            <summary>Error message from payment processor.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.Flag">
+            <summary>Result code.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.AuthCode">
+            <summary>Unique authorization ID if successfully authed.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.Amount">
+            <summary>Amount authorized.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.TransactionReferenceNumber">
+            <summary>Unique reference number from processor.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsAuthorized">
+            <summary>True if successful and has auth code</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsRequestSuccessful">
+            <summary>True if successful.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsInvalidData">
+            <summary>True if flag was DINVALIDDATA</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsInvalidCard">
+            <summary>True if flag was DINVALIDCARD</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsSoftDecline">
+            <summary>True if DAVSNO or DCCV error but authorization code given.</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.ReceiptNumber">
+            <summary>This is the receipt number created by payment tool</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsReauthCandidate">
+            <summary>True if soft decline, DCARDEXPIRED, DCARDREFUSED, DINVALIDCARD (typing errors).</summary>
+        </member>
+        <member name="F:PaymentClasses.CCResponse.IsComplete">
+            <summary>True if the transaction appears complete.</summary>
+        </member>
+        <member name="T:PaymentClasses.InternalService.Payments">
+            <summary>
+            Proxy class for accessing the Insurance Web service.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.Process(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Authorizes and bills (collects funds) from the card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.ReAuth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo)">
+            <summary>
+            Attempts to re-authorize the payment by the most appropriate method.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.Auth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Authorize the payment on the customer's card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.Bill(AuthenticationClasses.UserInfo,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that we previously authorized.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.BillVerbalAuth(AuthenticationClasses.UserInfo,System.String,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that were previously denied with a DCALL code 
+            based on an authorization obtained over the telephone.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="AuthCode">(string) The authorization code obtained on the telephone.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.Credit(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Refund an order.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.RecordPayment(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Record a payment other than on-line credit card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.UpdateLines(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Update the account number on the lines for the payment.  Only one of receipt #
+            or reference number need be supplied.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+            <param name="Reference">Merchant reference number</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.GetMerchantReference(System.String)">
+            <summary>
+            Returns a unique Merchant Reference Number that may be used for a transaction.
+            </summary>
+            <param name="AppId">(string) The calling application.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType which invokes the Webservice
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R)or Workflow(W))</param>
+            <param name="CurrentUser"> Get Current User to fetch PaymentType based on the roles for the user</param> 
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.GetCreditCards(System.Boolean)">
+            <summary>
+            Returns dataset containing accepted credit card names and numeric codes (Name, Code)
+            </summary>
+            <param name="includePrompt">True if the first row should be a prompt.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.GetBankAccount(System.Boolean)">
+            <summary>Gets list of states for use with billing addresses</summary>
+        </member>
+        <member name="M:PaymentClasses.InternalService.Payments.GetStateCodes">
+            <summary>Gets list of states for use with billing addresses</summary>
+        </member>
+        <member name="P:PaymentClasses.InternalService.Payments.ServiceClass">
+            <summary>
+            The assembly qualified name of the underlying web service.
+            </summary>
+        </member>
+        <member name="T:PaymentClasses.InternalService.CPM_Payments">
+            <summary>
+            Proxy class for accessing the Insurance Web service.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.Process(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Authorizes and bills (collects funds) from the card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.ACHDeposit(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.eCheckInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            (collects funds) that we previously authorized. from the echeck.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="echeck">(echeckInfo) The customer's echeck information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:PaymentClasses.InternalService.CPM_Payments.ACHVerify(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.eCheckInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)" -->
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.ReAuth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo)">
+            <summary>
+            Attempts to re-authorize the payment by the most appropriate method.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.Auth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem,PaymentClasses.PaymentTypes,PaymentClasses.eCheckInfo)">
+            <summary>
+            Authorize the payment on the customer's card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="PaymentType">(PaymentTypes) An enum for payment types.</param>
+            <param name="eCheckInfo">(eCheckInfo) An object contains e check information.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.Bill(AuthenticationClasses.UserInfo,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that we previously authorized.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.BillVerbalAuth(AuthenticationClasses.UserInfo,System.String,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that were previously denied with a DCALL code 
+            based on an authorization obtained over the telephone.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="AuthCode">(string) The authorization code obtained on the telephone.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.Credit(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Refund an order.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.RecordPayment(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Record a payment other than on-line credit card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.UpdateLines(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Update the account number on the lines for the payment.  Only one of receipt #
+            or reference number need be supplied.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+            <param name="Reference">Merchant reference number</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.GetMerchantReference(System.String)">
+            <summary>
+            Returns a unique Merchant Reference Number that may be used for a transaction.
+            </summary>
+            <param name="AppId">(string) The calling application.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType which invokes the Webservice
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R)or Workflow(W))</param>
+            <param name="CurrentUser"> Get Current User to fetch PaymentType based on the roles for the user</param> 
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.GetCreditCards(System.Boolean)">
+            <summary>
+            Returns dataset containing accepted credit card names and numeric codes (Name, Code)
+            </summary>
+            <param name="includePrompt">True if the first row should be a prompt.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.GetBankAccount(System.Boolean)">
+            <summary>
+            Returns dataset containing accepted Account names and numeric codes (Name, Code)
+            </summary>
+            <param name="includePrompt">True if the first row should be a prompt.</param>
+        </member>
+        <member name="M:PaymentClasses.InternalService.CPM_Payments.GetStateCodes">
+            <summary>Gets list of states for use with billing addresses</summary>
+        </member>
+        <member name="P:PaymentClasses.InternalService.CPM_Payments.ServiceClass">
+            <summary>
+            The assembly qualified name of the underlying web service.
+            </summary>
+            Modified by Cognizant on 06/27/2005 to change the Service class from PaymentService.Service to CPM_PaymentService.Service
+            Modified by Cognizant on 09/20/2005 to invoke either CPM_PaymentService or the PaymentService depending upon the key value "CCProcessing.UseCPM"
+        </member>
+        <member name="T:PaymentClasses.BillToInfo">
+            <summary>
+            BillToInfo encapsulates all the customer's billing information.  It does not contain
+            credit card information or any order information.  It does contain a field for a
+            signature of the card that is derived from the card but that cannot be used to 
+            obtain card information, but can be used to determine from one transaction to 
+            the next if the card has changed.
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo.EXP_MISSING_CONTACT">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo.EXP_MISSING_ADDRESS">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._FirstName">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._LastName">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Email">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Phone">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Address1">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Address2">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._City">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._State">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Zip">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Country">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Currency">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._Signature">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo._IgnoreAVS">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo.Default_Country">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.BillToInfo.Default_Currency">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.BillToInfo.#ctor">
+            <summary>
+            default no arg constructor
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.BillToInfo.#ctor(System.String)">
+            <summary>
+            Constructor to reconstruct from XML
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.BillToInfo.#ctor(System.Object)">
+            <summary>
+            Constructor to get fields from another object.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.BillToInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor with all the arguments
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.BillToInfo.ValidateFields">
+            <summary>
+            Ensures that all required fields are present.
+            </summary>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.LastName">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.FirstName">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Email">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Phone">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Address1">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Address2">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.City">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.State">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Zip">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Country">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.Currency">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.BillToInfo.IgnoreAVS">
+            <summary/>
+        </member>
+        <member name="T:PaymentClasses.Service.Payments">
+            <summary>
+            Proxy class for accessing the Insurance Web service.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.#ctor">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.#ctor(AuthenticationClasses.SessionInfo,AuthenticationClasses.UserInfo)">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Close">
+            <summary>Closes the internal web service.</summary>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Process(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Auth(System.String,System.Object,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Auth(System.String,System.Object,System.Object,System.Collections.IList,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Bill(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.BillVerbalAuth(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.Credit(System.String,System.Object,System.Object,System.Collections.IList)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.RecordPayment(PaymentClasses.PaymentTypes,System.String,System.Collections.IList)">
+            <summary>
+            Record a payment other than on-line credit card.
+            </summary>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.UpdateLines(AuthenticationClasses.UserInfo,PaymentClasses.PaymentTypes,System.String,System.String,System.Collections.IList)">
+            <summary>
+            Update the account number on the lines for the payment.  Only one of receipt #
+            or reference number need be supplied.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+            <param name="Reference">Merchant reference number</param>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.GetReferenceNumber">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType which invokes the Webservice
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R)or Workflow(W))</param>
+            <param name="CurrentUser"> Get Current User to fetch PaymentType based on the roles for the user</param> 
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.GetCreditCards(System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.GetBankAccount(System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:PaymentClasses.Service.Payments.GetStateCodes">
+            <remarks/>
+        </member>
+        <member name="T:PaymentClasses.ArrayOfLineItem">
+            <summary>
+            Represents a collection of line items.
+            </summary>
+            <remarks>
+            Collection can be instantiated from a delimited string (legacy) or xml string.
+            </remarks>
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.#ctor">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.#ctor(System.String)">
+            <summary>Constructor that accepts an xml string.</summary>
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.#ctor(System.Collections.IList)">
+            <summary>Constructor to create object from another object.</summary>
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.AddLi(PaymentClasses.ILineItem)">
+            <summary>Adds item to the collection.</summary>
+            Changed to AddLi as a part of Migration 3.5
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.Clear(System.String)">
+            <summary>
+            Removes all the items matching TransactionType
+            </summary>
+            <param name="ProductName">The type of items to remove.</param>
+        </member>
+        <member name="M:PaymentClasses.ArrayOfLineItem.Append(PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Appends the lines from source to this as LineItems.
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="P:PaymentClasses.ArrayOfLineItem.Item(System.Int32)">
+            <summary>Gets or sets the item at index.</summary>
+        </member>
+        <member name="P:PaymentClasses.ArrayOfLineItem.Total">
+            <summary/>
+        </member>
+        <member name="T:PaymentClasses.ILineItem">
+            <summary>
+            A simple line item for orders or payments
+            </summary>
+        </member>
+        <member name="P:PaymentClasses.ILineItem.LineItemNo">
+            <summary>LineItemNo - line item number property</summary>
+        </member>
+        <member name="P:PaymentClasses.ILineItem.ProductName">
+            <summary>ProductName - holds product name</summary>
+        </member>
+        <member name="P:PaymentClasses.ILineItem.Amount">
+            <summary>Amount - holds a dollar amount for a single line item</summary>
+        </member>
+        <member name="P:PaymentClasses.ILineItem.Quantity">
+            <summary>Quantity - holds a quantity for this line item</summary>
+        </member>
+        <member name="T:PaymentClasses.LineItem">
+            <summary>
+            Represents a line item for an order
+            </summary>
+            <remarks>
+            Item can be instantiated from a delimited string (legacy) or xml string.
+            </remarks>
+        </member>
+        <member name="F:PaymentClasses.LineItem._LineItemNo">
+            <summary>LineItemNo - line item number property</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem._ProductName">
+            <summary>ProductName - holds product name</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem._Amount">
+            <summary>Amount - holds a dollar amount for a single line item</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem._Quantity">
+            <summary>Quantity - holds a quantity for this line item</summary>
+        </member>
+        <member name="M:PaymentClasses.LineItem.#ctor">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.LineItem.#ctor(System.String)">
+            <summary>
+            Constructor that accepts an xml string
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.LineItem.#ctor(System.Object)">
+            <summary>
+            Constructor to construct from another object.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.LineItem.#ctor(System.Int32,System.String,System.Decimal,System.Int32)">
+            <summary>
+            Constructor with some common attributes
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.Tax_Amount">
+            <summary>Tax_Amount - holds a dollar amount for the total tax to apply to the product</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.FirstName">
+            <summary>Account holder's first name</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.LastName">
+            <summary>Account holder's last name</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.AccountNumber">
+            <summary>Account number of line item</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.RevenueCode">
+            <summary>Revenue code for this line item</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.SubProduct">
+            <summary>Sub product code for this line item</summary>
+        </member>
+        <member name="F:PaymentClasses.LineItem.ClubCode">
+            <summary>Club code for this line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.LineItemNo">
+            <summary>LineItemNo - line item number property</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.Description">
+            <summary>Description - fills product name</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.ProductName">
+            <summary>ProductName - holds product name</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.SKU">
+            <summary>SKU - holds stock keeping unit for a line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.ProductCode">
+            <summary>ProductCode - holds a product code</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.Amount">
+            <summary>Amount - holds a dollar amount for a single line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.Quantity">
+            <summary>Quantity - holds a quantity for this line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.MemberID">
+            <summary>Account number for a membership line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.Policy">
+            <summary>Account number for an insurance line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.RevenueType">
+            <summary>Revenue type for this line item</summary>
+        </member>
+        <member name="P:PaymentClasses.LineItem.ProductTypeNew">
+            <summary>
+            To store the product type of the line item
+            </summary>
+        </member>
+        <member name="T:PaymentClasses.AppDictionary">
+            <summary>
+            A class for keeping application permissions and keys.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.#ctor(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Constructor for data from database
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.AddData(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Adds the data the dictionary from reader
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.Contains(System.String)">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.LookupID(System.String)">
+            <summary>
+            Returns the Application Name of ApplicationID, if known.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.AppDictionary.ToString">
+            <summary>
+            Returns an XML representation of object.  Primary useful during debugging.
+            </summary>
+        </member>
+        <member name="P:PaymentClasses.AppDictionary.Item(System.String)">
+            <summary>
+            Item property
+            </summary>
+        </member>
+        <member name="T:PaymentClasses.App">
+            <summary>
+            A Class for containing information about an application that can use the payment service.
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.App.ApplicationID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.App.ApplicationName">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.App.PermittedFunctions">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.App.EncryptionKey">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.App.MerchantID">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.App.#ctor">
+            <summary>
+            Default constructor required by serializer.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.App.#ctor(System.Boolean)">
+            <summary>
+            Use this constructor for getting default information about the running application
+            from the config file.
+            </summary>
+            <param name="Auto">Dummy parameter to know to use this constuctor instead of default.</param>
+        </member>
+        <member name="M:PaymentClasses.App.#ctor(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Use this constructor for data coming from the database.
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:PaymentClasses.App.SettingArray(System.String)">
+            <summary>
+            Returns an ArrayList from a delimited string.
+            </summary>
+            <param name="st"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaymentClasses.eCheckInfo">
+            <summary>
+            Created new class eCheckInfo inorder to capture the echeck information by Cognizant
+             on 05/06/2009 for the echeck payment processing 
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_MISSING_BankID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_INVALID_LENGTH_BankID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_INVALID_CHECKDIGIT_BankID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_MISSING_ACNo">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_INVALID_LENGTH_ACNo">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_NON_NUMERIC_ACNo">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_NON_NUMERIC_BankID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.EXP_INVALID_BankID">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.Applications">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.#ctor">
+            <summary>
+            Default no value constructor
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.#ctor(System.String)">
+            <summary>
+            Constructor for reconstituting from XML, or an empty check object with just the app name..
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor with all fields
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.#ctor(System.Object)">
+            <summary>
+            Constructor to get fields from another object.
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.BankId">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.BankAcntNo">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.BankAcntType">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.Application">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.eCheckInfo.CustomerName">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.Decrypt(System.String)">
+            <summary>
+            decrypts the Bank Account number
+            </summary>
+            <param name="sValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.Encrypt(System.String)">
+            <summary>
+            Encyrpts Bank Account number
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.eCheckInfo.ValidateFields">
+            <summary>
+            Ensures that all required fields are present.
+            </summary>
+        </member>
+        <member name="P:PaymentClasses.eCheckInfo.ApplicationID">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.eCheckInfo.signature">
+            Added by Cognizant on 05/07/2009 for the echeck payment
+            used to encrypt and decrypt the bank account number.
+        </member>
+        <member name="T:PaymentClasses.CardInfo">
+            <summary>
+            Summary description for CardInfo.
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.EXP_MISSING_CC">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.Applications">
+            <summary/>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.#ctor">
+            <summary>
+            Default no value constructor
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.#ctor(System.String)">
+            <summary>
+            Constructor for reconstituting from XML, or an empty card with just the app name..
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.#ctor(System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Constructor with all fields except card type
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor with all fields
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.#ctor(System.Object)">
+            <summary>
+            Constructor to get fields from another object.
+            </summary>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CCNumber">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CCCVNumber">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CCExpMonth">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CCExpYear">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CCType">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.CPM_CCType">
+            <summary/>
+            Added by Cognizant on 07/1/2005 for the CPM Payment Tool integration
+            New Attribute to hold the CCType
+        </member>
+        <member name="F:PaymentClasses.CardInfo.Application">
+            <summary/>
+        </member>
+        <member name="F:PaymentClasses.CardInfo.IgnoreCCCV">
+            <summary>Set to false if you don't want to ignore CV errors.</summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.ValidateFields">
+            <summary>
+            Ensures that all required fields are present.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.ValidateFields(System.Data.DataTable)">
+            <summary>
+            Ensures that all required fields are present and checks card number against type.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.Decrypt(System.String)">
+            <summary>
+            Decyrpts sValue using the key sKey
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.CardInfo.Encrypt(System.String)">
+            <summary>
+            Encyrpts sValue using the key sKey
+            </summary>
+        </member>
+        <member name="P:PaymentClasses.CardInfo.ApplicationID">
+            <summary/>
+        </member>
+        <member name="P:PaymentClasses.CardInfo.Signature">
+            <summary/>
+        </member>
+        <member name="T:PaymentClasses.Payment">
+            <summary>
+            Data class for containing all information about a payment.
+            </summary>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor">
+            <summary>Default constructor creates a new instance of Payment.</summary>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor(System.String)">
+            <summary>Constructor that accepts an xml string to create a new instanct of Payment.</summary>
+            <param name="Xml">(string) Xml document containing the Payment.</param>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor(System.Object)">
+            <summary>Constructor to create a new instanct of Payment from another object.</summary>
+            <param name="O">Object with matching fields containing data to copy to this new instance.</param>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor(PaymentClasses.ServiceOperation,System.String,System.String,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem,AuthenticationClasses.UserInfo)">
+            <summary>
+            Initializes a new Payment with the requested fields. Generally used for credit card payments.
+            </summary>
+            <param name="Operation">(ServiceOperation) The operation to do.</param>
+            <param name="Application">(string) The name (code) of the calling application.</param>
+            <param name="Reference">(string) Merchant reference number.</param>
+            <param name="ReceiptNumber">(string) The reciept number for this payment.</param>
+            <param name="Card">(CardInfo) The credit card information.</param>
+            <param name="BillTo">(BillTo) The bill to address.</param>
+            <param name="Items">(ArrayOfLineItems) An array of Line Items being paid for.</param>
+            <param name="VerbalAuthorization">(string) An authorization code obtained from the bank over the telephone.</param>
+            <param name="User">(UserInfo) The logged-in operator making the request.</param>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor(PaymentClasses.PaymentTypes,PaymentClasses.ServiceOperation,System.String,System.String,System.String,PaymentClasses.eCheckInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem,AuthenticationClasses.UserInfo)">
+            <summary>
+            Initializes a new Payment with the requested fields. Generally used for echeck payments.
+            </summary>
+            <param name="PaymentType">(PaymentType)  PaymentType </param>
+            <param name="Operation">(ServiceOperation) The operation to do.</param>
+            <param name="Application">(string) The name (code) of the calling application.</param>
+            <param name="Reference">(string) Merchant reference number.</param>
+            <param name="ReceiptNumber">(string) The reciept number for this payment.</param>
+            <param name="echeck">(CardInfo) The credit card information.</param>
+            <param name="BillTo">(BillTo) The bill to address.</param>
+            <param name="Items">(ArrayOfLineItems) An array of Line Items being paid for.</param>
+            <param name="User">(UserInfo) The logged-in operator making the request.</param>
+        </member>
+        <member name="M:PaymentClasses.Payment.#ctor(PaymentClasses.PaymentTypes,System.String,System.String,PaymentClasses.ArrayOfLineItem,AuthenticationClasses.UserInfo)">
+            <summary>
+            Initializes a new Payment with the requested fields. Generally used for non-credit card payments.
+            </summary>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Application">(string) The name (code) of the calling application.</param>
+            <param name="ReceiptNumber">(string) The reciept number for this payment.</param>
+            <param name="Items">(ArrayOfLineItems) An array of Line Items being paid for.</param>
+            <param name="User">(UserInfo) The logged-in operator making the request.</param>
+        </member>
+        <member name="F:PaymentClasses.Payment.BillTo">
+            <summary>(BillToInfo) The billing address.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Card">
+            <summary>(CardInfo) The credit card information.</summary>
+            <remarks>This is only supplied for payments of type: On-Line card.</remarks>
+        </member>
+        <member name="F:PaymentClasses.Payment.echeck">
+            Added by Cognizant on 04/06/2010 for the echeck paymentprocessing as a part of HO6
+            <summary> (eCheckInfo) The echeck information</summary>
+            <remarks>This is only supplied for payments of type: echeck.</remarks>		
+        </member>
+        <member name="F:PaymentClasses.Payment.LineItems">
+            <summary>(ArrayOfLineItems) An array of Line Items being paid for.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.User">
+            <summary>(UserInfo) The logged-in operator making the request.</summary>
+            <remarks>This could be a service account for customer-facing systems.</remarks>
+        </member>
+        <member name="F:PaymentClasses.Payment.VerbalAuthorization">
+            <summary>(string) An authorization code obtained from the bank over the telephone.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.RequestID">
+            <summary>(string) Unique identifier supplied by the card processor.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Reference">
+            <summary>(string) Unique indentifier for this transaction supplied by the merchant.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.ReceiptNumber">
+            <summary>(string) Unique identifier for the reciept supplied by APDS.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Function">
+            <summary>(string) The function requested to the card processor.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Operation">
+            <summary>(ServiceOperation enum) The action requested to APDS.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.PaymentType">
+            <summary>(PaymentTypes) The type of payment.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Application">
+            <summary>(string) Name (code) of application making the request.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.PaymentId">
+            <summary>(int) Id of the payment in the data store.</summary>
+        </member>
+        <member name="F:PaymentClasses.Payment.Amount">
+            <summary>(int) The amount of the payment.</summary>
+        </member>
+        <member name="M:PaymentClasses.Payment.LogInput(System.Reflection.MethodBase,System.String,System.Int32)">
+            <summary>
+            Writes the input timestamp for each invocation along with the payment information and the 
+            calling method information into the project's log file
+            </summary>
+            <param name="mbCaller">MethodBase of the invoking method</param>
+            <param name="strAction">Custom Message</param>
+            <param name="verboselevel">The verbose level for logging time stamps</param>
+        </member>
+        <member name="T:PaymentClasses.ServiceOperation">
+            <summary>Enumeration of the payment operations available.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.Auth">
+            <summary>Credit card authorization request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.Bill">
+            <summary>Credit card bill or collect request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.Credit">
+            <summary>Credit card credit request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.Process">
+            <summary>Combined credit card authorization and bill request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.ReAuth">
+            <summary>Credit card re-authorize request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.Reverse">
+            <summary>Credit card reverse authorization request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.ACHVerify">
+            <summary>Added by Cognizant on 04/06/2010 for the echeck payment processing as a part of HO6 .</summary>
+            <summary>echeck Verification request</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.ACHDeposit">
+            <summary>echeck  collect request.</summary>
+        </member>
+        <member name="F:PaymentClasses.ServiceOperation.NoOp">
+            <summary>No credit card operation.</summary>
+        </member>
+        <member name="T:PaymentClasses.PaymentTypes">
+            <summary>Enumeration of the types of payments available.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.CreditCard">
+            <summary>Online real-time credit card.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.OfflineCreditCard">
+            <summary>Credit card payment already processed offline.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.Cash">
+            <summary>Cash payment.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.Check">
+            <summary>Check payment.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.ECheck">
+            <summary>ACH payment.</summary>
+        </member>
+        <member name="F:PaymentClasses.PaymentTypes.ECard">
+            <summary>ACH credit card?</summary>
+        </member>
+    </members>
+</doc>

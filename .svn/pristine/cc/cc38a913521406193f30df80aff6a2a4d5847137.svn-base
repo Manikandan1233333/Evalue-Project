@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.web>
+	<httpRuntime executionTimeout="900" /> 
+	<!-- 02/23/2006 CSR 4833.Ch1: Start - Added the sessionState tag to increase the timeout value 
+	during the Cybersource data feed (flatfile) generation -->
+     <sessionState 
+            mode="InProc"
+            stateConnectionString="tcpip=127.0.0.1:42424"
+            stateNetworkTimeout="10"
+            sqlConnectionString="data source=127.0.0.1;user id=sa;password="
+            cookieless="false" 
+            timeout="500" 
+        />
+        <!--02/23/2006 CSR 4833.Ch1: End -->
+ </system.web>
+</configuration>

@@ -1,0 +1,370 @@
+2:18:08 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow starts
+2:18:08 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment request to Payment Central - Payment token Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountRequest1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentAccountToken />
+    <paymentCardNumber>5454545454545454</paymentCardNumber>
+    <paymentCardHolderName>LEE CANTON</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-11-01T00:00:00</paymentCardExpirationDate>
+    <paymentCardCity />
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+    <saveForFuture>false</saveForFuture>
+  </MaintainPaymentAccountRequest1>
+</MaintainPaymentAccountRequest>
+2:18:09 AM: Source:OrderClassesII.IssueDirectPaymentWrapper.ProcessInsurance, Message:Payment response from Payment Central - Payment token Response : 
+<?xml version="1.0" encoding="utf-16"?>
+<MaintainPaymentAccountResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MaintainPaymentAccountResponse1>
+    <paymentSourceSystem>PMTTOOL</paymentSourceSystem>
+    <userId>xgs35gur</userId>
+    <paymentAccountToken>7A8A6BDD-2AC0-1DB4-A491-ED744A42A653</paymentAccountToken>
+    <paymentAcctFopType>CRDC</paymentAcctFopType>
+    <paymentCardLast4>5454</paymentCardLast4>
+    <paymentCardHolderName>LEE CANTON</paymentCardHolderName>
+    <paymentCardExpirationDate>2020-11-01T00:00:00-07:00</paymentCardExpirationDate>
+    <paymentCardAddrLine1>8230 POST RD</paymentCardAddrLine1>
+    <paymentCardAddrLine2>2304 GRAND CENTRAL AVE</paymentCardAddrLine2>
+    <paymentCardCity> </paymentCardCity>
+    <paymentCardState>CA</paymentCardState>
+    <paymentCardZip>78965</paymentCardZip>
+  </MaintainPaymentAccountResponse1>
+</MaintainPaymentAccountResponse>
+2:18:09 AM: Source:OrderClasses.WebService.Order.ProcessOrder, Message:Payment Central flow ends
+5:25:44 AM: Source:WebControls.Renderer.Render, Message:Menu retrieved for the User: xgs35gur Details: [[18,'','Insurance',,2,,1,0],[2,'','Admin',,3,,1,0],[30,'','Sales Turn-In',,10,,1,0],[46,'','Tools',,13,'fin',1,0],[12,,'User Administration','/PaymentToolmsc/admin/users.aspx',1,'adm',1,2],[44,,'Branch Administration','/PaymentToolmsc/admin/DOs.aspx',2,'adm',1,2],[48,'.','Manage Recurring','/PaymentToolmsc/forms/ManageEnrollment.aspx',1,'dsr,iss,fie,pss',1,18],[19,'.','Down Payment','/PaymentToolmsc/forms/newinsurance.aspx',2,'dsr,fie,pss',1,18],[54,'.','Installment Payment','/PaymentToolmsc/forms/newinsurance.aspx',3,'dsr,iss,fie,pss',1,18],[28,'.','Reports','/PaymentToolmscr/Reports/ins_reports.aspx',4,'man,fin,pss',1,18],[29,'.','My Reports','/PaymentToolmscr/Reports/ins_usr_reports.aspx',5,'dsr,iss,fie',1,18],[56,'','ACH Enrollment Pilot','/PaymentToolmsc/forms/ACHEnrollmentPilot.aspx',6,'iss',1,18],[57,'','View Scheduled Payments','/PaymentToolmsc/forms/ScheduledPayments.aspx',7,'dsr,fie,man,iss,pss,cas',1,18],[31,,'My Turn-In','/PaymentToolmscr/reports/salesturnIn_report.aspx',1,'fie',1,30],[32,,'Cashier\'s Reconciliation','/PaymentToolmscr/reports/CashierReconciliation_Report.aspx',2,'cas',1,30],[33,,'Reports','/PaymentToolmscr/Reports/TurnIn_General_Report.aspx',3,'man,cas,fin',1,30],[43,,'Manual Update','/PaymentToolmscr/reports/Manual_Update_Search.aspx',2,'fin',1,46]]
+5:25:58 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">WVH6201001362</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:25:59 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-30T12:25:36.099Z</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Information unavailable for this item</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.Policy Details are : WVH6201001362-PAS-HO</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV2PASMM</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">AAABillingService</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>WVH6201001362</policyNumber>
+        <type>HO</type>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+      </policy>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:25:59 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is a problem retrieving policy details. Please verify and enter valid policy detail. If problem persists contact support. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details.Policy Details are : WVH6201001362-PAS-HO PolicyNumber: WVH6201001362 UserID:xgs35gur
+5:28:05 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">WVH6201001362</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:28:05 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-30T12:27:43.047Z</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Information unavailable for this item</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.Policy Details are : WVH6201001362-PAS-HO</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV2PASMM</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">AAABillingService</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>WVH6201001362</policyNumber>
+        <type>HO</type>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+      </policy>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:28:05 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is a problem retrieving policy details. Please verify and enter valid policy detail. If problem persists contact support. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details.Policy Details are : WVH6201001362-PAS-HO PolicyNumber: WVH6201001362 UserID:xgs35gur
+5:29:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">XF80017</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:29:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>XF80017</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2016-01-02</termEffectiveDate>
+        <termExpirationDate>2017-01-02</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>true</renewalFlag>
+        <convertedRenewalOffer>true</convertedRenewalOffer>
+        <dataSource>HDES</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <fullName>LINDLEY FANNIE</fullName>
+            </name>
+            <preferredPostalAddress>
+              <extendedStreetAddressLine>SAN JOSE        CA</extendedStreetAddressLine>
+              <cityName>SAN JOSE</cityName>
+              <zipCode>95135</zipCode>
+              <streetAddressLine>5329 CRIBARI GLN</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <convertedPolicy>
+          <policyNumber>CAHS115002529</policyNumber>
+          <productCode>X</productCode>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <inceptionDate>2016-11-10</inceptionDate>
+        </convertedPolicy>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>1</remainingInstallments>
+        <currentBalance>28.47</currentBalance>
+        <payOffAmount>28.47</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <nextStatementDate>2016-12-13</nextStatementDate>
+        <bill>
+          <statementDate>2016-11-14</statementDate>
+          <dueDate>2016-12-02</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>0.00</installmentAmount>
+          <totalBillAmountDue>28.47</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>MTH</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2016-10-03T07:00:00Z</paymentDateTime>
+          <amount>14.51</amount>
+          <status>ACT</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>INVALID_POLICY_IN_CONVERSION</setupAutoPayReasonCode>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:29:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAHS115002529</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:29:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-30T12:28:44.976Z</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Information unavailable for this item</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.Policy Details are : CAHS115002529-PAS-HO</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV2PASMM</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">AAABillingService</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>CAHS115002529</policyNumber>
+        <type>HO</type>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+      </policy>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+5:29:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is a problem retrieving policy details. Please verify and enter valid policy detail. If problem persists contact support. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details.Policy Details are : CAHS115002529-PAS-HO PolicyNumber: CAHS115002529 UserID:xgs35gur
+5:57:48 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">XF80017</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+5:58:16 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <policy>
+        <lineOfBusiness>PC</lineOfBusiness>
+        <policyNumber>XF80017</policyNumber>
+        <riskState>CA</riskState>
+        <type>HO</type>
+        <termEffectiveDate>2016-01-02</termEffectiveDate>
+        <termExpirationDate>2017-01-02</termExpirationDate>
+        <status>A</status>
+        <statusDescription>Active</statusDescription>
+        <writingCompany>CSIIB</writingCompany>
+        <renewalFlag>true</renewalFlag>
+        <convertedRenewalOffer>true</convertedRenewalOffer>
+        <dataSource>HDES</dataSource>
+        <insureds>
+          <namedInsuredSummary>
+            <name>
+              <fullName>LINDLEY FANNIE</fullName>
+            </name>
+            <preferredPostalAddress>
+              <extendedStreetAddressLine>SAN JOSE        CA</extendedStreetAddressLine>
+              <cityName>SAN JOSE</cityName>
+              <zipCode>95135</zipCode>
+              <streetAddressLine>5329 CRIBARI GLN</streetAddressLine>
+              <isoRegionCode>CA</isoRegionCode>
+            </preferredPostalAddress>
+          </namedInsuredSummary>
+        </insureds>
+        <convertedPolicy>
+          <policyNumber>CAHS115002529</policyNumber>
+          <productCode>X</productCode>
+          <riskState>CA</riskState>
+          <dataSource>PAS</dataSource>
+          <writingCompany>CSIIB</writingCompany>
+          <inceptionDate>2016-11-10</inceptionDate>
+        </convertedPolicy>
+        <additionalInterests>
+          <additionalInterest>
+            <billTo>N</billTo>
+            <name>
+              <partyType>Organization</partyType>
+            </name>
+          </additionalInterest>
+        </additionalInterests>
+      </policy>
+      <billingSummary>
+        <remainingInstallments>1</remainingInstallments>
+        <currentBalance>28.47</currentBalance>
+        <payOffAmount>28.47</payOffAmount>
+        <nextInstallmentAmount>0.00</nextInstallmentAmount>
+        <nextStatementDate>2016-12-13</nextStatementDate>
+        <bill>
+          <statementDate>2016-11-14</statementDate>
+          <dueDate>2016-12-02</dueDate>
+          <previousBalance>0.00</previousBalance>
+          <installmentAmount>0.00</installmentAmount>
+          <totalBillAmountDue>28.47</totalBillAmountDue>
+          <paymentPlan>DIRECT</paymentPlan>
+          <billingPlan>MTH</billingPlan>
+        </bill>
+        <lastPayment>
+          <paymentDateTime>2016-10-03T07:00:00Z</paymentDateTime>
+          <amount>14.51</amount>
+          <status>ACT</status>
+        </lastPayment>
+        <setupAutoPayReasonCode>INVALID_POLICY_IN_CONVERSION</setupAutoPayReasonCode>
+        <updateAutoPayReasonCode>NOT_ELIGIBLE</updateAutoPayReasonCode>
+        <cancelAutoPayReasonCode>NOT_ELIGIBLE</cancelAutoPayReasonCode>
+      </billingSummary>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+6:20:51 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment request to Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationContext>
+    <transactionType xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">INCL_ALL_ELIG</transactionType>
+    <application xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">PMTTOOL</application>
+    <address xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">172.24.24.59</address>
+  </applicationContext>
+  <policies>
+    <policyNumber xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">CAHS115002529</policyNumber>
+    <dataSource xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2" />
+    <type xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">HO</type>
+  </policies>
+</retrievePolicyBillingSummariesRequest>
+6:20:54 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:Payment response from Payment Central - Billing Summary Request : 
+<?xml version="1.0" encoding="utf-16"?>
+<retrievePolicyBillingSummariesResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <billingSummaries>
+    <policyBillingSummary xmlns="http://www.aaancnuit.com.AAANCNU_RetrievePolicyBillingSummaries_version2">
+      <errorInfo>
+        <errorTimeStamp xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">2017-06-30T13:20:28.958Z</errorTimeStamp>
+        <errorCode xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">SOAB301</errorCode>
+        <severity xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Error</severity>
+        <errorMessageText xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Information unavailable for this item</errorMessageText>
+        <friendlyErrorMessage xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">Business Exception Occured. Please contact service administrator for exception details.Policy Details are : CAHS115002529-PAS-HO</friendlyErrorMessage>
+        <serviceName xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">RetrievePolicyBillingSummariesV2PASMM</serviceName>
+        <sourceSystem xmlns="http://www.aaancnuit.com.AAANCNU_Common_version2">AAABillingService</sourceSystem>
+      </errorInfo>
+      <policy>
+        <policyNumber>CAHS115002529</policyNumber>
+        <type>HO</type>
+        <renewalFlag>false</renewalFlag>
+        <dataSource>PAS</dataSource>
+      </policy>
+    </policyBillingSummary>
+  </billingSummaries>
+</retrievePolicyBillingSummariesResponse>
+6:21:07 AM: Source:InsuranceClasses.WebService.Insurance.CheckPolicy, Message:ErrorCode: SOAB301 Error Message: There is a problem retrieving policy details. Please verify and enter valid policy detail. If problem persists contact support. Friendly Error message :Business Exception Occured. Please contact service administrator for exception details.Policy Details are : CAHS115002529-PAS-HO PolicyNumber: CAHS115002529 UserID:xgs35gur

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_ActivityConditionPlace_version1" xmlns:ns1="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_ActivityConditionPlace_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:complexType name="RegistrationStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:StatusWithCommonReason">
+        <xs:sequence>
+          <xs:element name="state" type="tns:RegistrationState" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="registrationStatusExtension" nillable="true" type="ns1:ExtensionArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="RegistrationState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Draft" />
+      <xs:enumeration value="Requested" />
+      <xs:enumeration value="Issued" />
+      <xs:enumeration value="Effective" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="Disqualified" />
+      <xs:enumeration value="Suspended" />
+      <xs:enumeration value="Final" />
+      <xs:enumeration value="Initial" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,781 @@
+6:27:32 AM: Source:Forms.login.Page_Load, Message:Session Expired/Redirecting to logout Page 
+6:27:32 AM: Source:Forms.login.Page_Load, Message:Session Expired/Redirecting to logout Page 
+6:27:34 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+6:27:43 AM: Source:Forms.login.Page_Load, Message:The User is not Authenticated, So Session is Abandoned 
+6:27:43 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:27:43 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IkVpUHQtN0dhWmJrWUtwbGJkQlJKUEdwWENyUSIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjI3OjQyLjk5MFoiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJtYWFRX0doWnMtek1heGJ0ZzJGRWN1OUZhNHQiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzoyNzo0My4wMDVaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI21hYVFfR2hacy16TWF4YnRnMkZFY3U5RmE0dCI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPjlEQUhiZnlEeVBnODU4QWpHbm1naTU2amw5TDJtRTZ3S3Ixckh1ZGxoT1k9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpEUkp4Q0Y0RGxhZVdlanJKblFyZTNCSHYwOUhBWjhHS0Iwajh4cElIK1hCWklmeUpQRlh5WjhGZERVV1dMakhuL1Q0T1NyZTdSVmI1CmFiZVcvcGFqMXh6UFhtR2xTSFcyMWkxZ0JHNXY5UVR3ZUVlMVVDVmdCT3hOZWk4NDJrdmJaeTcva0w4VlBUOHNJQ2NUMWhzU3VJMHUKQS9sMVY1SHEzMGJ0ejZaVGVzZ2d1ZlhXNm5QMWVOOXJtWDZDRnkrTVVwVHdBNlVDT1NRWXQya2g2RGJjdVBSdzR5cnZyeWdpcGo3bAovTW8rTnpzT2hBNHZKTS8ycDVRUktjdDFvM3g5cmw3RFBiQUcrTFdwYkZTMmVMK3RvdWE0a0NWODYrK09GTXR1QldocXBpTDk2RHBjCmdwNms3MEFPM0c3blA1SFRLTlZzVHZMZ0NJTmNDQ2t2bWtSeDZ3PT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjMyOjQzLjAwNVoiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzoyMjo0My4wMDVaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6MzI6NDMuMDA1WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9Im1hYVFfR2hacy16TWF4YnRnMkZFY3U5RmE0dCIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjI3OjQzLjAwNVoiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:27:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:27:43 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:27:43 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:27:46 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:27:46 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:27:46 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:27:46 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:27:46 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:27:46 AM: Source:Global.Application_Error, Message:/PaymentToolMSCR/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:27:48 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:27:48 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:27:48 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:27:48 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:27:48 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:27:48 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:28:34 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+6:28:43 AM: Source:Forms.login.Page_Load, Message:The User is not Authenticated, So Session is Abandoned 
+6:28:43 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:28:43 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IlVBRE5qSy1IS1JPQkpyN2MxQVUuNTZwa2J4TiIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjI4OjQzLjM4MFoiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJZSU42UUtmQUt5OFdUazl2S25uUFRzVF9XWXQiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzoyODo0My4zOTZaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI1lJTjZRS2ZBS3k4V1RrOXZLbm5QVHNUX1dZdCI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPmpFeWxmWkl3ZGJFdmhROUxkd0YzQm5DR2ZwOGJsWk56QWRpQzZHV2dqdzA9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpmQ3hzcHBjRmU0L1R2VjdVazBXSktMRlRjNjB6UGU3T3I1SmlsSGF2WlRqMEZLL3JjUnpLaytFbEFhYXVIWXZSVDJLTjQwWk8zYUlECnJSNWlHNEVrSjloNGM2V3AzQU83QlFQQ1J2L0dTbkFnb2ZjVkhUTytORVNrNkhQS054d3JQekM0ak9YYXVsb3JOeHFMUWdBT282L0wKTXpZYVBuYXMwMHhEQ3hPVWhEMUVmSEMwM241WHVHOUU5eENaTFY1WS9wVzBaOHRUTEF4TXhYcXpyNDJLUlFrRFFiOEdmakdHZmE0UApiSUE0T3lCZXJiQXdYeEViR0xKek5uWkxWU1IxWFdBWXFxTlhaOUZMdHFzSnl2SWM5bEdWaEhJNW1MNmxsNjQ5bnowbVZobFcwaVQrCkx3Nmw0dFNMbWtLMUFIcDh1Y3h1R2J1R25LOVNNL3BpSkNmTFdBPT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjMzOjQzLjM5NloiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzoyMzo0My4zOTZaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6MzM6NDMuMzk2WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9IllJTjZRS2ZBS3k4V1RrOXZLbm5QVHNUX1dZdCIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjI4OjQzLjM5NloiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:28:43 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:28:43 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:28:43 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:28:45 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:28:45 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:28:45 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:28:45 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:28:45 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:28:45 AM: Source:Global.Application_Error, Message:/PaymentToolMSCR/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:28:47 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:28:47 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:28:47 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:28:47 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:28:47 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:28:47 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:30:53 AM: Source:Forms.login.Page_Load, Message:Session Expired/Redirecting to logout Page 
+6:30:56 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+6:30:56 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:30:56 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9Ik5CZHpCNjBJa0w3Ulg4cmxwcGZTbHVfR1VCUCIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjMwOjU2LjUzN1oiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJzZGZlLjFsUWR4elRVOU9DTjR0WFRaZ2RyUG4iIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzozMDo1Ni41NTJaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI3NkZmUuMWxRZHh6VFU5T0NONHRYVFpnZHJQbiI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPlJ1eEsyYTk2U0l5T1NyOUgrRk9NMFM2R3dmR1Y5NzAzT1hYRzNWckxHeFE9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpTTU43SW42WVVsc3pCTjZDc0xkVllIaWxGMEQzM3pSUGRDM2lXWlVjMGZTalBES044NjFJaWhlODZqbW9ra3laWTB0VTA1dmVYMS9sCkdKTXQyM3luZW5mbjFMeXF1TVV0dncxN3dDbFd3MExWR3lxNXpFanF2dGJNc0QxSUs0REFtMmVJL3ZheWdMbXRVU2ZoZ21vV2VCVFgKemF3azZ6bzAzQ0I1N2pVaGZLMTQ5eTA2cDJUMFM5YkoycGNySW1EdWJibVVXdUQ0NXRwQW93R0ZZK1hCYkhuZ1VlcEFYODFZRGdlUQpycndDN1JXK1lyZFRESTFlNHgzN085bGJ5bGtReWw0YW5ENjRRcWpDdHE3R0RscFYrRThPMG03N2pTNkVpRDVTQ2xML0hlVHhBdmFJCk8vblh4SHhSOGpUSnpkK09GdmpVVXh2OXF6T0UxZGlOUUxIWGpnPT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjM1OjU2LjU1MloiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzoyNTo1Ni41NTJaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6MzU6NTYuNTUyWiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9InNkZmUuMWxRZHh6VFU5T0NONHRYVFpnZHJQbiIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjMwOjU2LjUzN1oiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:30:56 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:30:56 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:30:56 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:30:58 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:30:58 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:30:58 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:30:58 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:30:58 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:30:58 AM: Source:Global.Application_Error, Message:/PaymentToolMSCR/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:31:00 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:31:00 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:31:00 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:31:00 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:31:00 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:31:00 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:41:14 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+6:41:15 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:41:15 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IkNBdXdRLlFjUThGUldBQTZQWG56bkloS1RSeiIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQxOjE1Ljk2MFoiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJfbk5UVWlqcEpCTG91b2tLVEt1UkdmRmJTVGMiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzo0MToxNS45NjBaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI19uTlRVaWpwSkJMb3Vva0tUS3VSR2ZGYlNUYyI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPi84YjZqQllwbC9kTE5qTWhjVCtNaWZ2Q3VtY2dSdUJsMktMeGlxWHYwWWM9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpXd0hLSkJ4SForY2U4bEkxWU5vU3RJcmRGZmEzU0hZZlp0VzhDTmRxaUNKbGtOZXVVM0xCTG85dG1kVTMrVndNK0ZPd29Ra3UrN2dPCjFoTG4rT2RJTmM1ZUdNWEo1UE5vZ1JadXFDMUhEWVpDMDE5VjdBQmRTSzJybFpNcVVPS0x1aVFuNGNlMzJCMzQ2QmR6ZUdEWHlCakwKeDBrNnZ4Rjc1NG0rMnNpY1hkVW8yeW0vd3lZdk9kbkgrblREZkpLZlRmN3VqOFBhcVVuS1VDYWJZd0pWYll3cVZYRDZOQktKMmo2TQpER3RTTFNmUXc0RE5lZ1hvSCswOTBrMENVZ04xcGtUNFVvbGFEeXJxa2RhczJ4Szh2NUdKMzV0bGM1RUE1SDdGajIvN1ZuUndNS29LCmZMTEtiWDlxWXQ1MFR2N1VBcVY5ZFZNOUY1SlBLdVlkQVMyZ3V3PT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjQ2OjE1Ljk2MFoiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzozNjoxNS45NjBaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6NDY6MTUuOTYwWiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9Il9uTlRVaWpwSkJMb3Vva0tUS3VSR2ZGYlNUYyIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQxOjE1Ljk2MFoiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:41:15 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:41:15 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:41:15 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:41:18 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:41:18 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:41:18 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:41:18 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:41:18 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:41:18 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:41:20 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:41:20 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:41:20 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:41:20 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:41:20 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:41:20 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:47:53 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO 
+6:47:54 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:47:54 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IlhUZW5pM19UZDJ2ejRDVDhPcWk3WEhjV0hWRSIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQ3OjU0Ljc1OFoiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJCYkwucWozZ2w3Z3hUMU9nd1hzQzNtQWY2UjkiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzo0Nzo1NC43NThaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI0JiTC5xajNnbDdneFQxT2d3WHNDM21BZjZSOSI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPlV0N0s4cWVXaWFVRlY4NUVxMDdPWGZVY2pqejNuVDV5bExGc2ZGeUxISUU9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpEdCtoa2FjQVlPVkR3OXA3WWV1MWpKYkN1MEl2VVJ3OWtDNWVaTk1iaDMwUU8xMFpkUUEyTTd5YU9UYkE3azNrK2ZZWjBkaFNpSnNQCkI0NUFiNzcxR0FrbzlkUHNyaGpjZTkvVnJ1WHpjTE9mWTgxTlEwV0ZsbTRGV0Y5OWtwWTJQRS96SXVScW5tU3Rzb3ltSWVFQk12TW8KdnBnOXAwbUNUNlJGdlB2a0daRDVZd2xOM1NtS1BmQlZHcGNOWWk2SFRJWVM5RTBBcDRSTDhYVnZJK3drUXFhaDZ3MnQ5Vmh0aFJBQwpsVzVZK3lTQ3oreFlQc3VQU29USlBGOFBiOVd5TlNmQkZxaUJwenF6L29WcnRVUWxVbk4yWHJ4UjdYQ0grRjhiM3diaDdDVDJSRzBTCmZWL1ozbXlXZWFSRXhWMmlPem94TGlPM1ZtRWZWdHV3TG5qNlNBPT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjUyOjU0Ljc1OFoiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzo0Mjo1NC43NThaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6NTI6NTQuNzU4WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9IkJiTC5xajNnbDdneFQxT2d3WHNDM21BZjZSOSIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQ3OjU0Ljc1OFoiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:47:54 AM: Source:Forms.login.Page_Load, Message:Replay attack check
+6:47:54 AM: Source:Forms.login.Page_Load, Message:NotBefore6/20/2017 6:42:54 AM
+6:47:54 AM: Source:Forms.login.Page_Load, Message:NotOnOrAfter6/20/2017 6:52:54 AM
+6:47:54 AM: Source:Forms.login.Page_Load, Message:CurrentDate6/20/2017 6:47:54 AM
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:47:54 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:47:54 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:47:54 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:47:57 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:47:57 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:47:57 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:47:57 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:47:57 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:47:57 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:47:59 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:47:59 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:47:59 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:47:59 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:47:59 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:47:59 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:48:13 AM: Source:Forms.login.Page_Load, Message:Request sent to SSO xgs35gur
+6:48:14 AM: Source:Forms.login.Page_Load, Message:Response received from SSO. 
+6:48:14 AM: Source:Forms.login.Page_Load, Message:SSO Response: PHNhbWxwOlJlc3BvbnNlIFZlcnNpb249IjIuMCIgSUQ9IlNBWVdWX1ViTzRMckpyeUFsR2UtUWdxbXZnayIgSXNzdWVJbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQ4OjE0LjYxN1oiIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIElEPSJ0c1FFblguLjBfaERTRlFJMmNXUEEyRlhSMFQiIElzc3VlSW5zdGFudD0iMjAxNy0wNi0yMFQxMzo0ODoxNC42MTdaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sOklzc3Vlcj5QYXltZW50VG9vbDpTUDwvc2FtbDpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI3RzUUVuWC4uMF9oRFNGUUkyY1dQQTJGWFIwVCI+CjxkczpUcmFuc2Zvcm1zPgo8ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8L2RzOlRyYW5zZm9ybXM+CjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiLz4KPGRzOkRpZ2VzdFZhbHVlPnZBOEpkNzJQUUtjMXkxeStKalBsMHp0Y2dyRGdza2cwdEdZWW8ybFZjQWM9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz4KPGRzOlNpZ25hdHVyZVZhbHVlPgpiclZQalNxa3FEYklGc2thc3ZZL0VTekRaOUt5NWp6SzJpdW5LR2Y2T1JiL1RjRzZ4bkRwbktzNUxsaUhPQmxuNU4wNkRwdUFuWVJtCmwzRG51K2Y1bHNkY1NqWkJUbkpkUEhzb3hsVUVoR0pBM20wVXBNUVNDNEIvcE1LS3U1OHlYczdlY3dKeTlwR1p2cjNjVHlLSndrOG0KbVM5VWVlb01xY09IN0xkZUJENzFCamhFbkI4bWw3OVRhN2k0ZEVSQk9ERDRvQXQ0aXdxNitUOGdRbFJvcGMxQ0xRemR2RDQ3L1Y2QwppMkdFbzNKSjF0M1lqbk90THprc3cvV0N0di9neFZEeUJyTnlhc0Z3eFFqSXBHZkQxZUxzczhJR2tlblBoczdrTHRGWnhiNVRORFE5CjBSczVOQkhpYzY5TnpBWDZCMkZEeXZZelZOOW1iNDFYYXhGcWN3PT0KPC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+eGdzMzVndXI8L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9Imh0dHBzOi8vbjAxYXB3MzE3MS50ZW50LnRydC5jc2FhLnByaS9wYXltZW50dG9vbG1zY3IvZm9ybXMvbG9naW4uYXNweCIgTm90T25PckFmdGVyPSIyMDE3LTA2LTIwVDEzOjUzOjE0LjYxN1oiLz48L3NhbWw6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWw6U3ViamVjdD48c2FtbDpDb25kaXRpb25zIE5vdEJlZm9yZT0iMjAxNy0wNi0yMFQxMzo0MzoxNC42MTdaIiBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMjBUMTM6NTM6MTQuNjE3WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5QYXltZW50VG9vbDpTUDwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBTZXNzaW9uSW5kZXg9InRzUUVuWC4uMF9oRFNGUUkyY1dQQTJGWFIwVCIgQXV0aG5JbnN0YW50PSIyMDE3LTA2LTIwVDEzOjQ4OjE0LjYxN1oiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48L3NhbWw6QXNzZXJ0aW9uPjwvc2FtbHA6UmVzcG9uc2U+
+6:48:14 AM: Source:Forms.login.Page_Load, Message:Replay attack check
+6:48:14 AM: Source:Forms.login.Page_Load, Message:NotBefore6/20/2017 6:43:14 AM
+6:48:14 AM: Source:Forms.login.Page_Load, Message:NotOnOrAfter6/20/2017 6:53:14 AM
+6:48:14 AM: Source:Forms.login.Page_Load, Message:CurrentDate6/20/2017 6:48:14 AM
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : xgg5ibho
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : n01apw3171.tent.trt.csaa.pri
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate present in the certificate store is : dev-sso.tent.trt.csaa.pri
+6:48:14 AM: Source:AuthenticationClasses.UserInfo.ProcessSSOResponse, Message:The certificate subject name to be validated is : System.Security.Cryptography.X509Certificates.X509Certificate2
+6:48:14 AM: Source:Forms.login.Page_Load, Message:SSO UserID: xgs35gur
+6:48:14 AM: Source:Forms.login.Page_Load, Message:Successfully retrieved the Logged-in User details from DB. UserID: xgs35gur
+6:48:16 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:16 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:16 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:16 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:16 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:48:16 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/default.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:48:18 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:18 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:18 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:18 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:18 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:48:18 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur
+6:48:37 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:37 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:37 AM: Source:, Message:Exception=No connection could be made because the target machine actively refused it [::1]:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+6:48:37 AM: Source:CSAAWeb, Web.SoapHttpClientProtocol.Invoke <-- Web.SoapHttpClientProtocol.Invoke <-- Navigation.NavigationClient.UnauthorizedUrl <-- Navigation.ACL.OnInit <-- Filter.TagFilter.AddFilter <-- Filter.TagFilter.CreateChildControls <-- Filter.TagFilter.DoInit <-- WebControls.DefaultTemplate.OnLoad
+   Exception=Unable to connect to the remote server
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters, Boolean SkipLog) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 206
+   at CSAAWeb.Web.SoapHttpClientProtocol.Invoke(String MethodName, Object[] Parameters) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Web\SoapHttpClientProtocol.cs:line 183
+   at CSAAWeb.Navigation.NavigationClient.UnauthorizedUrl() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 590
+   at CSAAWeb.Navigation.ACL.OnInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Navigation\ACL.cs:line 318
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at CSAAWeb.Filter.TagFilter.AddFilter(FilterTags Filter) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 89
+   at CSAAWeb.Filter.TagFilter.CreateChildControls() in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 63
+   at CSAAWeb.Filter.TagFilter.DoInit(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\Filter\TagFilter.cs:line 40
+   at CSAAWeb.WebControls.DefaultTemplate.OnLoad(EventArgs e) in d:\POC\splitting services\PaymentTool_Emember_Changes\CODE\CSAAWeb\WebControls\Template.cs:line 62
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+6:48:37 AM: Source:MSCR, Application_Error
+   Exception=Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+6:48:37 AM: Source:Global.Application_Error, Message:/PaymentToolmscr/forms/general_error.aspx,Exception of type 'System.Web.HttpUnhandledException' was thrown., User:xgs35gur

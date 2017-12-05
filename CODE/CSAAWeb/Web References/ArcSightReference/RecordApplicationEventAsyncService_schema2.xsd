@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_RecordApplicationEventAsync_version1" xmlns:ns1="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_RecordApplicationEventAsync_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:complexType name="RecordApplicationEventAsync_Operations">
+    <xs:sequence>
+      <xs:element name="minor" type="xs:integer" />
+      <xs:element name="operation" type="tns:RecordApplicationEventAsync_OperationType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recordApplicationEventAsync_OperationsExtension" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecordApplicationEventAsync_ResponseFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recordApplicationEventAsync_ResponseFilterExtension" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecordApplicationEventAsync_TechnicalCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recordApplicationEventAsync_TechnicalCriteriaExtension" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RecordApplicationEventAsync_OperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Record" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

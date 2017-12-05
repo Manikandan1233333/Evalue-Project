@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_WSDL_RecordApplicationEventAsync_version1" xmlns:ns2="http://www.aaancnuit.com.AAANCNU_Common_version1" xmlns:ns3="http://www.aaancnuit.com.AAANCNU_RecordApplicationEventAsync_version1" xmlns:ns1="http://www.aaancnuit.com.AAANCNU_ApplicationEvent_version1" targetNamespace="http://www.aaancnuit.com.AAANCNU_WSDL_RecordApplicationEventAsync_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema8.xsd" namespace="http://www.aaancnuit.com.AAANCNU_ApplicationEvent_version1" />
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema2.xsd" namespace="http://www.aaancnuit.com.AAANCNU_RecordApplicationEventAsync_version1" />
+  <xs:element name="recordApplicationEventAsyncRequest" type="tns:recordApplicationEventAsyncRequest" />
+  <xs:element name="recordApplicationEventAsync_choice" type="tns:recordApplicationEventAsync_choice" />
+  <xs:complexType name="recordApplicationEventAsync_choice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="event" type="ns1:CEFEvent" />
+      <xs:element minOccurs="0" name="message" type="ns1:ApplicationMessageExtension" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recordApplicationEventAsyncRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applicationContext" type="ns2:ApplicationContext" />
+      <xs:element minOccurs="0" name="options" type="ns2:ServiceOptions" />
+      <xs:element minOccurs="0" name="operations" type="ns3:RecordApplicationEventAsync_Operations" />
+      <xs:element minOccurs="0" name="filters" type="ns3:RecordApplicationEventAsync_ResponseFilter" />
+      <xs:element minOccurs="0" name="technicalCriteria" type="ns3:RecordApplicationEventAsync_TechnicalCriteria" />
+      <xs:element name="logLevel" type="xs:string" />
+      <xs:element name="requestorName" type="xs:string" />
+      <xs:element name="recordApplicationEventAsync_choice" type="tns:recordApplicationEventAsync_choice" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recordApplicationEventAsyncRequestExtension" nillable="true" type="ns2:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

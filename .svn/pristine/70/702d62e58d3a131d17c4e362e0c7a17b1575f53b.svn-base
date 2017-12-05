@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSC", "http://localhost/MSC/MSC.csproj", "{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = http://localhost/MSC/MSC.csproj
+		SccProjectName0 = \u0022$/CSAA/Q3\u0020CSR/WEB/msc\u0022,\u0020EPYDAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}.Debug.ActiveCfg = Debug|.NET
+		{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}.Debug.Build.0 = Debug|.NET
+		{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}.Release.ActiveCfg = Release|.NET
+		{EA7921B4-9BEA-42C3-A8B2-B4E2DD71ED36}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

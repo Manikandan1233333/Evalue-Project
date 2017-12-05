@@ -1,0 +1,704 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaymentService</name>
+    </assembly>
+    <members>
+        <member name="T:PaymentService.CyberResponse">
+            <summary>
+            CyberResponse class
+            </summary>
+            <remarks>
+            Response class for payment authorizations.  
+            Translates CyberSource-specific return codes to generic responses.
+            Used for web service results and for persistence
+            </remarks>
+        </member>
+        <member name="M:PaymentService.CyberResponse.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="F:PaymentService.CyberResponse.ReceiptNumber">
+            <summary>
+            This is the receipt number created by payment tool
+            </summary>
+        </member>
+        <member name="M:PaymentService.CyberResponse.ToString">
+            <summary>
+            To convert as string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PaymentService.CyberResponse.ID">
+            <summary>
+            The id of the item in the data store.
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.RequestID">
+            <summary>
+            Request id (returned from payment gateway)
+            </summary>
+            <remarks>
+            See CyberSource application programming guide for more info
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.ReturnCode">
+            <summary>
+            return code from payment gateway
+            </summary>
+            <remarks>
+            See CyberSource application programming guide for more info
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.Message">
+            <summary>
+            translated response message 
+            </summary>
+            <remarks>
+            Defined in web.config
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.ActualMessage">
+            <summary>
+            response message from the payment gateway
+            </summary>
+            <remarks>
+            Still see the CyberSource application programming guide for more info
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.Flag">
+            <summary>
+            response flag from payment gateway
+            </summary>
+            <remarks>
+            Ditto re: seeing CyberSource programming guide
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.AuthCode">
+            <summary>
+            Authorization code received from payment gateway
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.Amount">
+            <summary>
+            Authorized amount.
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.TransactionReferenceNumber">
+            <summary>
+            TransactionReferenceNumber
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsComplete">
+            <summary>
+            IsComplete
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsAuthorized">
+            <summary>
+            convenience property to determine whether request was OK
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsRequestSuccessful">
+            <summary>
+            convenience property to determine whether request was successfully processed
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsInvalidData">
+            <summary>
+            True if user data was valid
+            </summary>
+            <remarks>
+            translates to "DINVALIDDATA" in CyberSource reply flag
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsInvalidCard">
+            <summary>
+            True if declined reason was invalid card.
+            </summary>
+            <remarks>
+            translates to "DINVALIDCARD" in CyberSource reply flag
+            </remarks>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsSoftDecline">
+            <summary>
+            True if declined reason was AVS failure or CVCC failure.
+            </summary>
+        </member>
+        <member name="P:PaymentService.CyberResponse.IsReauthCandidate">
+            <summary>
+            IsReauthCandidate
+            </summary>
+        </member>
+        <member name="T:PaymentService.ServiceRequest">
+            <summary>
+            Encapsulates functionality for talking to Cybersource
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.TranslateOperation(PaymentClasses.ServiceOperation)">
+            <summary>
+            Returns a string representation of the enum value
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.Permits(PaymentClasses.ServiceOperation,System.String)">
+            <summary>
+            Returns true if the enum value is in the permitted list.
+            </summary>
+            <param name="op">The operation being checked.</param>
+            <param name="Application">The calling application</param>
+            <returns></returns>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.#ctor(PaymentClasses.Payment)">
+            <summary>
+            Initializes a new ServiceRequest from Payment
+            </summary>
+            <param name="Payment">The payment to create a service request from</param>
+        </member>
+        <member name="F:PaymentService.ServiceRequest.Application">
+            <summary>
+            The application making the request.
+            </summary>
+        </member>
+        <member name="F:PaymentService.ServiceRequest.User">
+            <summary>
+            The user making the request.
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.CheckICSPermission">
+            <summary>
+            Throws and exception if the function isn't permitted.
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.InitClient">
+            <summary>
+            Builds an ICSClient object and initializes per config settings
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.CheckAuthErrors(PaymentService.CyberResponse)">
+            <summary>
+            Checks to see if there were authorization errors, throws exceptions unders certain conditions.
+            </summary>
+            <param name="Response">The Cybersource response.</param>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.Ex(System.String)">
+            <summary>
+            Creates an exception based on the message.
+            </summary>
+            <param name="msg">Message to create exception for.</param>
+            <returns>(Exception)</returns>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.IsMissing(System.String)">
+            <summary>
+            Convenience function, checks for missing values (blanks or null)
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceRequest.CopyTo(System.Data.IDbCommand)">
+            <summary>
+            Copies the values of fields to the matching parameters of a db command
+            object representing a stored procedure with named parameters.
+            </summary>
+            <param name="Cmd">The database command object who's parameters will be set.</param>
+            <remarks>
+            This is a new method that allows this type to behave as if it were a SimpleSerializer
+            with respect to Data Command objects.
+            </remarks>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.BillTo">
+            <summary>
+            The customer's billing address
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.Card">
+            <summary>
+            Gets or sets the customer's credit card information.
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.VerbalAuthorization">
+            <summary>
+            Gets or sets the VerbalAuthorization code.
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.RequestID">
+            <summary>
+            Gets or sets the Cybersource RequestID
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.Reference">
+            <summary>
+            Gets or sets the merchant reference number.
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.Function">
+            <summary>
+            Gets the cybersource functions request.
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.isNew">
+            <summary>
+            Returns true if the function is a new request type (Auth, Credit, Process)
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.Operation">
+            <summary>
+            Gets or sets the operation type.
+            </summary>
+        </member>
+        <member name="P:PaymentService.ServiceRequest.LineItems">
+            <summary>
+            Gets or sets the items begin purchased.
+            </summary>
+        </member>
+        <member name="T:PaymentService.ServiceLineItem">
+            <summary>
+            Encapsulates and allows for easy creation of Cybersource offer lines.
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceLineItem.#ctor">
+            <summary>
+            Default no value constructor
+            </summary>
+        </member>
+        <member name="M:PaymentService.ServiceLineItem.#ctor(PaymentClasses.LineItem)">
+            <summary>
+            Constructor with the actual line item data
+            </summary>
+            <param name="item">Data to pass</param>
+        </member>
+        <member name="P:PaymentService.ServiceLineItem.Item">
+            <summary>
+            Sets the line item
+            </summary>
+        </member>
+        <member name="T:PaymentService.BasePaymentService">
+            <summary>
+            BasePaymentService contains methods that perform the basic payment processing functions.
+            Most of these functions are not exposed as web service methods, but are used by other methods
+            that do expose them.
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="F:PaymentService.BasePaymentService.Data">
+            <summary></summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.#cctor">
+            <summary>
+            static constructor
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.#ctor">
+            <summary>
+            The default no arg constructor
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.Close(System.Object,System.EventArgs)">
+            <summary>
+            Closes the connection and rollsback any open transaction.
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.Close">
+            <summary>
+            Cleans up card file.
+            </summary>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.DoRequest(PaymentClasses.Payment)">
+            <summary>
+            Actual code for processing credit card payments.
+            </summary>
+            <param name="Payment">The payment to process.</param>
+            <returns>CCResponse instance with result data.</returns>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.DoAuth(PaymentClasses.Payment)">
+            <summary>
+            Attempts to re-authorize the payment by the most appropriate method.
+            </summary>
+            <param name="Payment">The payment to re-authorize</param>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.GetDefaultEmail(System.String)">
+            <summary>
+            Applications that do not require an email address may use this as default
+            </summary>
+            <param name="appid">(string) The calling application.</param>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.IsMissing(System.String)">
+            <summary>
+            Convenience function, checks for missing values (blanks or nulls)
+            </summary>
+            <param name="s"></param>
+            <returns>True if s is blank or null</returns>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.CheckAppAllowed(System.String)">
+            <summary>
+            Check against list of apps which are allowed to use this service.  Log
+            event and throw exception if not.
+            </summary>
+            <param name="Application">The ID of the calling application</param>
+        </member>
+        <member name="M:PaymentService.BasePaymentService.CheckEmail(System.String,PaymentClasses.BillToInfo)">
+            <summary>
+            Checks to see if an email address is supplied, fills in application's default if not
+            </summary>
+            <param name="Application"></param>
+            <param name="BillTo"></param>
+        </member>
+        <member name="T:PaymentService.DataConnection">
+            <summary>
+            Summary description for DataConnection.
+            </summary>
+        </member>
+        <member name="F:PaymentService.DataConnection.PreCacheParametersFor">
+            <summary>
+            These procedures will participate in a transaction, and so must have their
+            parameters pre-cached.
+            </summary>
+        </member>
+        <member name="M:PaymentService.DataConnection.Begin_Transaction(PaymentClasses.Payment)">
+            <summary>
+            Creates the records for the payment in the appropriate tables.  Returns
+            the paymentID.
+            </summary>
+            <param name="Payment">
+            A record with the complete payment information, with properties including the card, billing
+            address, line items etc.
+            </param>
+        </member>
+        <member name="M:PaymentService.DataConnection.Insert_Lines(System.Int32,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Inserts records for the line items.
+            </summary>
+            <param name="PaymentId">The payment id to insert lines for.</param>
+            <param name="Lines">An array of the lines to insert.</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.Insert_Payment(PaymentClasses.Payment,System.Boolean@)">
+            <summary>
+            Inserts a record into the main payment table.
+            </summary>
+            <param name="Payment">The payment to insert.</param>
+            <param name="IsNew">(bool) output parameter indicating if the record is new or already exists.</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.Insert_Record(System.Data.SqlClient.SqlCommand,System.Int32,CSAAWeb.Serializers.SimpleSerializer)">
+            <summary>
+            Inserts a record into a table using Cmd
+            </summary>
+            <param name="Cmd">The Sql Command object to execute.</param>
+            <param name="PaymentId">The payment id to which to assign the record.</param>
+            <param name="Record">The record to insert.</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.InsertCardRequest(PaymentClasses.Payment)">
+            <summary>
+            Inserts a cyber request record into the table.
+            </summary>
+            <param name="Payment">The payment to insert.</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.ReadResponse(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Returns a constructed CCResponse object with properties filled from 
+            the database Reader.
+            </summary>
+            <param name="Reader">Dataset with saved response properties.</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.Complete_Transaction(PaymentClasses.Payment,PaymentClasses.CCResponse)">
+            <summary>
+            Completes the transaction started by Begin_Insurance_Transaction
+            </summary>
+        </member>
+        <member name="M:PaymentService.DataConnection.CheckReAuth(PaymentClasses.Payment)">
+            <summary>
+            Wrapper for Check_ReAuth stored procedure.  This procedure
+            will raise an exception if its a duplicate.
+            </summary>
+            <param name="Payment">Service Request to check</param>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetCardTypes(System.Boolean)">
+            <summary>
+            Get a recordset with Credit Card types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetAccountTypes(System.Boolean)">
+             <summary>
+            RFC#130547 PT_echeck: Added by Cognizant on 05/03/2011 for Adding a new Method GetAccountTypes
+             Get a recordset with Account types.
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R) or Workflow(W))</param>
+            <param name="CurrentUser">To Get the Payment Types that are applicable for the user</param>
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetStateCodes">
+            <summary>
+            Get a recordset with state codes.
+            </summary>
+            <returns>Dataset of the state codes that can be used</returns>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetMerchantReference(System.String)">
+            <summary>
+            Get a unique merchant reference number.
+            </summary>
+            <param name="Application">The ID of the calling application.</param>
+            <returns>Merchant reference number</returns>
+        </member>
+        <member name="M:PaymentService.DataConnection.GetApplications(PaymentClasses.AppDictionary)">
+            <summary>
+            Fills Applications with data from the Application_IDs table.
+            </summary>
+            <param name="Applications"></param>
+        </member>
+        <member name="P:PaymentService.DataConnection.ConnectionString">
+            <summary>
+            Override of base ConnectionString property forces the name to Payments instead of DataConnection.
+            </summary>
+        </member>
+        <member name="T:PaymentService.Service">
+            <summary>
+            This is a web service that contains the basic payment processing functions, plus some additional
+            lookup methods that return .NET datasets.
+            </summary>
+        </member>
+        <member name="T:PaymentService.PaymentGateway">
+            <summary>
+            This web service contains the basic payment processing functions.  It does not contain any 
+            methods that return datasets, as those are .NET specific.  Methods that return datasets should
+            be provided through another service that inherits this one.
+            </summary>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.#ctor">
+            <summary>
+            Constructor for PaymentGateway class
+            </summary>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.Process(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Authorizes and bills (collects funds) from the card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.ReAuth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo)">
+            <summary>
+            Attempts to re-authorize the payment by the most appropriate method.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.Auth(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Authorize the payment on the customer's card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.Bill(AuthenticationClasses.UserInfo,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that we previously authorized.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.BillVerbalAuth(AuthenticationClasses.UserInfo,System.String,System.String,System.String)">
+            <summary>
+            Bill (collect funds) that were previously denied with a DCALL code 
+            based on an authorization obtained over the telephone.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="AuthCode">(string) The authorization code obtained on the telephone.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.Credit(AuthenticationClasses.UserInfo,System.String,System.String,PaymentClasses.CardInfo,PaymentClasses.BillToInfo,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Refund an order.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="MerchantRefNum">The unique id by which to reference this transaction.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="BillTo">(BillTo) The customer's bill-to address.</param>
+            <param name="Card">(CardInfo) The customer's credit card information.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.RecordPayment(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Record a payment other than on-line credit card.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway.UpdateLines(AuthenticationClasses.UserInfo,System.String,PaymentClasses.PaymentTypes,System.String,System.String,PaymentClasses.ArrayOfLineItem)">
+            <summary>
+            Update the account number on the lines for the payment.  Only one of receipt #
+            or reference number need be supplied.
+            </summary>
+            <param name="User">(UserInfo) Information about the logged-in (internal) user.</param>
+            <param name="AppId">(string) The name (code) of the application calling the method.</param>
+            <param name="PaymentType">(PaymentTypes) The type of payment.</param>
+            <param name="Items">(ArrayOfLineItem) An array of the items being purchased.</param>
+            <param name="ReceiptNumber">(string) The receipt number for this payment.</param>
+            <param name="Reference">Merchant reference number</param>
+        </member>
+        <member name="M:PaymentService.PaymentGateway._GetConstants">
+            <summary>
+            Method for populating the constants into the Application object(for STAR application)
+            </summary>
+        </member>
+        <member name="M:PaymentService.Service.GetMerchantReference(System.String)">
+            <summary>
+            Returns a unique Merchant Reference Number that may be used for a transaction.
+            </summary>
+            <param name="AppId">(string) The calling application.</param>
+        </member>
+        <member name="M:PaymentService.Service.GetCreditCards(System.Boolean)">
+            <summary>
+            Returns dataset containing accepted credit card names and numeric codes (Name, Code)
+            </summary>
+            <param name="includePrompt">True if the first row should be a prompt.</param>
+        </member>
+        <member name="M:PaymentService.Service.GetBankAccount(System.Boolean)">
+            <summary>
+            RFC#130547 PT_eCheck Ch1 Added the new dataset Bank Account types reference for getting the bank account type details- by cognizant on 05/3/2011.
+            Returns dataset containing accepted Account names and numeric codes (Name, Code)
+            </summary>
+            <param name="includePrompt">True if the first row should be a prompt.</param>
+        </member>
+        <member name="M:PaymentService.Service.GetPaymentType(System.String,System.String)">
+            <summary>
+            Added by Cognizant on 05/17/2004 for Adding a new Method GetPaymentType
+            </summary> 
+            <param name="ColumnFlag">Screen type(Payments(P) or Reports(R) or Workflow(W))</param>
+            <param name="CurrentUser">The user name of the current user.</param>
+            <returns>Dataset of all Payment Types</returns>
+        </member>
+        <member name="M:PaymentService.Service.GetStateCodes">
+            <summary>Gets list of states for use with billing addresses</summary>
+        </member>
+        <member name="T:PaymentService.CardFile">
+            <summary>
+            Class used to persist card information from denied authorizations in memory for
+            a brief time.  This allows the service to compare card information for subsequent
+            auth requests on the same Merchant Ref Num to determine eligibility to continue
+            without having to persist this data in the database.  The data is actually stored
+            in the WebService.Application property as a dictionary.  This class allows 
+            manipulating of that data.
+            </summary>
+        </member>
+        <member name="M:PaymentService.CardFile.#cctor">
+            <summary/>
+        </member>
+        <member name="M:PaymentService.CardFile.Add(PaymentClasses.Payment)">
+            <summary>
+            Adds an entry in the dicationary.
+            </summary>
+            <param name="Payment">The payment to add.</param>
+        </member>
+        <member name="M:PaymentService.CardFile.Remove(PaymentClasses.Payment)">
+            <summary>
+            Removes the entry for MerchantRefNum
+            </summary>
+            <param name="Payment">The payment to remove</param>
+        </member>
+        <member name="M:PaymentService.CardFile.CleanUp">
+            <summary>
+            Called at the end of each request to clean up stale values.  If the last call was
+            less that a minute ago, just returns without doing anything.
+            </summary>
+        </member>
+        <member name="M:PaymentService.CardFile.CheckCard(PaymentClasses.Payment)">
+            <summary>
+            Returns a number indicating how Card compares to the card in the previous
+            auth request for this transaction.
+            0 - No saved value or card number doesn't match
+            1 - Card number matches
+            3 - Card and CC_CV match
+            5 - Card and Expiration date match
+            7 - Exact match.
+            This information is sent to the stored procedure Check_ReAuth, which uses it in
+            conjunction with data from the database to determine if auth or reauth is OK, or
+            to return the appropriate exception.
+            </summary>
+            <param name="Payment">The payment to be checked.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PaymentService.ArrayOfSavedCard">
+            <summary>
+            Helper class for perstisting the CardFile information into and out of XML.
+            </summary>
+        </member>
+        <member name="M:PaymentService.ArrayOfSavedCard.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PaymentService.ArrayOfSavedCard.#ctor(System.String)">
+            <summary>
+            Restores from Xml
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:PaymentService.ArrayOfSavedCard.Add(PaymentService.SavedCard)">
+            <summary>
+            Adds the item to the list.
+            </summary>
+            <param name="item">The card to add.</param>
+        </member>
+        <member name="P:PaymentService.ArrayOfSavedCard.Item(System.Int32)">
+            <summary>
+            Gets or sets the array item at index.
+            </summary>
+        </member>
+        <member name="T:PaymentService.SavedCard">
+            <summary>
+            Class used to store an card in the application.  Wraps CardInfo with a timestamp
+            that is used for cleaning up stale data.
+            </summary>
+        </member>
+        <member name="F:PaymentService.SavedCard.Card">
+            <summary>The card information.</summary>
+        </member>
+        <member name="F:PaymentService.SavedCard.TimeStamp">
+            <summary>The time this record was created.</summary>
+        </member>
+        <member name="F:PaymentService.SavedCard.Reference">
+            <summary>Merchant reference number for the payment.</summary>
+        </member>
+        <member name="M:PaymentService.SavedCard.#ctor(PaymentClasses.Payment)">
+            <summary>
+            Initializes a new instance of SavedCard with the information from Payment.
+            </summary>
+            <param name="Payment">The Payment to save.</param>
+        </member>
+        <member name="M:PaymentService.SavedCard.#ctor">
+            <summary>
+            Initializes a new instance of SavedCard with default parameters.
+            </summary>
+        </member>
+    </members>
+</doc>

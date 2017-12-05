@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.aaancnuit.com.AAANCNU_ApplicationEvent_version1" xmlns:ns1="http://www.aaancnuit.com.AAANCNU_Common_version1" elementFormDefault="qualified" targetNamespace="http://www.aaancnuit.com.AAANCNU_ApplicationEvent_version1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="RecordApplicationEventAsyncService_schema7.xsd" namespace="http://www.aaancnuit.com.AAANCNU_Common_version1" />
+  <xs:complexType name="CEFEvent">
+    <xs:sequence>
+      <xs:element name="version" type="xs:integer" />
+      <xs:element name="deviceVendor" type="xs:string" />
+      <xs:element name="deviceProduct" type="xs:string" />
+      <xs:element name="deviceVersion" type="xs:string" />
+      <xs:element name="signatureId" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="severity" type="xs:integer" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="extension" nillable="true" type="ns1:ObjectProperty" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cEFEventExtension" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ApplicationMessageExtension">
+    <xs:sequence>
+      <xs:element name="timestamp" type="xs:dateTime" />
+      <xs:element name="eventMessage" type="tns:ApplicationMessage" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="applicationMessageExtensionExtension" nillable="true" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ApplicationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="version" type="xs:integer" />
+      <xs:element name="application" type="xs:string" />
+      <xs:element minOccurs="0" name="subsystem" type="xs:string" />
+      <xs:element minOccurs="0" name="module" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="address" type="xs:string" />
+      <xs:element minOccurs="0" name="correlationId" type="xs:string" />
+      <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+      <xs:element minOccurs="0" name="detailedMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="applicationMessageExtension" nillable="true" type="ns1:ExtensionArea" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
